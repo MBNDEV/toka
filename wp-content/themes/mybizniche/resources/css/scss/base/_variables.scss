@@ -1,0 +1,40 @@
+$color-primary: #222222;
+$color-secondary: #14c8f0;
+$color-success: #3adb76;
+$color-alert: #cc4b37;
+$color-warning: #cc8b00;
+$color-dark: #333;
+$color-light: #f8f8f8;
+$color-white: #fff;
+$color-grey: #6a7376;
+$color-light-grey: #b2b2ae;
+$color-blue: #1c8ece;
+
+// $white:#fff;
+// $dark:#222;
+// $textcolor1:$dark;
+// $textcolor2:#14c8f0;
+// $textcolor3:#6a7376;
+// $textcolor4:#b2b2ae;
+// $textcolor5:#333;
+
+
+$body-font-family: 'Ubuntu', sans-serif;
+$body-font-size: 16px;
+
+$heading-font-family: 'Ubuntu', sans-serif;
+
+$paragraph-font-family: 'Ubuntu', sans-serif;
+$paragraph-font-size: 24px;
+$paragraph-line-height: 1.55;
+$paragraph-color: $color-grey;
+$paragraph-font-weight: 300;
+
+$button-font-family: 'Ubuntu', sans-serif;
+
+
+/* FOUNDATION VARIABLES */
+$grid-container: 1440px;
+
+$button-background: $color-primary;
+$button-radius: 3px;

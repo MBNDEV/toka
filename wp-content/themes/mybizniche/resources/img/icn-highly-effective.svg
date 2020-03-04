@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="98.546" height="99.238" viewBox="0 0 98.546 99.238">
+    <defs>
+        <style>
+            .prefix__cls-6{fill:none}.prefix__cls-3{fill:#14c8f0}.prefix__cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="prefix__icn-highly-effective" transform="translate(-735 -1758.762)">
+        <g id="prefix__Ellipse_1011" data-name="Ellipse 1011" transform="translate(735 1768)" style="stroke:#c9c9c9;stroke-width:2px;fill:none">
+            <circle cx="45" cy="45" r="45" class="prefix__cls-5"/>
+            <circle cx="45" cy="45" r="44" class="prefix__cls-6"/>
+        </g>
+        <g id="prefix__Ellipse_1012" data-name="Ellipse 1012" transform="translate(754 1787)" style="stroke-width:3px;stroke:#90ebff;opacity:.996;fill:none">
+            <circle cx="26" cy="26" r="26" class="prefix__cls-5"/>
+            <circle cx="26" cy="26" r="24.5" class="prefix__cls-6"/>
+        </g>
+        <circle id="prefix__Ellipse_1013" cx="4" cy="4" r="4" class="prefix__cls-3" data-name="Ellipse 1013" transform="translate(776 1809)"/>
+        <path id="prefix__Path_4062" d="M-12959-19273l40.931-41.887" data-name="Path 4062" transform="translate(13739 21086)" style="stroke:#14c8f0;stroke-width:3px;fill:none"/>
+        <path id="prefix__Icon_material-keyboard-arrow-down" d="M11.115 11.76L18 18.63l6.885-6.87L27 13.875l-9 9-9-9z" class="prefix__cls-3" data-name="Icon material-keyboard-arrow-down" transform="rotate(45 -1693.91 1865.212)"/>
+    </g>
+</svg>

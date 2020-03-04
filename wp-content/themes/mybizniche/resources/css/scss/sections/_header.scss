@@ -1,0 +1,307 @@
+.header{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+    width: 100%;
+    min-height: 109px;
+	z-index: 99;
+    background-color: $color-white;
+    padding: 0 25px;
+    
+	// .row{
+	// 	max-width: 100%;
+    // }
+    
+    .left-col{
+        display: flex;
+        align-items: center;
+    }
+
+    .right-col{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+	.option-menu{
+        flex: 0 0 30px;
+		width: 30px;
+        height: 21px;
+        display: block;
+		// float: left;
+        // margin: 46px 0 0 35px;
+        margin: 0;
+        background: url("../img/icn-feather-menu.svg") no-repeat;
+        background-size: 100%;
+	}
+
+	.s-icon{
+        flex: 0 0 27px;
+		width: 27px;
+        height: 27px;
+        display: block;
+		background: url("../img/icn-search.svg") no-repeat;
+        background-size: 100%;
+		// float: left;
+        // margin: 41px 0 0 56px;
+        margin: 0 0 0 56px;
+	}
+
+	.sale{
+        display: block;
+		// float: left;
+        // margin: 46px 0 0 56px;
+        margin: 0 0 0 56px;
+		font-size: 16px;
+        font-style: italic;
+        white-space: nowrap;
+
+		.lbl{
+			color: #888;
+		}
+
+		.val{
+			&:before{
+				content: " ";
+				display: inline-block;
+				width: 27px;
+				height: 0px;
+				border: solid 0.5px #222222;
+				margin: 0 12px;
+				vertical-align: middle;
+			}
+
+			color: #888;
+
+			.lbl2{
+				color: #222;
+			}
+
+			strong{
+				color: #14c8f0;
+			}
+		}
+	}
+
+	a.logo{
+		margin: 0 auto;
+		display: block;
+		max-width: 109px;
+    }
+    
+    .m-menu{
+        display: block;
+        padding: 0px;
+        // margin: 43px auto 0;
+        margin: 0 0 0;
+        list-style: none;
+        
+        li{
+            display: inline-block;
+            position: relative;
+            margin-right: 55.5px;
+            
+            a{
+                color: #222;
+                font-weight: 500;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            
+            &:last-child{
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .woo-acc{
+        padding: 0px;
+        // margin-left: 51.6px;
+        margin: 0 0 0 52px;
+        display: block;
+        list-style: none;
+        
+        li{
+            display: inline-block;
+            vertical-align: middle;
+            
+            a{
+                display: inline-block;
+            }
+            
+            a.acc{
+                width: 29.37px;
+                height: 34.148px;
+                background: url("../img/icn-account.svg") no-repeat;
+                background-size: 100%;
+                margin-right: 46px;
+            }
+            
+            a.mini-cart{
+                width: 29px;
+                height: 32px;
+                background: url("../img/icn-shopping-bag.svg") no-repeat;
+                background-size: 100%;
+                // margin-right: 35px;
+                position: relative;
+                
+                .item-c{
+                    position: absolute;
+                    width: 30px;
+                    height: 20px;
+                    text-align: center;
+                    top: -10px;
+                    right: -15px;
+                    
+                    span{
+                        color: #fff;
+                        position: relative;
+                        z-index: 9;
+                    }
+                    
+                    &:before{
+                        content: " ";
+                        left: 0px;
+                        top: 2px;
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        opacity: 0.9;
+                        border-radius: 10px;
+                        box-shadow: -5px 6px 10px 0 rgba(0, 0, 0, 0.15);
+                        background-color: #05c7f2;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    &.fixed{
+        position: fixed;
+        // box-shadow: 0 1px 5px 1px rgba(0,0,0,.1);
+        animation: 0.6s ease headerIn forwards;
+    }
+
+
+    @include media(max-width, 1640px){
+        .s-icon, .sale{
+            margin-left: 35px;
+        }
+    }
+
+    @include media(max-width, 1536px){
+        padding: 0 15px;
+
+        .s-icon, .sale{
+            margin-left: 25px;
+        }
+
+        .sale{
+            font-size: 14px;
+
+            .val{
+                &:before{
+                    width: 20px;
+                    margin: 0 8px;
+                }
+            }
+        }
+
+        .woo-acc{
+            li{
+                a.acc{
+                    margin-right: 25px;
+                }
+            }
+        }
+    }
+
+    @include media(max-width, 1280px){
+        .sale{
+            white-space: normal;
+        }
+
+        .m-menu{
+            li{
+                margin-right: 25px;
+            }
+        }
+
+        .woo-acc{
+            margin-left: 25px;
+        }
+    }
+
+    @include media(max-width, 1072px){
+        .m-menu{
+            li{
+                margin-right: 15px;
+            }
+        }
+    }
+
+    @include media(max-width, 1023px){
+        padding-top: 31px;
+
+        .sale{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            left: 0;
+            margin: 0;
+            padding: 5px 10px;
+            text-align: center;
+            background-color: $color-primary;
+            color: #fff;
+
+            .lbl, .val{
+                color: $color-light-grey;
+            }
+
+            .val{
+                .lbl2{
+                    color: #fff;
+                }
+            }
+        }
+
+        .m-menu{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: $color-primary;
+            z-index: 20;
+            text-align: center;
+            padding: 15px 10px;
+
+            li{
+                margin-right: 20px;
+
+                a{
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    
+    @include media(max-width, 639px){
+        .sale{
+            font-size: 10px;
+            padding: 8px;
+        }
+
+        .left-col{
+            justify-content: space-between;
+        }
+
+        .woo-acc{
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

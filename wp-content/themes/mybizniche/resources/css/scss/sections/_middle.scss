@@ -1,0 +1,47 @@
+.section{
+    padding-top: 55px;
+    padding-bottom: 55px;
+    position: relative;
+    z-index: 1;
+
+    .background-objects{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+
+        & > *{
+            position: absolute;
+        }
+    }
+
+    @include media(max-width, 1536px){
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include media(max-width, 1023px){
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.section-title{
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.18;
+    color: $color-dark;
+
+    @include media(max-width, 1023px){
+        font-size: 30px;
+    }
+
+    @include media(max-width, 639px){
+        font-size: 20px;
+    }
+}

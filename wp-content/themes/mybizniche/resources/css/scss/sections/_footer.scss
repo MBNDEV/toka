@@ -1,0 +1,134 @@
+.footer{
+    background-color: #fafafa;
+    padding-top: 300px;
+    padding-bottom: 45px;
+
+    .f-top{
+        border-bottom: 1.5px solid #dfdfdf;
+        padding-bottom: 10px;
+        margin-bottom: 55px;
+
+        .contact-info{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+    }
+
+    .f-menu{
+        h4{
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-dark;
+            text-transform: uppercase;
+            margin-bottom: 29px;
+        }
+
+        ul{
+            li{
+                a{
+                    padding: 0;
+                    margin-bottom: 20px;
+                    color: $color-dark;
+                    text-transform: uppercase;
+                    
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+                &.hide-link > a{
+                    display: none;
+                }
+            }
+
+            &.sub-menu{
+                padding-left: 10px;
+
+                li{
+                    a{
+                        color: $color-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    .f-bottom{
+        max-width: 750px;
+        margin: 225px auto 0;
+    }
+
+    .f-cards{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        li{
+            margin: 0 10px;
+        }
+    }
+
+    .f-copyright{
+        margin-bottom: 25px;
+
+        p{
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.79;
+            color: $color-grey;
+            margin-bottom: 0;
+        }
+    }
+
+    .f-note{
+        p{
+            font-size: 14px;
+            line-height: 2.14;
+            color: $color-grey;
+            margin-bottom: 0;
+        }
+    }
+
+    @include media(max-width, 1536px){
+        padding-top: 185px;
+
+        .f-top{
+            .contact-info{
+                li.calendar{
+                    .badge{
+                        width: 165px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(max-width, 1200px){
+        .f-top{
+            .contact-info{
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    @include media(max-width, 639px){
+        .f-top{
+            .contact-info{
+                & > li{
+                    flex: 0 0 100%;
+                }
+            }
+        }
+
+        .f-bottom{
+            margin-top: 75px;
+        }
+    }
+}

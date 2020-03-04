@@ -1,0 +1,94 @@
+/*
+** Theme Name: Mybizniche
+** Theme URI: https://mybizniche.com/
+** Author: Mybizniche
+** Author URI: https://mybizniche.com/
+** Version: 1.0
+*/
+
+/* Block Overrides */
+.wp-block-group__inner-container, .wp-block-cover__inner-container {max-width: 75rem; padding:0 15px; margin: 0 auto;}
+.wp-block-group__inner-container .wp-block-group__inner-container {padding: 0; max-width: none;}
+.no-width .wp-block-group__inner-container {max-width: none;}
+
+.grid-container .wp-block-group__inner-container, 
+.grid-container .wp-block-cover__inner-container,
+.wp-block-group .wp-block-cover__inner-container,
+.wp-block-cover .wp-block-group__inner-container {padding: 0; max-width: none;}
+
+.wp-block-button.aligncenter {text-align: center;}
+.wp-block-button__link {display:inline-block; font-size: 16px; font-weight: 500; text-transform: uppercase; line-height: 22px; padding: 10px 25px; position: relative; letter-spacing: 4.8px;}
+.btn-arrow .wp-block-button__link {position: relative; padding-right: 50px;}
+.btn-arrow .wp-block-button__link:after {content: ""; transition:all 0.5s ease; display: inline-block; position: absolute; right: 20px; width: 25px; height: 21px; margin: 0 0 0 5px; vertical-align: middle; background: url(assets/img/icn-arrow-right.svg) no-repeat right center / 25px;}
+.btn-arrow .wp-block-button__link:hover:after {right: 10px;}
+
+
+/* page content */
+.page-content {}
+.page-content ul {margin: 0; padding: 0 0 0 10px;}
+.page-content ul li {list-style: none; position: relative; padding: 0 0 0 26px; margin-bottom: 15px;font-family: "Ubuntu", sans-serif;font-size: 24px;font-weight: 300;line-height: 1.55;color: #6a7376;}
+.page-content ul li:before {content: ""; position: absolute; top: 16px; left: 1px; width: 8px; height: 8px; background: #14c8f0; border-radius: 50%;}
+
+.sec-why-toka {padding: 120px 0 80px; text-align: center;}
+.sec-why-toka * {max-width: 1170px; margin: 0 auto;}
+.sec-why-toka h1 {color: #b2b2ae; margin-bottom: 30px;}
+.sec-why-toka h1 img {display: block; width: auto !important; margin: 10px auto;}
+
+.sec-tagline {position: relative; z-index: 1; height: 100vh; background-repeat: no-repeat; background-position: center center; background-size: cover;}
+.sec-tagline:before {content: ""; z-index: -1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100%;}
+.sec-tagline:after {content: ""; z-index: -1; position: absolute; left: 0; right: 0; bottom: 0; height: 135px; background: url(/wp-content/uploads/2020/03/img-frame-bottom.png) no-repeat center top / 100% 135px;}
+.sec-tagline h2 {font-size: 40px; font-weight: 500; font-style: italic; color: #222; width: 570px; max-width: 100%; padding-top: 10%;}
+.sec-tagline h2 strong {color: #14c8f0; font-weight: 500;}
+
+.sec-origin {position: relative; z-index: 1; min-height: 110vh; background-repeat: no-repeat; background-position: center 250px; background-size: cover;}
+.sec-origin:before {content: ""; z-index: -1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100%;}
+.sec-origin:after {content: ""; z-index: -1; position: absolute; left: 0; right: 0; bottom: 0; height: 330px; background: url(/wp-content/uploads/2020/03/img-frame-bottom2.png) no-repeat center top / 100% 330px;}
+.sec-origin .origin-header {position: relative; padding: 90px 0 0;}
+.sec-origin .origin-header:before {content:""; position: absolute; z-index: -1; top:-65px; left: calc((-100vw - -1427px)/2);  right: calc((-100vw - -1427px)/2); height: 390px; background: url(/wp-content/uploads/2020/03/toka-fade.png) no-repeat center top / 100%;}
+.origin-header > div > * {width: 1170px; max-width: 100%;}
+.origin-header h2 {color: #222; font-size: 60px; font-weight: 500;}
+.origin-header h2 strong {color: #14c8f0;  font-weight: 500;}
+.origin-header p {font-size: 40px; color: #6a7376; font-weight: 300;}
+.origin-header p strong {font-weight: 500; color: #222;}
+
+.sec-mission-vision {padding: 10px 0 60px;}
+.sec-mission-vision h3 {font-weight: 500;}
+.sec-mission-vision h3 strong {font-weight: 500; color: #14c8f0;}
+
+
+.sec-faqs h2 {text-align: center; font-weight: 300; margin-bottom: 50px;}
+.sec-faqs .btn-fullwidth {background: #6a7376; padding: 50px 0; position: relative;}
+.sec-faqs .btn-fullwidth:before {content: "";background: #6a7376;  position: absolute; left: calc((-100vw - -1427px) / 2); right: calc((-100vw - -1427px) / 2); top: 0; bottom: 0;}
+.sec-faqs .btn-fullwidth a {color: #fff;}
+
+.featured-faqs {position: relative; display: flex; flex-flow: wrap;}
+.featured-faqs .sc-faq-item {padding:100px 0; position: relative; font-size: 25px;}
+.featured-faqs .sc-faq-item h3 {font-size: 65px; font-weight: normal; line-height: 1.2;}
+.featured-faqs .sc-faq-item p {font-size: 25px; line-height: 2;}
+.featured-faqs .sc-faq-item:nth-child(3n+1) {width: 100%; background: #1c8ece; color: #fff;}
+.featured-faqs .sc-faq-item:nth-child(3n+1):before {content:""; background: #1c8ece; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1427px) / 2); right: calc((-100vw - -1427px) / 2);}
+.featured-faqs .sc-faq-item:nth-child(3n+1) *{color: #fff;}
+
+.featured-faqs .sc-faq-item:nth-child(3n+2) {width: 60%; background: #414141; color: #b0b0b0; padding-right: 90px;}
+.featured-faqs .sc-faq-item:nth-child(3n+2):before {content:""; background: #414141; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1427px) / 2); right: 100%;}
+.featured-faqs .sc-faq-item:nth-child(3n+2) *{color: #fff;}
+.featured-faqs .sc-faq-item:nth-child(3n+2) p {color: #b0b0b0;}
+
+.featured-faqs .sc-faq-item:nth-child(3n+3) {width: 40%; padding-left: 90px;}
+.featured-faqs .sc-faq-item:nth-child(3n+3) h3 {color: #14c8f0;}
+
+
+
+
+
+
+@media (min-width: 1600px) {
+	.wp-block-group__inner-container, .wp-block-cover__inner-container {max-width: 1440px;}
+}
+
+
+/* Landscape tablet */
+@media (max-width: 1199px) {
+	.grid-container {padding-left: 30px; padding-right: 30px;}
+	.wp-block-group__inner-container, .wp-block-cover__inner-container {padding-left: 30px; padding-right: 30px;}
+}

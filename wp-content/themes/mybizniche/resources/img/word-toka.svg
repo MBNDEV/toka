@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="569.992" height="115.735" viewBox="0 0 569.992 115.735">
+    <defs>
+        <style>
+            .prefix__cls-1{fill-rule:evenodd}
+        </style>
+    </defs>
+    <g id="prefix__word-toka" transform="translate(-222.871 -315.901)">
+        <g id="prefix__Group_1" data-name="Group 1" transform="translate(222.871 315.901)">
+            <path id="prefix__Path_58" d="M221.3 318.322l-11.257 26.368H187.4l49.252-112.76h19.588l49.252 112.76h-23.285l-11.094-26.368-8.2-19.749-16.775-38.855-16.638 38.855-8.2 19.749z" class="prefix__cls-1" data-name="Path 58" transform="translate(264.499 -230.831)"/>
+            <path id="prefix__Path_59" d="M157.52 285.09l50-52.87h27.386l-46.814 48.448 48.397 63.532h-26.716l-36.738-48.422-15.515 15.948V344.2H135.6V232.22h21.92v52.87z" class="prefix__cls-1" data-name="Path 59" transform="translate(177.492 -230.344)"/>
+            <path id="prefix__Path_60" d="M71 289.7v-.3c0-32.933 25.778-57.881 58.631-57.881s58.2 24.626 58.2 57.559v.322c0 32.933-25.778 57.854-58.631 57.854S71 322.628 71 289.7zm94.083 0v-.3c0-20.446-14.819-37.515-35.747-37.515S93.75 268.633 93.75 289.079v.322c0 20.446 14.819 37.515 35.747 37.515s35.452-16.721 35.452-37.167z" class="prefix__cls-1" data-name="Path 60" transform="translate(68.986 -231.52)"/>
+            <path id="prefix__Path_61" d="M53.408 252.773H18.76V232.22h91.4v20.553H75.515V344.2H53.408v-91.43z" class="prefix__cls-1" data-name="Path 61" transform="translate(-18.76 -230.344)"/>
+        </g>
+    </g>
+</svg>

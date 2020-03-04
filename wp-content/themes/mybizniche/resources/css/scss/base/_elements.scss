@@ -1,0 +1,75 @@
+body{
+    font-family: $body-font-family;
+    font-size: $body-font-size;
+    color: $color-dark;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: bold;
+    font-family: $heading-font-family;
+}
+
+h1{
+    font-size: 90px;
+    line-height: 1.11em;
+    font-weight: 500;
+}
+h2{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.25em;
+    color: $color-primary;
+}
+
+h3{
+    font-size:40px;
+    font-weight:500;
+    color: $color-primary;
+}
+
+a{
+    color: $color-primary;
+    transition: 0.3s ease all;
+
+    &:hover,
+    &:focus{
+        color: $color-secondary;
+    }
+}
+
+p{
+    margin-bottom: 25px;  
+    font-family: $paragraph-font-family;
+    font-size: $paragraph-font-size;
+    font-weight: $paragraph-font-weight;
+    line-height: $paragraph-line-height;
+    color: $paragraph-color;
+}
+
+
+
+@include media(max-width, 1023px){
+    body{
+        font-size: $body-font-size * 0.9;
+    }
+
+    p{
+        font-size: $paragraph-font-size * 0.9;
+    }
+}
+
+
+@include media(max-width, 639px){
+    body{
+        font-size: $body-font-size * 0.8;
+    }
+
+    p{
+        font-size: $paragraph-font-size * 0.8;
+    }
+}
