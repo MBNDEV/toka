@@ -14,6 +14,8 @@ function mbn_theme_setup(){
     add_theme_support('title-tag');
     
     add_theme_support('post-thumbnails');
+
+    add_theme_support( 'woocommerce');
     
     //set_post_thumbnail_size(1568, 9999);
     // add_image_size('small-thumbnail', '150', '100');
