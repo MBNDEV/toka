@@ -235,7 +235,19 @@ function initMap() {
     marker.addListener('click', function () {
         infowindow.open(map, marker);
     });
-    infowindow.open(map, marker);
+    
+    checkPopup();
 
+    $(window).resize(function(){
+        checkPopup();
+    });
+    function checkPopup(){
+        var ww = $(window).innerWidth();
+        if(ww<=1023){
+            infowindow.close();
+        }else{
+            infowindow.open(map, marker);
+        }
+    }
     
 }

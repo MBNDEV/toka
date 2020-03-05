@@ -77,18 +77,27 @@
 .featured-faqs .sc-faq-item:nth-child(3n+3) {width: 40%; padding-left: 90px;}
 .featured-faqs .sc-faq-item:nth-child(3n+3) h3 {color: #14c8f0;}
 
-
-
-
-
+.parent-pageid-65 .page-content{padding-top:100px;padding-bottom:100px}
 
 @media (min-width: 1600px) {
 	.wp-block-group__inner-container, .wp-block-cover__inner-container {max-width: 1440px;}
 }
 
-
 /* Landscape tablet */
 @media (max-width: 1199px) {
 	.grid-container {padding-left: 30px; padding-right: 30px;}
 	.wp-block-group__inner-container, .wp-block-cover__inner-container {padding-left: 30px; padding-right: 30px;}
+}
+
+@media (max-width: 1366px){
+	.parent-pageid-65 .page-content h1{font-size:32px}
+}
+
+@media (max-width: 1279px){
+	.parent-pageid-65 .page-content h1{font-size:32px;text-align: center;}
+	.parent-pageid-65 .page-content p{text-align: center;font-size:18px}
+}
+@media (max-width: 1023px){
+
+	.parent-pageid-65 .page-content p{text-align: center;font-size:18px}
 }
