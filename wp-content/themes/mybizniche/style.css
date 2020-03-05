@@ -6,6 +6,8 @@
 ** Version: 1.0
 */
 
+body {overflow-x: hidden;}
+
 /* Block Overrides */
 .wp-block-group__inner-container, .wp-block-cover__inner-container {max-width: 75rem; padding:0 15px; margin: 0 auto;}
 .wp-block-group__inner-container .wp-block-group__inner-container {padding: 0; max-width: none;}
@@ -30,26 +32,33 @@
 .page-content ul li:before {content: ""; position: absolute; top: 16px; left: 1px; width: 8px; height: 8px; background: #14c8f0; border-radius: 50%;}
 
 .sec-why-toka {padding: 120px 0 80px; text-align: center;}
-.sec-why-toka * {max-width: 1170px; margin: 0 auto;}
+.sec-why-toka * {width: 1170px; max-width: 100%; margin: 0 auto;}
 .sec-why-toka h1 {color: #b2b2ae; margin-bottom: 30px;}
 .sec-why-toka h1 img {display: block; width: auto !important; margin: 10px auto;}
 
-.sec-tagline {position: relative; z-index: 1; height: 100vh; background-repeat: no-repeat; background-position: center center; background-size: cover;}
-.sec-tagline:before {content: ""; z-index: -1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100%;}
-.sec-tagline:after {content: ""; z-index: -1; position: absolute; left: 0; right: 0; bottom: 0; height: 135px; background: url(/wp-content/uploads/2020/03/img-frame-bottom.png) no-repeat center top / 100% 135px;}
-.sec-tagline h2 {font-size: 40px; font-weight: 500; font-style: italic; color: #222; width: 570px; max-width: 100%; padding-top: 10%;}
+.sec-tagline {position: relative; z-index: 1;}
+.sec-tagline h2 {position: absolute; z-index: 1; font-size: 40px; font-weight: 500; font-style: italic; color: #222; width: 570px; max-width: 100%; padding-top: 10%;}
 .sec-tagline h2 strong {color: #14c8f0; font-weight: 500;}
+.sec-tagline figure {margin: 0 calc((-100vw - -1410px) / 2); position: relative; max-height: 90vh; overflow: hidden;}
+.sec-tagline figure:before {content: ""; z-index: 1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100%;}
+.sec-tagline figure:after {content: ""; z-index: 1; position: absolute; left: 0; right: 0; bottom: 0; height: 135px; background: url(/wp-content/uploads/2020/03/img-frame-bottom.png) no-repeat center bottom / 100% auto;}
 
-.sec-origin {position: relative; z-index: 1; min-height: 110vh; background-repeat: no-repeat; background-position: center 250px; background-size: cover;}
-.sec-origin:before {content: ""; z-index: -1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100%;}
-.sec-origin:after {content: ""; z-index: -1; position: absolute; left: 0; right: 0; bottom: 0; height: 330px; background: url(/wp-content/uploads/2020/03/img-frame-bottom2.png) no-repeat center top / 100% 330px;}
-.sec-origin .origin-header {position: relative; padding: 90px 0 0;}
-.sec-origin .origin-header:before {content:""; position: absolute; z-index: -1; top:-65px; left: calc((-100vw - -1427px)/2);  right: calc((-100vw - -1427px)/2); height: 390px; background: url(/wp-content/uploads/2020/03/toka-fade.png) no-repeat center top / 100%;}
+.sec-tagline figure img {width: 100%;}
+
+.sec-origin {position: relative; z-index: 1;}
+.sec-origin figure {margin: 0 calc((-100vw - -1410px) / 2); position: relative;}
+.sec-origin figure img {width: 100%;}
+.sec-origin figure:before {content: ""; z-index: -1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100% auto;}
+.sec-origin figure:after {content: ""; z-index: -1; position: absolute; left: 0; right: 0; bottom: 0; height: 330px; background: url(/wp-content/uploads/2020/03/img-frame-bottom2.png) no-repeat center bottom / 100% auto;}
+.sec-origin h2 {color: #222; font-size: 60px; font-weight: 500;}
+.sec-origin h2 strong {color: #14c8f0;  font-weight: 500;}
+.sec-origin p {font-size: 40px; color: #6a7376; font-weight: 300;}
+.sec-origin p strong {font-weight: 500; color: #222;}
+
+.sec-origin .origin-header {position: relative; padding: 90px 0 0; margin-bottom: -230px; z-index: 10;}
+.sec-origin .origin-header:before {content:""; position: absolute; z-index: -1; top:-65px; left: calc((-100vw - -1410px)/2);  right: calc((-100vw - -1410px)/2); height: 390px; background: url(/wp-content/uploads/2020/03/toka-fade.png) no-repeat center top / 100%;}
 .origin-header > div > * {width: 1170px; max-width: 100%;}
-.origin-header h2 {color: #222; font-size: 60px; font-weight: 500;}
-.origin-header h2 strong {color: #14c8f0;  font-weight: 500;}
-.origin-header p {font-size: 40px; color: #6a7376; font-weight: 300;}
-.origin-header p strong {font-weight: 500; color: #222;}
+
 
 .sec-mission-vision {padding: 10px 0 60px;}
 .sec-mission-vision h3 {font-weight: 500;}
@@ -58,37 +67,104 @@
 
 .sec-faqs h2 {text-align: center; font-weight: 300; margin-bottom: 50px;}
 .sec-faqs .btn-fullwidth {background: #6a7376; padding: 50px 0; position: relative;}
-.sec-faqs .btn-fullwidth:before {content: "";background: #6a7376;  position: absolute; left: calc((-100vw - -1427px) / 2); right: calc((-100vw - -1427px) / 2); top: 0; bottom: 0;}
+.sec-faqs .btn-fullwidth:before {content: "";background: #6a7376;  position: absolute; left: calc((-100vw - -1410px) / 2); right: calc((-100vw - -1410px) / 2); top: 0; bottom: 0;}
 .sec-faqs .btn-fullwidth a {color: #fff;}
 
 .featured-faqs {position: relative; display: flex; flex-flow: wrap;}
 .featured-faqs .sc-faq-item {padding:100px 0; position: relative; font-size: 25px;}
-.featured-faqs .sc-faq-item h3 {font-size: 65px; font-weight: normal; line-height: 1.2;}
+.featured-faqs .sc-faq-item h3 {font-size: 65px; font-weight: normal; line-height: 1.2; font-style: italic;}
 .featured-faqs .sc-faq-item p {font-size: 25px; line-height: 2;}
 .featured-faqs .sc-faq-item:nth-child(3n+1) {width: 100%; background: #1c8ece; color: #fff;}
-.featured-faqs .sc-faq-item:nth-child(3n+1):before {content:""; background: #1c8ece; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1427px) / 2); right: calc((-100vw - -1427px) / 2);}
+.featured-faqs .sc-faq-item:nth-child(3n+1):before {content:""; background: #1c8ece; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1410px) / 2); right: calc((-100vw - -1410px) / 2);}
 .featured-faqs .sc-faq-item:nth-child(3n+1) *{color: #fff;}
 
-.featured-faqs .sc-faq-item:nth-child(3n+2) {width: 60%; background: #414141; color: #b0b0b0; padding-right: 90px;}
-.featured-faqs .sc-faq-item:nth-child(3n+2):before {content:""; background: #414141; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1427px) / 2); right: 100%;}
+.featured-faqs .sc-faq-item:nth-child(3n+2) {width: 55%; background: #414141; color: #b0b0b0; padding-right: 60px;}
+.featured-faqs .sc-faq-item:nth-child(3n+2):before {content:""; background: #414141; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1410px) / 2); right: 100%;}
 .featured-faqs .sc-faq-item:nth-child(3n+2) *{color: #fff;}
 .featured-faqs .sc-faq-item:nth-child(3n+2) p {color: #b0b0b0;}
 
-.featured-faqs .sc-faq-item:nth-child(3n+3) {width: 40%; padding-left: 90px;}
+.featured-faqs .sc-faq-item:nth-child(3n+3) {width: 45%; padding-left: 60px;}
 .featured-faqs .sc-faq-item:nth-child(3n+3) h3 {color: #14c8f0;}
 
-
-
-
+.featured-faqs .slick-dots {text-align: center; padding: 0;}
+.featured-faqs .slick-dots li {list-style: none; display: inline-block; padding: 0 10px;}
+.featured-faqs .slick-dots li:before {display: none;}
+.featured-faqs .slick-dots button {display: block; font-size: 0; padding: 0; width: 12px; height: 12px; border:1px solid #e1e1e1; border-radius: 50%;;}
+.featured-faqs .slick-dots .slick-active button {background: #e1e1e1;}
 
 
 @media (min-width: 1600px) {
 	.wp-block-group__inner-container, .wp-block-cover__inner-container {max-width: 1440px;}
-}
 
+	.featured-faqs .sc-faq-item:nth-child(3n+2) {width: 60%; padding-right: 90px;}
+	.featured-faqs .sc-faq-item:nth-child(3n+3) {width: 40%; padding-left: 90px;}
+
+}
+@media (max-width: 1599px) {
+	.sec-tagline figure {margin: 0 calc((-100vw - -1170px) / 2);}
+
+	.sec-origin figure {margin: 0 calc((-100vw - -1170px) / 2);}
+	.sec-origin .origin-header::before {left:calc((-100vw - -1170px) / 2); right: calc((-100vw - -1170px) / 2);}
+
+	.featured-faqs .sc-faq-item:nth-child(3n+1):before {left: calc((-100vw - -1170px) / 2); right: calc((-100vw - -1170px) / 2);}
+	.featured-faqs .sc-faq-item:nth-child(3n+2):before {left: calc((-100vw - -1170px) / 2);}
+	.sec-faqs .btn-fullwidth:before {left: calc((-100vw - -1170px) / 2); right: calc((-100vw - -1170px) / 2);}
+	
+}
 
 /* Landscape tablet */
 @media (max-width: 1199px) {
 	.grid-container {padding-left: 30px; padding-right: 30px;}
 	.wp-block-group__inner-container, .wp-block-cover__inner-container {padding-left: 30px; padding-right: 30px;}
+	
+	.sec-tagline figure {margin: 0 -30px;}
+
+	.sec-origin figure {margin: 0 -30px;}
+	
+	.sec-origin .origin-header::before {left:-30px; right: -30px;}
+	.origin-header h2 {font-size: 40px;}
+	.origin-header p {font-size: 32px;}
+
+	.featured-faqs .sc-faq-item h3 {font-size: 45px;}
+	.featured-faqs .sc-faq-item p {font-size: 22px;}
+	.featured-faqs .sc-faq-item:nth-child(3n+1):before {left: -30px; right: -30px;}
+	.featured-faqs .sc-faq-item:nth-child(3n+2):before {left: -30px;}
+	.sec-faqs .btn-fullwidth:before {left: -30px; right: -30px;}
+	
+}
+
+@media (max-width: 1023px) {
+	.sec-tagline h2 {position: static; width: auto; max-width: 100%; text-align: center; padding-top: 0;}
+	.origin-header p {font-size: 26px;}
+
+	.sec-origin .origin-header {margin: 0;}
+	.sec-origin .origin-header::before {top: 20px;}
+	
+	.featured-faqs {margin: 0 -30px; padding: 50px 30px; background: #1c8ece;}
+	.featured-faqs .sc-faq-item {display: block; width: auto; padding:0 !important; background: none !important;}
+	.featured-faqs .sc-faq-item:before, .featured-faqs .sc-faq-item:after {display: none !important;}
+	.featured-faqs .sc-faq-item * {color: #fff !important;}
+	.sec-faqs .btn-fullwidth {padding: 25px 0;}
+
+	.sec-mission-vision h3 {text-align: center;}
+}
+
+@media (max-width: 639px) {
+	body {font-size: 18px;}
+
+	.page-content ul li {font-size: 18px;}
+
+	.sec-why-toka h1 {font-size: 32px;}
+	.sec-why-toka h1 img {max-width: 75%;}
+
+	.sec-tagline h2 {font-size: 25px;}
+
+	.origin-header h2 {font-size: 32px;}
+	.origin-header p {font-size: 22px;}
+
+	.sec-mission-vision h3 {font-size: 24px;}
+	
+	.featured-faqs .sc-faq-item h3 {font-size: 28px;}
+	.featured-faqs .sc-faq-item p {font-size: 18px;}
+
 }
