@@ -101,6 +101,11 @@ function mbn_enqueue_scripts(){
     
     // App
     wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [], $wp_version);
+    
+    if(is_page_template("templates/template-contact.php")){
+        wp_enqueue_style('contact-css', MBN_ASSETS_URI.'/css/contact.css', [], $wp_version);
+        wp_enqueue_script('contact-js', MBN_ASSETS_URI.'/js/contact.js', [], $wp_version);
+    }
     wp_enqueue_script('app', MBN_ASSETS_URI.'/js/app.js', [], $wp_version);
     
 

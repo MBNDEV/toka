@@ -91,6 +91,7 @@ body {overflow-x: hidden;}
 .featured-faqs .slick-dots li:before {display: none;}
 .featured-faqs .slick-dots button {display: block; font-size: 0; padding: 0; width: 12px; height: 12px; border:1px solid #e1e1e1; border-radius: 50%;;}
 .featured-faqs .slick-dots .slick-active button {background: #e1e1e1;}
+.parent-pageid-65 .page-content{padding-top:100px;padding-bottom:100px}
 
 
 @media (min-width: 1600px) {
@@ -110,6 +111,15 @@ body {overflow-x: hidden;}
 	.featured-faqs .sc-faq-item:nth-child(3n+2):before {left: calc((-100vw - -1170px) / 2);}
 	.sec-faqs .btn-fullwidth:before {left: calc((-100vw - -1170px) / 2); right: calc((-100vw - -1170px) / 2);}
 	
+}
+
+@media (max-width: 1366px){
+	.parent-pageid-65 .page-content h1{font-size:32px}
+}
+
+@media (max-width: 1279px){
+	.parent-pageid-65 .page-content h1{font-size:32px;text-align: center;}
+	.parent-pageid-65 .page-content p{text-align: center;font-size:18px}
 }
 
 /* Landscape tablet */
@@ -147,6 +157,7 @@ body {overflow-x: hidden;}
 	.sec-faqs .btn-fullwidth {padding: 25px 0;}
 
 	.sec-mission-vision h3 {text-align: center;}
+  .parent-pageid-65 .page-content p{text-align: center;font-size:18px}
 }
 
 @media (max-width: 639px) {
@@ -166,5 +177,4 @@ body {overflow-x: hidden;}
 	
 	.featured-faqs .sc-faq-item h3 {font-size: 28px;}
 	.featured-faqs .sc-faq-item p {font-size: 18px;}
-
 }
