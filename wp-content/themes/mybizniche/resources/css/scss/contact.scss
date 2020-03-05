@@ -1,0 +1,156 @@
+@import "main";
+
+
+section.banner {
+    h1 {
+        padding: 106px 0 149px
+    }
+}
+
+section.map_section {
+    display:block;
+    position: relative;
+    width:100%;
+    height: 720px;
+    overflow-y:hidden;
+
+    #map {
+        width: 150%;
+        min-height: 993px;
+        margin-left:-50%;
+    }
+
+    .overlay-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        .box-cont {
+            display: block;
+            padding: 41px 48px 0px;
+            margin-top: 78px;
+            background-color: $color-white;
+            width: 100%;
+            max-width: 570px;
+            min-height: 642px;
+
+            p {
+                font-size: 18px;
+                line-height: 1.94em;
+
+                strong {
+                    color: $color-secondary;
+                }
+            }
+
+            span.wpcf7-not-valid-tip {
+                margin-top: -20px;
+                font-size: 12px;
+            }
+
+            span.first-name {
+                width: calc(50% - 5px);
+                float: left;
+            }
+            div.wpcf7-validation-errors, div.wpcf7-acceptance-missing{
+                margin-bottom:20px;
+            }
+
+            span.last-name {
+                width: 50%;
+                float: right;
+            }
+
+            textarea {
+                height: 160px;
+            }
+
+            select {
+                background-image: none;
+            }
+
+            ::-webkit-input-placeholder {
+                color: $color-textfield-gray;
+                opacity: 1;
+            }
+
+            ::-moz-placeholder {
+                color: $color-textfield-gray;
+                opacity: 1;
+            }
+
+            :-ms-input-placeholder {
+                color: $color-textfield-gray;
+                opacity: 1;
+            }
+
+            :-moz-placeholder {
+                color: $color-textfield-gray;
+                opacity: 1;
+            }
+        }
+    }
+    .popupinfo-cont{
+        display:none;
+    }
+    .popupinfo{
+       
+        overflow: hidden;
+        img{
+            display: block;
+            margin-bottom:16px;
+        }
+        ul{
+            display: block;
+            list-style: none;
+            margin:0;
+            padding:0px;
+            li{
+                font-family: "Roboto";
+                font-size:14px;
+                color: $color-grey;
+                line-height: 1.79em;
+                font-weight: 400;
+                position: relative;
+                padding-left: 41px;
+                margin-bottom:5px;
+                &:before{
+                    content:" ";
+                    width:31px;
+                    height:31px;
+                    position: absolute;
+                    top:-4px;
+                    left:0px;
+                    
+                }
+                &.address:before{
+                   
+                    background:url("../img/icn-location-pin.svg") no-repeat;
+                }
+                &.sched{
+                    background:url("../img/icn-cals.svg") no-repeat;
+                }
+                &.phone{
+                    background:url("../img/icn-call.svg") no-repeat;
+                }
+                .store-status{
+                    width: 100%;
+                    max-width: 210px;
+                    height: 26px;
+                    border-radius: 23px;
+                    background-color: $color-dark;
+                    display:inline-block;
+                    font-family: "Roboto";
+                    font-size: 14px;
+                    line-height: 1.79em;
+                    text-align: center;
+                    color: #d1d1d1;
+                    margin-left:18px
+                }
+            }
+        }
+    } 
+
+
+}

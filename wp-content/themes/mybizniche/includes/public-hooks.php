@@ -116,6 +116,21 @@ function mbn_add_lazyload_end() { ob_end_flush(); }
 //add_action('shutdown', 'mbn_add_lazyload_end');
 
 
+/**
+ * 
+ * Add Google Maps Api Contact
+ * 
+ */
+function mbn_google_maps_api(){
+    if(is_page_template("templates/template-contact.php")){
+?>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDac2mOtJr_IktjUhiLZYRL_xHzxRbodRE&callback=initMap"
+    async defer></script>
+    <?php
+    }
+}
+
+add_action("wp_footer", "mbn_google_maps_api", 99);
 
 
 /**

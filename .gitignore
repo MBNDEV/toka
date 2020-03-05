@@ -1,1 +1,4 @@
 /wp-content/themes/mybizniche/mybizniche/node_modules/*
+node_modules
+local.php
+.htaccess
