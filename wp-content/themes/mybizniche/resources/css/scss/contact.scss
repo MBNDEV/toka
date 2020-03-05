@@ -1,0 +1,287 @@
+@import "main";
+
+section {
+    
+    &.banner {
+        h1 {
+            padding: 166px 0 140px
+        }
+        
+    }
+    &.contact_section{
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 720px;
+        z-index:10;
+        .overlay-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            z-index: 2;
+
+            .box-cont {
+                display: block;
+                padding: 41px 48px 0px;
+                margin-top: 78px;
+                background-color: $color-white;
+                width: 100%;
+                max-width: 570px;
+                min-height: 642px;
+
+                p {
+                    font-size: 18px;
+                    line-height: 1.94em;
+
+                    strong {
+                        color: $color-secondary;
+                    }
+                }
+
+                span.wpcf7-not-valid-tip {
+                    margin-top: -20px;
+                    font-size: 12px;
+                }
+
+                span.first-name {
+                    width: calc(50% - 5px);
+                    float: left;
+                }
+
+                div.wpcf7-validation-errors,
+                div.wpcf7-acceptance-missing {
+                    margin-bottom: 20px;
+                    clear:both;
+                    float:left;
+                    
+                }
+
+                span.last-name {
+                    width: 50%;
+                    float: right;
+                }
+
+                textarea {
+                    height: 160px;
+                }
+
+                select {
+                    background-image: none;
+                }
+
+                ::-webkit-input-placeholder {
+                    color: $color-textfield-gray;
+                    opacity: 1;
+                }
+
+                ::-moz-placeholder {
+                    color: $color-textfield-gray;
+                    opacity: 1;
+                }
+
+                :-ms-input-placeholder {
+                    color: $color-textfield-gray;
+                    opacity: 1;
+                }
+
+                :-moz-placeholder {
+                    color: $color-textfield-gray;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &.map_section {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 720px;
+        overflow-y: hidden;
+        margin-top:-720px;
+
+        #map {
+            width: 150%;
+            min-height: 993px;
+            margin-left: -50%;
+        }
+
+       
+
+        .popupinfo-cont {
+            display: none;
+        }
+
+        .popupinfo {
+
+            overflow: hidden;
+
+            img {
+                display: block;
+                margin-bottom: 16px;
+            }
+
+            ul {
+                display: block;
+                list-style: none;
+                margin: 0;
+                padding: 0px;
+
+                li {
+                    font-family: "Roboto";
+                    font-size: 14px;
+                    color: $color-grey;
+                    line-height: 1.79em;
+                    font-weight: 400;
+                    position: relative;
+                    padding-left: 41px;
+                    margin-bottom: 5px;
+
+                    &:before {
+                        content: " ";
+                        width: 31px;
+                        height: 31px;
+                        position: absolute;
+                        top: -4px;
+                        left: 0px;
+
+                    }
+
+                    &.address:before {
+
+                        background: url("../img/icn-location-pin.svg") no-repeat;
+                    }
+
+                    &.sched {
+                        background: url("../img/icn-cals.svg") no-repeat;
+                    }
+
+                    &.phone {
+                        background: url("../img/icn-call.svg") no-repeat;
+                    }
+
+                    .store-status {
+                        width: 100%;
+                        max-width: 210px;
+                        height: 26px;
+                        border-radius: 23px;
+                        background-color: $color-dark;
+                        display: inline-block;
+                        font-family: "Roboto";
+                        font-size: 14px;
+                        line-height: 1.79em;
+                        text-align: center;
+                        color: #d1d1d1;
+                        margin-left: 18px
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(max-width, 1365px) {
+    .overlay-container {
+        .box-cont {
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@include media(max-width, 1279px) {
+    
+    .overlay-container {
+        .box-cont {
+
+            span.last-name,
+            span.first-name {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@include media(max-width, 1023px) {
+    
+    section {
+        &.banner {
+            h1 {
+                padding: 120px 0 0px;
+                font-size: 32px;
+            }
+        }
+        &.contact_section{
+            .overlay-container {
+                position: static;
+
+                .box-cont {
+                    p{
+                        text-align: center;
+                    }
+                    padding: 6px 36px;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &.map_section {
+            height: auto;
+            overflow-y: visible;
+            margin-top:0px;
+            #map {
+                width: 100%;
+                height: 720px;
+                min-height: auto;
+                margin-left:0px;
+            }
+
+            
+        }
+    }
+}
+
+@include media(max-width, 639px) {
+    section {
+        &.banner {
+            h1 {
+                
+                font-size: 32px;
+            }
+        }
+        &.contact_section {
+          
+            .overlay-container {
+                .box-cont {
+                    padding:6px 25px;
+                    p{
+                        font-size:14px;
+                    }
+                    select,
+                    textarea,
+                    input[type="text"],
+                    input[type="phone"],
+                    input[type="email"] {
+                        font-size: 14px;
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+
+@include media(max-width, 320px) {
+    section {
+        &.map_section {
+            .overlay-container {
+                .box-cont {
+                    padding: 25px; 
+                }
+            }
+        }
+    }
+}
