@@ -117,3 +117,4 @@ It is in the main Block Editor menu, see this [screenshot](https://ps.w.org/clas
 5. Link to switch to the Classic Editor while editing a post in the Block Editor. Visible when the users are allowed to switch editors.
 6. Network settings to select the default editor for the network and allow site admins to change it.
 7. The "Switch to Classic Editor" link.
+
