@@ -29,7 +29,7 @@ define( 'DB_USER', 'tokacbddevmybizn_mbn' );
 define( 'DB_PASSWORD', '.2Exo~8ch.z.' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', '148.251.34.250' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
