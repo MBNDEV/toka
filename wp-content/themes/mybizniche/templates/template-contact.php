@@ -26,7 +26,7 @@ get_header(); ?>
   
 </div>
 <section class="map_section">
-    
+
    <div id="map"></div>
 
    <div class="popupinfo-cont" id="popupinfo-cont" data-map-pin="<?php echo MBN_ASSETS_URI ?>/img/map-pin-location-toka.png">

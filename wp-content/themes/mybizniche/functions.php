@@ -3,7 +3,7 @@
 define('MBN_DIR_URI', get_template_directory_uri());
 define('MBN_DIR_PATH', get_template_directory());
 define('MBN_ASSETS_URI', MBN_DIR_URI.'/resources');
-
+define('MBN_MAP_API_KEY',"AIzaSyDac2mOtJr_IktjUhiLZYRL_xHzxRbodRE");
 
 /**
  * Theme setup
@@ -19,6 +19,7 @@ function mbn_theme_setup(){
     
     //set_post_thumbnail_size(1568, 9999);
     // add_image_size('small-thumbnail', '150', '100');
+    add_image_size('contact-image', '487', '157',true);
 
     add_theme_support('html5', array(
         'search-form',
@@ -102,10 +103,7 @@ function mbn_enqueue_scripts(){
     // App
     wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [], $wp_version);
     
-    if(is_page_template("templates/template-contact.php")){
-        wp_enqueue_style('contact-css', MBN_ASSETS_URI.'/css/contact.css', [], $wp_version);
-        wp_enqueue_script('contact-js', MBN_ASSETS_URI.'/js/contact.js', [], $wp_version);
-    }
+    
     wp_enqueue_script('app', MBN_ASSETS_URI.'/js/app.js', [], $wp_version);
     
 
@@ -116,6 +114,15 @@ function mbn_enqueue_scripts(){
         'theme_url' => MBN_DIR_URI,
         'nonce'     => wp_create_nonce('mbn-nonce')
     ));
+
+    if(is_page_template("templates/template-contact.php")){
+        wp_enqueue_style('contact-css', MBN_ASSETS_URI.'/css/contact.css', [], $wp_version);
+        wp_enqueue_script('contact-js', MBN_ASSETS_URI.'/js/contact.js', [], $wp_version);
+    }
+    if(is_page_template("templates/template-findstore.php")){
+        wp_enqueue_style('findstore-css', MBN_ASSETS_URI.'/css/find-store.css', [], $wp_version);
+        wp_enqueue_script('findstore-js', MBN_ASSETS_URI.'/js/find-store.js', [], $wp_version);
+    }
 }
 add_action('wp_enqueue_scripts', 'mbn_enqueue_scripts', 20);
 
