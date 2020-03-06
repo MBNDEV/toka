@@ -29,7 +29,6 @@ get_header(); ?>
   </div><!--end of overlay-container-->
    <div class="popupinfo-cont" id="popupinfo-cont" data-map-pin="<?php echo MBN_ASSETS_URI ?>/img/map-pin-location-toka.png">
        <div class="popupinfo">
-
             <ul>
                 <li class="address"></li>
                 <li class="sched"><span class="val"></span> <span class="store-status">Store is open today</span></li>

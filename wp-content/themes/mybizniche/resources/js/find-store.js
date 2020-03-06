@@ -4,11 +4,8 @@
                 map:null,
                 timer:undefined,
                 paged:1,
-                isProgress:false
-            },
-            initMap:function(){
-                app.loadPostType("");
-                 $("section.map_result .items").slick({
+                isProgress:false,
+                slickOptions:{
                     dots: true,
                     arrows: false,
                     slidesToShow: 3,
@@ -28,18 +25,24 @@
                             }
                         }
                     ]
-                });
+                }
+            },
+            initMap:function(){
+                app.loadPostType("");
+                 $("section.map_result .items").slick(app.data.slickOptions);
                 $(".map_section input[name='q']").keyup(function(e){
-                var q = $(this).val();
+                    var q = $(this).val();
                     if(app.data.timer){
                         
                      clearTimeout(app.data.timer);
                     }
                     app.data.timer = setTimeout(function(){
                         app.loadPostType(q);
-                    },2500);
-                    
-                   
+                    },1500);
+                    if(e.keyCode==13){
+                        clearTimeout(app.data.timer);
+                        app.loadPostType(q);
+                    }
                 });
                
             },
@@ -55,7 +58,7 @@
                         },
                         success: function (result) {
                             app.data.isProgress = false;
-                            $(".map_result .items").html("");
+                           
                             app.loadMap(result);
                             app.loadMapResult(result);
                         }
@@ -63,6 +66,8 @@
                 }
             },
             loadMapResult:function(data){
+                $("section.map_result .items").slick("destroy");
+                $("section.map_result .items").html("");
                 
                 data.forEach(function(item,i){
                     var html = '<div class="item">';
@@ -78,8 +83,8 @@
                     $(".map_result .items").append(html);
                     
                 })
-                $("section.map_result .items").slick("refresh");
-
+                $("section.map_result .items").slick(app.data.slickOptions);
+               
              
             },
             loadMap:function(data){
