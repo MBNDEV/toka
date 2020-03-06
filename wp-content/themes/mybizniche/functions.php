@@ -157,6 +157,44 @@ function mbn_register_sidebars(){
 add_action('widgets_init', 'mbn_register_sidebars');
 
 
+// WooCommerce 
+// ===============================================================================
+
+//Change several of the breadcrumb defaults
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
+function jk_woocommerce_breadcrumbs() {
+    return array(
+            'delimiter'   => '',
+            'wrap_before' => '<nav class="woocustom-breadcrumb" itemprop="breadcrumb">',
+            'wrap_after'  => '</nav>',
+            'before'      => '',
+            'after'       => '',
+            'home'        => _x( 'TOKA', 'breadcrumb', 'woocommerce' ),
+        );
+}
+
+//Product custom sale price badge
+function custom_product_sale_flash( $output, $post, $product ) {
+    global $product;
+    if($product->is_on_sale()) {
+        if($product->is_type( 'variable' ) )
+        {
+            $regular_price = $product->get_variation_regular_price();
+            $sale_price = $product->get_variation_price();
+        } else {
+            $regular_price = $product->get_regular_price();
+            $sale_price = $product->get_sale_price();
+        }
+        $percent_off = (($regular_price - $sale_price) / $regular_price) * 100;
+        return '<span class="onsale">' . round($percent_off) . '% OFF</span>';
+    }
+}
+add_filter( 'woocommerce_sale_flash', 'custom_product_sale_flash', 11, 3 );
+
+
+// End woocommerce functions
+//----------------------------------
+
 
 require MBN_DIR_PATH.'/includes/tgmpa/init.php';
 require MBN_DIR_PATH.'/includes/post-types.php';

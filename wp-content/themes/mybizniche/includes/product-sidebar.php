@@ -7,14 +7,13 @@
 ?>
 
 <aside class="woocommerce-sidebar"  id="mobtoggle" data-toggler=".show">
-	<h4 class="all-products <?php if(get_the_permalink(6) == $current_link) {echo "selected";} ?>"><a href="<?php the_permalink(6); ?>">
-		<img src="<?php bloginfo('template_url'); ?>/assets/images/icn-all-products.svg" alt="All Products" width="45">
+	<h4 class="all-products <?php if(get_the_permalink(112) == $current_link) {echo "selected";} ?>"><a href="<?php the_permalink(112); ?>">
 		All Products</a><span class="mobtoggle" data-toggle="mobtoggle"></span></h4>
 
 	<div class="all-categories">
-	<h5><a href="<?php echo get_term_link(77) ?>"><?php echo get_term(77)->name; ?></a></h5>
 	<?php
-		echo '<ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true" data-multi-open="false" >';
+		//echo '<ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true" data-multi-open="false" >';
+		echo '<ul class="vertical menu">';
 		$categories = get_terms( array('taxonomy'=>$taxonomy_name, 'parent' => 0,  'hide_empty' => false) );
 		foreach ( $categories as $category ) {
 			$image = wp_get_attachment_url(get_term_meta($category->term_id, 'thumbnail_id', true));	 
