@@ -14,7 +14,6 @@ get_header(); ?>
 
 <section class="map_section">
    <div id="map"></div>
-
    <div class="overlay-container">
       <div class="grid-container">
         <div class="grid-x grid-margin-x">
@@ -47,7 +46,9 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-    </div>
+    </div><!--emd-->
+    <a href="javascript:;" class="sl-nav next"></a>
+    <a href="javascript:;" class="sl-nav prev"></a>
 </section>
 
 

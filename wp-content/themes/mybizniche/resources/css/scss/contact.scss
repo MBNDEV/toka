@@ -246,12 +246,6 @@ section {
 
 @include media(max-width, 639px) {
     section {
-        &.banner {
-            h1 {
-                
-                font-size: 32px;
-            }
-        }
         &.contact_section {
           
             .overlay-container {

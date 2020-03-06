@@ -4,8 +4,13 @@
 section {
     &.banner {
         h1 {
-            padding: 166px 0 140px
+            padding: 166px 0 140px;
+            @include media(max-width, 1023px) {
+                padding: 120px 0 60px;
+                font-size: 32px;
+            }
         }
+        
     }
 
     &.map_section {
@@ -135,17 +140,27 @@ section {
                         line-height: 1.79em;
                         text-align: center;
                         color: #d1d1d1;
-                        margin-left: 18px
+                        margin-left: 18px;
+                        @include media(max-width, 639px) {
+                            margin-left: 0px;
+                            display:block;
+                            font-size:11px;
+                            padding-top:3px;
+                        }
                     }
                 }
             }
         }
+
+     
+        
     }
 
     &.map_result {
         min-height: 395px;
         padding-bottom: 20px;
         margin-top: 51px;
+        position: relative;
         .slick-dots{
             display:block;
             margin:75px auto 0;
@@ -170,7 +185,16 @@ section {
                 }
             }
         }
+        
         .items {
+            .slick-list{
+                .slick-track{
+                    min-width:100%!important;
+                }
+            }
+            
+            float:left;
+            width:100%;
             .item {
                 outline: 0;
 
@@ -222,8 +246,30 @@ section {
                 }
             }
         }
+        
 
-
+        a.sl-nav{
+            position: absolute;
+            width:24px;
+            height:22px;
+            top:10px;
+            &.next{
+                right:20px;
+                background:url("../img/icn-arrow-blue.png") no-repeat;
+            }
+            &.prev{
+                display:none;
+                left:20px;
+                background:url("../img/icn-arrow-blue.png") no-repeat;
+                transform: rotate(-180deg);
+                -webkit-transform: rotate(-180deg);
+            }
+            @include media(max-width, 1023px) {
+                top:-20px;
+            }
+        }
 
     }
 }
+
+
