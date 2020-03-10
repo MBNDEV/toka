@@ -44,8 +44,7 @@ function mbn_theme_setup(){
     add_editor_style( 'style-editor.css' );
 
     register_nav_menus(array(
-        'header-nav'            => 'Header Navigation',
-        'header-nav-mobile'     => 'Header Navigation (Mobile)',
+        'header-menu'            => 'Header Menu',
     ));
 
 }
@@ -99,6 +98,9 @@ function mbn_enqueue_scripts(){
 
     // Match Height
     wp_enqueue_script('match-height', MBN_ASSETS_URI.'/vendor/jquery.matchHeight-min.js', [], $wp_version);
+
+    // Nicescroll
+    wp_enqueue_script('nicescroll', MBN_ASSETS_URI.'/vendor/jquery.nicescroll.min.js', [], $wp_version);
     
     // App
     wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [], $wp_version);
@@ -129,6 +131,12 @@ add_action('wp_enqueue_scripts', 'mbn_enqueue_scripts', 20);
 
 // disable gutenberg
 //add_filter('use_block_editor_for_post', '__return_false');
+function mbn_disable_gutenberg($current_status, $post_type){
+    if ($post_type === 'ivtherapy') return false;
+    
+    return $current_status;
+}
+add_filter('use_block_editor_for_post_type', 'mbn_disable_gutenberg', 10, 2);
 
 
 // remove wp emoji
@@ -149,6 +157,16 @@ add_action( 'after_setup_theme', 'mbn_gutenberg_disable_all_colors' );
  * Register sidebars
 **/
 function mbn_register_sidebars(){
+    // Minicart sidebar
+    register_sidebar([
+        'name'  => 'Mini Cart',
+        'id'    => 'mini-cart',
+        'before_widget' => false,
+        'after_widget'  => false,
+        'before_title'  => false,
+        'after_title'   => false,
+    ]);
+
     // footer menus
     for($i=1;$i<=3;$i++){
         register_sidebar(array(
@@ -164,43 +182,15 @@ function mbn_register_sidebars(){
 add_action('widgets_init', 'mbn_register_sidebars');
 
 
-// WooCommerce 
-// ===============================================================================
-
-//Change several of the breadcrumb defaults
-add_filter( 'woocommerce_breadcrumb_defaults', 'jk_woocommerce_breadcrumbs' );
-function jk_woocommerce_breadcrumbs() {
-    return array(
-            'delimiter'   => '',
-            'wrap_before' => '<nav class="woocustom-breadcrumb" itemprop="breadcrumb">',
-            'wrap_after'  => '</nav>',
-            'before'      => '',
-            'after'       => '',
-            'home'        => _x( 'TOKA', 'breadcrumb', 'woocommerce' ),
-        );
+/**
+ * Allow SVG
+**/
+function mbn_myme_types($mime_types){
+    $mime_types['svg'] = 'image/svg+xml';
+    return $mime_types;
 }
+add_filter('upload_mimes', 'mbn_myme_types');
 
-//Product custom sale price badge
-function custom_product_sale_flash( $output, $post, $product ) {
-    global $product;
-    if($product->is_on_sale()) {
-        if($product->is_type( 'variable' ) )
-        {
-            $regular_price = $product->get_variation_regular_price();
-            $sale_price = $product->get_variation_price();
-        } else {
-            $regular_price = $product->get_regular_price();
-            $sale_price = $product->get_sale_price();
-        }
-        $percent_off = (($regular_price - $sale_price) / $regular_price) * 100;
-        return '<span class="onsale">' . round($percent_off) . '% OFF</span>';
-    }
-}
-add_filter( 'woocommerce_sale_flash', 'custom_product_sale_flash', 11, 3 );
-
-
-// End woocommerce functions
-//----------------------------------
 
 
 require MBN_DIR_PATH.'/includes/tgmpa/init.php';
@@ -209,6 +199,9 @@ require MBN_DIR_PATH.'/includes/shortcodes.php';
 require MBN_DIR_PATH.'/includes/utils.php';
 require MBN_DIR_PATH.'/includes/public-hooks.php';
 require MBN_DIR_PATH.'/includes/admin-hooks.php';
+require MBN_DIR_PATH.'/includes/woocommerce-hooks.php';
+require MBN_DIR_PATH.'/includes/header-menu-walker.php';
+require MBN_DIR_PATH.'/includes/widget-ivtherapy-nav-item.php';
 //require MBN_DIR_PATH.'/includes/options/theme-options.php';
 // require MBN_DIR_PATH.'/includes/options/template-options.php';
 

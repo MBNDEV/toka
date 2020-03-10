@@ -1,47 +1,45 @@
 <?php
 
 
-function mbn_register_post_types(){
+function mbn_ivtherapy_post_type(){
+    $labels = array(
+        'name'                  => __('IV Therapies'),
+        'singular_name'         => __('IV Therapy'),
+        'menu_name'             => __('IV Therapies'),
+        'name_admin_bar'        => __('IV Therapy'),
+        'add_new'               => __('Add New'),
+        'add_new_item'          => __('Add New IV Therapy'),
+        'new_item'              => __('New IV Therapy'),
+        'edit_item'             => __('Edit IV Therapy'),
+        'view_item'             => __('View IV Therapy'),
+        'all_items'             => __('IV Therapies'),
+        'search_items'          => __('Search IV Therapies'),
+        'parent_item_colon'     => __('Parent IV Therapies:'),
+        'not_found'             => __('No IV Therapies found.'),
+        'not_found_in_trash'    => __('No IV Therapies found in Trash.')
+    );
 
-    /* Dogs  */
-    // $labels = array(
-    //     'name'                  => __('Dogs'),
-    //     'singular_name'         => __('Dog'),
-    //     'menu_name'             => __('Dogs'),
-    //     'name_admin_bar'        => __('Dog'),
-    //     'add_new'               => __('Add New'),
-    //     'add_new_item'          => __('Add New Dog'),
-    //     'new_item'              => __('New Dog'),
-    //     'edit_item'             => __('Edit Dog'),
-    //     'view_item'             => __('View Dog'),
-    //     'all_items'             => __('Dogs'),
-    //     'search_items'          => __('Search Dogs'),
-    //     'parent_item_colon'     => __('Parent Dogs:'),
-    //     'not_found'             => __('No Dogs found.'),
-    //     'not_found_in_trash'    => __('No Dogs found in Trash.')
-    // );
+    $args = array(
+        'labels'                => $labels,
+        'description'           => 'lorem ipsum',
+        'public'                => false,
+        'publicly_queryable'    => false,
+        'show_in_menu'          => true,
+        'show_ui'               => true,
+        'show_in_admin_bar'     => false,
+        'show_in_nav_menus'     => true,
+        'capability_type'       => 'post',
+        'show_in_rest'          => true,
+        'has_archive'           => true,
+        'hierarchical'          => false,
+        'can_export'            => true,
+        'menu_position'         => 5,
+        'menu_icon'             => 'dashicons-image-filter',
+        'supports'              => array('title', 'editor'),
+        'delete_with_user'      => true
+    );
 
-    // $args = array(
-    //     'labels'                => $labels,
-    //     'description'           => 'lorem ipsum',
-    //     'public'                => false,
-    //     'publicly_queryable'    => false,
-    //     'show_in_menu'          => true,
-    //     'show_ui'               => true,
-    //     'show_in_admin_bar'     => false,
-    //     'show_in_nav_menus'     => true,
-    //     'capability_type'       => 'post',
-    //     'show_in_rest'          => true,
-    //     'has_archive'           => true,
-    //     'hierarchical'          => false,
-    //     'can_export'            => true,
-    //     'menu_position'         => 5,
-    //     'menu_icon'             => 'dashicons-buddicons-activity',
-    //     'supports'              => array('title', 'editor', 'thumbnail'),
-    //     'delete_with_user'      => true
-    // );
-
-    // register_post_type('dogs', $args);
+    register_post_type('ivtherapy', $args);
 
 
     // // Add new taxonomy
@@ -85,7 +83,9 @@ function mbn_register_post_types(){
 	);
 }
 
-add_action('init', 'mbn_register_post_types');
+add_action('init', 'mbn_ivtherapy_post_type');
+
+
 
 
 function mbn_faqs_post_types(){

@@ -1,0 +1,10 @@
+2020-03-07T14:19:24+00:00 CRITICAL Uncaught Error: Call to undefined function get_post_title() in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\widget-ivtherapy-nav-item.php:36
+Stack trace:
+#0 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-widget.php(379): MBN_Widget_IVtherapy_Nav_Item->widget(Array, Array)
+#1 C:\xampp\htdocs\projects\tokacbd\wp-content\plugins\megamenu\classes\widget-manager.class.php(846): WP_Widget->display_callback(Array, Array)
+#2 C:\xampp\htdocs\projects\tokacbd\wp-content\plugins\megamenu\megamenu.php(665): Mega_Menu_Widget_Manager->show_widget('mbn_widget_ivth...')
+#3 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-hook.php(288): Mega_Menu->add_widgets_to_menu(Array, Object(stdClass))
+#4 C:\xampp\htdocs\projects\tokacbd\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#5 C:\xampp\htdocs\projects\tokacbd\wp-includes\nav-menu-template.php(215): apply_filters('wp_nav_menu_obj...', Array, Object(stdClass))
+#6 C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybiznich in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\widget-ivtherapy-nav-item.php on line 36
+
