@@ -116,6 +116,135 @@ function mbn_add_lazyload_end() { ob_end_flush(); }
 //add_action('shutdown', 'mbn_add_lazyload_end');
 
 
+/**
+ * 
+ * Add Google Maps Api Contact
+ * 
+ */
+function mbn_google_maps_api(){
+    if(is_page_template("templates/template-contact.php") || is_page_template("templates/template-findstore.php")){
+?>
+<script src="https://maps.googleapis.com/maps/api/js?key=<?php echo MBN_MAP_API_KEY;?>&callback=initMap"
+    async defer></script>
+    <?php
+    }
+}
+
+
+/**
+ * 
+ * Find Store AJAX
+ * 
+ */
+
+function mbn_find_store_ajax(){
+
+	
+	$paged = isset($_GET['paged'])?$_GET['paged']:1;
+    $q = isset($_GET['q'])?$_GET['q']:"";
+    
+    $args = [
+        'post_type'=>"find_store",
+        'post_status'=>"publish",
+        'orderby'=>"title",
+        "order"=>"ASC",
+        "posts_per_page"=>-1,
+        "paged"=>$paged
+    ];
+    if($q!=""){
+        $args['s'] = $q;
+    }
+
+    $post_query = new WP_Query($args);
+    $post_query_result = $post_query->posts;
+    if($q!=""){
+       unset($args['s']);
+        $args['meta_query']	= [
+            'relation'		=> 'OR',
+            array(
+                'key'		=> 'street',
+                'value'		=> $q,
+                'compare'	=> 'LIKE'
+            ),array(
+                'key'		=> 'city',
+                'value'		=> $q,
+                'compare'	=> 'LIKE'
+            ),array(
+                'key'		=> 'state',
+                'value'		=> $q,
+                'compare'	=> 'LIKE'
+            ),array(
+                'key'		=> 'zip',
+                'value'		=> $q,
+                'compare'	=> 'LIKE'
+            ),array(
+                'key'		=> 'country',
+                'value'		=> $q,
+                'compare'	=> 'LIKE'
+            )
+        ];
+
+    }
+    $meta_query = new WP_Query($args);
+    $meta_query_result = $meta_query->posts;
+    
+    $final_query = new WP_Query();
+    $final_query->posts = array_unique(array_merge($post_query_result,$meta_query_result),SORT_REGULAR);
+    $final_query->post_count = count($final_query->posts);
+    global $wp_query;
+    
+   
+  
+    $array=[];
+    foreach($final_query->posts as $post):
+
+        $location_pin = get_field("location_pin",$post->ID);
+        
+        $array[] = [
+            "id"=>$post->ID,
+            "title"=>$post->post_title,
+            "street"=>get_field("street",$post->ID),
+            "city"=>get_field("city",$post->ID),
+            "state"=>get_field("state",$post->ID),
+            "zip"=>get_field("zip",$post->ID),
+            "country"=>get_field("country",$post->ID),
+            "phone"=>get_field("phone",$post->ID),
+            "schedule"=>get_field("schedule",$post->ID),
+            "lat"=>$location_pin['lat'],
+            "lng"=>$location_pin['lng'],
+            "image"=>get_the_post_thumbnail_url($post, "contact-image")
+        ];
+      
+    endforeach;   
+   
+    
+    header("Content-Type: application/json");
+    echo json_encode($array);
+    wp_die();
+}
+add_action("wp_ajax_nopriv_mbn_find_store_ajax","mbn_find_store_ajax");
+add_action("wp_ajax_mbn_find_store_ajax","mbn_find_store_ajax");
+
+/**
+ * Contact form 7 Redirect
+ * 
+ */
+
+add_action("wp_footer", "mbn_google_maps_api", 99);
+
+function contact_form_7_redirect(){
+    ?>
+<script type="text/javascript">
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if(event.detail.contactFormId =='68'){
+            window.location = "/contact/thank-you/";
+    }
+    }, false );
+</script>
+    <?php
+}
+
+add_action("wp_footer", "contact_form_7_redirect", 99);
 
 
 /**
@@ -208,6 +337,7 @@ function mbn_pace_loader_style(){
     </style>
     <?php
 }
+
 //add_action('wp_head', 'mbn_pace_loader_style', 20);
 
 

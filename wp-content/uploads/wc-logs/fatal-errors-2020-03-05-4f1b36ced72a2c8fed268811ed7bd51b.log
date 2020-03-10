@@ -1,0 +1,26 @@
+2020-03-05T15:34:35+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in D:\XAMPP\htdocs\toka\wp-content\themes\mybizniche\woocommerce\archive-product.php on line 101
+
+2020-03-05T15:36:08+00:00 CRITICAL Uncaught Error: Object of class WP_Error could not be converted to string in D:\XAMPP\htdocs\toka\wp-content\themes\mybizniche\includes\product-sidebar.php:15
+Stack trace:
+#0 D:\XAMPP\htdocs\toka\wp-includes\template.php(724): require()
+#1 D:\XAMPP\htdocs\toka\wp-includes\template.php(671): load_template('D:\\XAMPP\\htdocs...', false)
+#2 D:\XAMPP\htdocs\toka\wp-includes\general-template.php(168): locate_template(Array, true, false)
+#3 D:\XAMPP\htdocs\toka\wp-content\themes\mybizniche\woocommerce\archive-product.php(103): get_template_part('includes/produc...')
+#4 D:\XAMPP\htdocs\toka\wp-includes\template-loader.php(98): include('D:\\XAMPP\\htdocs...')
+#5 D:\XAMPP\htdocs\toka\wp-blog-header.php(19): require_once('D:\\XAMPP\\htdocs...')
+#6 D:\XAMPP\htdocs\toka\index.php(17): require('D:\\XAMPP\\htdocs...')
+#7 {main}
+  thrown in D:\XAMPP\htdocs\toka\wp-content\themes\mybizniche\includes\product-sidebar.php on line 15
+
+2020-03-05T15:38:46+00:00 CRITICAL Uncaught Error: Object of class WP_Error could not be converted to string in D:\XAMPP\htdocs\toka\wp-content\themes\mybizniche\includes\product-sidebar.php:15
+Stack trace:
+#0 D:\XAMPP\htdocs\toka\wp-includes\template.php(724): require()
+#1 D:\XAMPP\htdocs\toka\wp-includes\template.php(671): load_template('D:\\XAMPP\\htdocs...', false)
+#2 D:\XAMPP\htdocs\toka\wp-includes\general-template.php(168): locate_template(Array, true, false)
+#3 D:\XAMPP\htdocs\toka\wp-content\themes\mybizniche\woocommerce\archive-product.php(96): get_template_part('includes/produc...')
+#4 D:\XAMPP\htdocs\toka\wp-includes\template-loader.php(98): include('D:\\XAMPP\\htdocs...')
+#5 D:\XAMPP\htdocs\toka\wp-blog-header.php(19): require_once('D:\\XAMPP\\htdocs...')
+#6 D:\XAMPP\htdocs\toka\index.php(17): require('D:\\XAMPP\\htdocs...')
+#7 {main}
+  thrown in D:\XAMPP\htdocs\toka\wp-content\themes\mybizniche\includes\product-sidebar.php on line 15
+

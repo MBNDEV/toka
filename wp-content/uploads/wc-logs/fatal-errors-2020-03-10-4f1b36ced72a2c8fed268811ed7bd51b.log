@@ -10,3 +10,5 @@ Stack trace:
 #7 C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\page.php(1): get_header()
 #8 C:\xa in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\template-parts\mini-cart-settings.php on line 17
 
+2020-03-10T15:33:53+00:00 CRITICAL syntax error, unexpected '<<' (T_SL), expecting end of file in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\functions.php on line 185
+

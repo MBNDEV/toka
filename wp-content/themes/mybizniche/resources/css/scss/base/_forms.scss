@@ -49,3 +49,36 @@ fieldset{
         }
     }
 }
+    
+input[type="text"],
+input[type="phone"],
+input[type="email"]{
+    border: solid 1px $color-border-gray;
+    background-color: $color-white;
+    height: 58px;
+    box-shadow:none!important;
+    padding:20px;
+    color: $color-textfield-gray;
+    font-size:18px;
+    position: relative;
+    z-index: 9;
+}
+
+
+textarea {
+    border: solid 1px $color-border-gray;
+    background-color: $color-white;
+    resize: none;
+    box-shadow:none!important;
+    padding:20px;
+    color: $color-textfield-gray;
+    font-size:18px;
+}
+select {
+    border: solid 1px $color-border-gray;
+    background-color: $color-white;
+    height: 58px;
+    box-shadow:none!important;
+    padding:10px 20px;
+    color: $color-textfield-gray;
+}

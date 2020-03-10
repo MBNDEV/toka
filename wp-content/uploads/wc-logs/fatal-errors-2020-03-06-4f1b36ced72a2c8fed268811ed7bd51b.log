@@ -1,0 +1,6 @@
+2020-03-06T05:35:26+00:00 CRITICAL syntax error, unexpected '$array' (T_VARIABLE) in /Applications/XAMPP/xamppfiles/htdocs/toka/wp-content/themes/mybizniche/includes/public-hooks.php on line 157
+
+2020-03-06T05:38:52+00:00 CRITICAL syntax error, unexpected '=', expecting ']' in /Applications/XAMPP/xamppfiles/htdocs/toka/wp-content/themes/mybizniche/includes/public-hooks.php on line 170
+
+2020-03-06T11:04:44+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE) in /Applications/XAMPP/xamppfiles/htdocs/toka/wp-content/themes/mybizniche/includes/public-hooks.php on line 217
+

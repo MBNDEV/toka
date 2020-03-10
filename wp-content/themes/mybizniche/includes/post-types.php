@@ -67,6 +67,20 @@ function mbn_ivtherapy_post_type(){
     // );
 
     // register_taxonomy('faqs_cat', array('faqs'), $args);
+
+    register_post_type( 'find_store',
+		array(
+			'labels' => array(
+				'name' => __( 'Stores' ),
+				'singular_name' => __('find-store')
+			),
+			'public' => true,
+			'has_archive' => false,
+			'show_in_rest' => false,
+			'rewrite' => array('slug' => 'find-store'),
+			'supports'	=>	array('title','editor','page-attributes','thumbnail')
+		)
+	);
 }
 
 add_action('init', 'mbn_ivtherapy_post_type');

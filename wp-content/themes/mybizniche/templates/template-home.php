@@ -12,6 +12,7 @@ get_header(); ?>
             <div class="large-12 cell">
                 <div class="text-wrap text-center">
                     <h1>Your journey to<br /> wellness starts with</h1>
+                    
                     <img src="<?php echo MBN_ASSETS_URI ?>/img/word-toka.svg" alt="TOKA" class="toka" />
 
                     <h2>Positively <span class="blue">Pure Wellness.</span></h2>

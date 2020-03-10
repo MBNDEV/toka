@@ -6,6 +6,8 @@
 ** Version: 1.0
 */
 
+body {overflow-x: hidden;}
+
 /* Block Overrides */
 .wp-block-group__inner-container, .wp-block-cover__inner-container {max-width: 75rem; padding:0 15px; margin: 0 auto;}
 .wp-block-group__inner-container .wp-block-group__inner-container {padding: 0; max-width: none;}
@@ -30,26 +32,33 @@
 .page-content ul li:before {content: ""; position: absolute; top: 16px; left: 1px; width: 8px; height: 8px; background: #14c8f0; border-radius: 50%;}
 
 .sec-why-toka {padding: 120px 0 80px; text-align: center;}
-.sec-why-toka * {max-width: 1170px; margin: 0 auto;}
+.sec-why-toka * {width: 1170px; max-width: 100%; margin: 0 auto;}
 .sec-why-toka h1 {color: #b2b2ae; margin-bottom: 30px;}
 .sec-why-toka h1 img {display: block; width: auto !important; margin: 10px auto;}
 
-.sec-tagline {position: relative; z-index: 1; height: 100vh; background-repeat: no-repeat; background-position: center center; background-size: cover;}
-.sec-tagline:before {content: ""; z-index: -1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100%;}
-.sec-tagline:after {content: ""; z-index: -1; position: absolute; left: 0; right: 0; bottom: 0; height: 135px; background: url(/wp-content/uploads/2020/03/img-frame-bottom.png) no-repeat center top / 100% 135px;}
-.sec-tagline h2 {font-size: 40px; font-weight: 500; font-style: italic; color: #222; width: 570px; max-width: 100%; padding-top: 10%;}
+.sec-tagline {position: relative; z-index: 1;}
+.sec-tagline h2 {position: absolute; z-index: 1; font-size: 40px; font-weight: 500; font-style: italic; color: #222; width: 570px; max-width: 100%; padding-top: 10%;}
 .sec-tagline h2 strong {color: #14c8f0; font-weight: 500;}
+.sec-tagline figure {margin: 0 calc((-100vw - -1410px) / 2); position: relative; max-height: 90vh; overflow: hidden;}
+.sec-tagline figure:before {content: ""; z-index: 1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100%;}
+.sec-tagline figure:after {content: ""; z-index: 1; position: absolute; left: 0; right: 0; bottom: 0; height: 135px; background: url(/wp-content/uploads/2020/03/img-frame-bottom.png) no-repeat center bottom / 100% auto;}
 
-.sec-origin {position: relative; z-index: 1; min-height: 110vh; background-repeat: no-repeat; background-position: center 250px; background-size: cover;}
-.sec-origin:before {content: ""; z-index: -1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100%;}
-.sec-origin:after {content: ""; z-index: -1; position: absolute; left: 0; right: 0; bottom: 0; height: 330px; background: url(/wp-content/uploads/2020/03/img-frame-bottom2.png) no-repeat center top / 100% 330px;}
-.sec-origin .origin-header {position: relative; padding: 90px 0 0;}
-.sec-origin .origin-header:before {content:""; position: absolute; z-index: -1; top:-65px; left: calc((-100vw - -1427px)/2);  right: calc((-100vw - -1427px)/2); height: 390px; background: url(/wp-content/uploads/2020/03/toka-fade.png) no-repeat center top / 100%;}
+.sec-tagline figure img {width: 100%;}
+
+.sec-origin {position: relative; z-index: 1;}
+.sec-origin figure {margin: 0 calc((-100vw - -1410px) / 2); position: relative;}
+.sec-origin figure img {width: 100%;}
+.sec-origin figure:before {content: ""; z-index: -1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100% auto;}
+.sec-origin figure:after {content: ""; z-index: -1; position: absolute; left: 0; right: 0; bottom: 0; height: 330px; background: url(/wp-content/uploads/2020/03/img-frame-bottom2.png) no-repeat center bottom / 100% auto;}
+.sec-origin h2 {color: #222; font-size: 60px; font-weight: 500;}
+.sec-origin h2 strong {color: #14c8f0;  font-weight: 500;}
+.sec-origin p {font-size: 40px; color: #6a7376; font-weight: 300;}
+.sec-origin p strong {font-weight: 500; color: #222;}
+
+.sec-origin .origin-header {position: relative; padding: 90px 0 0; margin-bottom: -230px; z-index: 10;}
+.sec-origin .origin-header:before {content:""; position: absolute; z-index: -1; top:-65px; left: calc((-100vw - -1410px)/2);  right: calc((-100vw - -1410px)/2); height: 390px; background: url(/wp-content/uploads/2020/03/toka-fade.png) no-repeat center top / 100%;}
 .origin-header > div > * {width: 1170px; max-width: 100%;}
-.origin-header h2 {color: #222; font-size: 60px; font-weight: 500;}
-.origin-header h2 strong {color: #14c8f0;  font-weight: 500;}
-.origin-header p {font-size: 40px; color: #6a7376; font-weight: 300;}
-.origin-header p strong {font-weight: 500; color: #222;}
+
 
 .sec-mission-vision {padding: 10px 0 60px;}
 .sec-mission-vision h3 {font-weight: 500;}
@@ -58,37 +67,179 @@
 
 .sec-faqs h2 {text-align: center; font-weight: 300; margin-bottom: 50px;}
 .sec-faqs .btn-fullwidth {background: #6a7376; padding: 50px 0; position: relative;}
-.sec-faqs .btn-fullwidth:before {content: "";background: #6a7376;  position: absolute; left: calc((-100vw - -1427px) / 2); right: calc((-100vw - -1427px) / 2); top: 0; bottom: 0;}
+.sec-faqs .btn-fullwidth:before {content: "";background: #6a7376;  position: absolute; left: calc((-100vw - -1410px) / 2); right: calc((-100vw - -1410px) / 2); top: 0; bottom: 0;}
 .sec-faqs .btn-fullwidth a {color: #fff;}
 
 .featured-faqs {position: relative; display: flex; flex-flow: wrap;}
 .featured-faqs .sc-faq-item {padding:100px 0; position: relative; font-size: 25px;}
-.featured-faqs .sc-faq-item h3 {font-size: 65px; font-weight: normal; line-height: 1.2;}
+.featured-faqs .sc-faq-item h3 {font-size: 65px; font-weight: normal; line-height: 1.2; font-style: italic;}
 .featured-faqs .sc-faq-item p {font-size: 25px; line-height: 2;}
 .featured-faqs .sc-faq-item:nth-child(3n+1) {width: 100%; background: #1c8ece; color: #fff;}
-.featured-faqs .sc-faq-item:nth-child(3n+1):before {content:""; background: #1c8ece; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1427px) / 2); right: calc((-100vw - -1427px) / 2);}
+.featured-faqs .sc-faq-item:nth-child(3n+1):before {content:""; background: #1c8ece; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1410px) / 2); right: calc((-100vw - -1410px) / 2);}
 .featured-faqs .sc-faq-item:nth-child(3n+1) *{color: #fff;}
 
-.featured-faqs .sc-faq-item:nth-child(3n+2) {width: 60%; background: #414141; color: #b0b0b0; padding-right: 90px;}
-.featured-faqs .sc-faq-item:nth-child(3n+2):before {content:""; background: #414141; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1427px) / 2); right: 100%;}
+.featured-faqs .sc-faq-item:nth-child(3n+2) {width: 55%; background: #414141; color: #b0b0b0; padding-right: 60px;}
+.featured-faqs .sc-faq-item:nth-child(3n+2):before {content:""; background: #414141; z-index: -1; position: absolute; top:0; bottom: 0; left: calc((-100vw - -1410px) / 2); right: 100%;}
 .featured-faqs .sc-faq-item:nth-child(3n+2) *{color: #fff;}
 .featured-faqs .sc-faq-item:nth-child(3n+2) p {color: #b0b0b0;}
 
-.featured-faqs .sc-faq-item:nth-child(3n+3) {width: 40%; padding-left: 90px;}
+.featured-faqs .sc-faq-item:nth-child(3n+3) {width: 45%; padding-left: 60px;}
 .featured-faqs .sc-faq-item:nth-child(3n+3) h3 {color: #14c8f0;}
 
+.featured-faqs .slick-dots {text-align: center; padding: 0;}
+.featured-faqs .slick-dots li {list-style: none; display: inline-block; padding: 0 10px;}
+.featured-faqs .slick-dots li:before {display: none;}
+.featured-faqs .slick-dots button {display: block; font-size: 0; padding: 0; width: 12px; height: 12px; border:1px solid #e1e1e1; border-radius: 50%;;}
+.featured-faqs .slick-dots .slick-active button {background: #e1e1e1;}
+
+.parent-pageid-65 .page-content{padding-top:100px;padding-bottom:100px}
 
 
+/* Woocommerce ------- */
+.woocommerce-products-header {text-align: center; padding: 150px 0 80px;}
+.woocommerce-products-header h1 {margin-bottom: 30px;}
+.woocommerce-products-header h2 {font-weight: 500;}
+.woocommerce-products-header h2 strong {font-weight: 500; color: #14c8f0;}
 
+.woocommerce-sidebar {position: relative; margin: 0 15px 0 0; height: 100%; border-right: 1px solid rgba(0,0,0,0.08);}
+.woocommerce-sidebar .all-products a {background: #222; color: #fff; display: block; position: relative; padding: 18px 0; font:500 14px "Roboto", sans-serif; text-transform: uppercase; line-height: 1;}
+.woocommerce-sidebar .all-products a:before {content: ""; position: absolute; left: -30px; top:0; bottom: 0; right: 0; background: #222; z-index: -1;}
+.woocommerce-sidebar .all-products a:after {content: ""; z-index: 2; transition: all 0.5s ease; position: absolute; width: 10px; height: 10px; right: 20px; top: 20px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); opacity: .3;}
 
+.woocommerce-sidebar ul {margin: 0; padding: 0; position: relative; z-index: 1;}
+.woocommerce-sidebar ul li {list-style: none; padding:0; margin: 0;}
+.woocommerce-sidebar ul li a {padding: 16px 0; display: block; font:500 14px "Roboto", sans-serif; text-transform: uppercase; line-height: 1; position: relative; color: #14c8f0;}
+
+.woocommerce-sidebar ul ul {margin: 0; padding: 0 0 10px;}
+.woocommerce-sidebar ul ul li {margin: 0;}
+.woocommerce-sidebar ul ul li a {color: #222;padding: 18px 40px 18px 10px;}
+.woocommerce-sidebar ul ul li a:after {content: ""; transition: all 0.5s ease; position: absolute; width: 10px; height: 10px; right: 20px; top: 20px; border-top: 2px solid #222; border-right: 2px solid #222; transform: rotate(45deg); opacity: .3;}
+
+.woocustom-breadcrumb {font-size: 18px; font-weight: bold; color: #222; line-height: 1; float: left; margin: 16px 0;}
+.woocustom-breadcrumb a {position: relative; display: inline-block; color: #14c8f0; padding: 0 26px 0 0; line-height: 1;}
+.woocustom-breadcrumb a:before {content: ''; position: absolute; right: 11px; top:8px; width:5px; height: 5px; border-top: 1px solid rgba(34,34,34,0.5); border-right: 1px solid rgba(34,34,34,0.5); transform: rotate(45deg);}
+
+.woocommerce-count-filter {float: right;}
+.woocommerce-count-filter .woocommerce-result-count {font-size: 14px; color: #bebebe; margin: 8px 20px 0 0; line-height: 1.2;}
+.woocommerce-count-filter .woocommerce-result-count b {color: #222; font-style: italic;}
+
+.woocommerce-count-filter .woocommerce-ordering select {height: 45px; padding: 5px 20px 5px 10px; margin: 0; font-size: 14px;}
+
+#woocommerce ul.products {padding: 30px 0 0;}
+#woocommerce ul.products li {text-align: center;}
+#woocommerce ul.products li h2 {font: ;}
+#woocommerce ul.products li .onsale {background: #222; margin: 0; min-height: 1px; min-width: 1px; padding: 10px; border-radius: 20px; font:400 14px/1 "Roboto", sans-serif}
+#woocommerce ul.products li .price {font:400 18px "Oswald", sans-serif; color: #222222;}
+#woocommerce ul.products li .price del {color: #bebebe; text-decoration: none; opacity: 1;}
+#woocommerce ul.products li .price ins {text-decoration: none; font-weight: 400;}
+
+#woocommerce ul.products li .button {height: 46px; padding: 5px 16px; font:500 14px/34px "Roboto", sans-serif; margin: 5px; text-transform: uppercase;}
+#woocommerce ul.products li .add_to_cart_button {border:1px solid #333; background: #222 url(resources/img/icn-shop-bag.svg) no-repeat 18px center; color: #fff; padding: 5px 25px 5px 55px; font-weight: bold;}
+#woocommerce ul.products li .add_to_cart_button.added {padding:5px 25px; background-image: none; pointer-events: none; opacity: 0.8;}
+#woocommerce ul.products li .add_to_cart_button.loading:after {top: 5px;}
+#woocommerce ul.products li .yith-wcqv-button {border:1px solid #333;}
+#woocommerce ul.products li .wc-forward {display: none;}
 
 @media (min-width: 1600px) {
 	.wp-block-group__inner-container, .wp-block-cover__inner-container {max-width: 1440px;}
+
+	.featured-faqs .sc-faq-item:nth-child(3n+2) {width: 60%; padding-right: 90px;}
+	.featured-faqs .sc-faq-item:nth-child(3n+3) {width: 40%; padding-left: 90px;}
+
+}
+@media (max-width: 1599px) {
+	.sec-tagline figure {margin: 0 calc((-100vw - -1170px) / 2);}
+
+	.sec-origin figure {margin: 0 calc((-100vw - -1170px) / 2);}
+	.sec-origin .origin-header::before {left:calc((-100vw - -1170px) / 2); right: calc((-100vw - -1170px) / 2);}
+
+	.featured-faqs .sc-faq-item:nth-child(3n+1):before {left: calc((-100vw - -1170px) / 2); right: calc((-100vw - -1170px) / 2);}
+	.featured-faqs .sc-faq-item:nth-child(3n+2):before {left: calc((-100vw - -1170px) / 2);}
+	.sec-faqs .btn-fullwidth:before {left: calc((-100vw - -1170px) / 2); right: calc((-100vw - -1170px) / 2);}
+	
 }
 
+@media (max-width: 1366px){
+	.parent-pageid-65 .page-content h1{font-size:32px}
+}
+
+@media (max-width: 1279px){
+	.parent-pageid-65 .page-content h1{font-size:32px;text-align: center;}
+	.parent-pageid-65 .page-content p{text-align: center;font-size:18px}
+}
 
 /* Landscape tablet */
 @media (max-width: 1199px) {
 	.grid-container {padding-left: 30px; padding-right: 30px;}
 	.wp-block-group__inner-container, .wp-block-cover__inner-container {padding-left: 30px; padding-right: 30px;}
+	
+	.sec-tagline figure {margin: 0 -30px;}
+
+	.sec-origin figure {margin: 0 -30px;}
+	
+	.sec-origin .origin-header::before {left:-30px; right: -30px;}
+	.origin-header h2 {font-size: 40px;}
+	.origin-header p {font-size: 32px;}
+
+	.featured-faqs .sc-faq-item h3 {font-size: 45px;}
+	.featured-faqs .sc-faq-item p {font-size: 22px;}
+	.featured-faqs .sc-faq-item:nth-child(3n+1):before {left: -30px; right: -30px;}
+	.featured-faqs .sc-faq-item:nth-child(3n+2):before {left: -30px;}
+	.sec-faqs .btn-fullwidth:before {left: -30px; right: -30px;}
+	
+}
+
+@media (max-width: 1023px) {
+	.sec-tagline h2 {position: static; width: auto; max-width: 100%; text-align: center; padding-top: 0;}
+	.origin-header p {font-size: 26px;}
+
+	.sec-origin .origin-header {margin: 0;}
+	.sec-origin .origin-header::before {top: 20px;}
+	
+	.featured-faqs {margin: 0 -30px; padding: 50px 30px; background: #1c8ece;}
+	.featured-faqs .sc-faq-item {display: block; width: auto; padding:0 !important; background: none !important;}
+	.featured-faqs .sc-faq-item:before, .featured-faqs .sc-faq-item:after {display: none !important;}
+	.featured-faqs .sc-faq-item * {color: #fff !important;}
+	.sec-faqs .btn-fullwidth {padding: 25px 0;}
+
+	.sec-mission-vision h3 {text-align: center;}
+	
+	.woocommerce-sidebar {margin: 0 0 30px; border:0}
+	.woocommerce-sidebar .all-products {margin-bottom: 0;}
+	.woocommerce-sidebar .all-products a {padding: 18px 25px 18px 15px;}
+	.woocommerce-sidebar .all-products a:before {display: none;}
+	.woocommerce-sidebar.show .all-products a:after {transform: rotate(135deg);}
+	.woocommerce-sidebar .all-products span {cursor: pointer; position: absolute; width: 50px; height: 50px; right: 0px;top: 0px;}
+
+	.woocommerce-sidebar .all-categories {display: none; background: rgba(0,0,0,0.06); padding: 10px 15px;}
+	.woocommerce-sidebar.show .all-categories {display: block;}
+	  
+	.parent-pageid-65 .page-content p{text-align: center;font-size:18px}
+}
+
+@media (max-width: 639px) {
+	body {font-size: 18px;}
+
+	.page-content ul li {font-size: 18px;}
+
+	.sec-why-toka h1 {font-size: 32px;}
+	.sec-why-toka h1 img {max-width: 75%;}
+
+	.sec-tagline h2 {font-size: 25px;}
+
+	.origin-header h2 {font-size: 32px;}
+	.origin-header p {font-size: 22px;}
+
+	.sec-mission-vision h3 {font-size: 24px;}
+	
+	.featured-faqs .sc-faq-item h3 {font-size: 28px;}
+	.featured-faqs .sc-faq-item p {font-size: 18px;}
+
+	.woocommerce-count-filter {float:none; display: flex;}
+	.woocommerce-count-filter .woocommerce-result-count {white-space: nowrap;}
+	.woocommerce-count-filter .woocommerce-ordering {flex-basis: 100%;}
+}
+
+@media (max-width: 480px) {
+	#woocommerce ul.products li {text-align: center; float: none; width: auto;}
 }
