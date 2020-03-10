@@ -16,6 +16,9 @@
 
     <div class="spacer-top"></div>
 
+    <?php get_template_part('template-parts/account-settings') ?>
+    <?php get_template_part('template-parts/mini-cart-settings') ?>
+
     <!-- WRAPPER -->
     <div id="wrapper" class="wrapper">
 
@@ -32,22 +35,32 @@
                         </div>
                     </div>
                     <div class="small-4 large-2 cell">
-                        <a href="#" class="logo">
+                        <a href="<?php echo home_url() ?>" class="logo">
                             <img src="<?php echo MBN_ASSETS_URI ?>/img/logo-toka-box-black.svg" alt="Toka CBD Wellness" />
                         </a>
                     </div>
                     <div class="small-4 large-5 cell right-col">
-                        <ul class="m-menu">
-                            <li><a href="#">Shop</a></li>
+                        <?php
+                        wp_nav_menu([
+                            'theme_location'    => 'header-menu',
+                            'container'         => false,
+                            'menu_class'        => 'm-menu',
+                            // 'walker'            => new MBN_Walker_Header_Menu
+                        ]);
+                        ?>
+                        <!-- <ul class="m-menu">
+                            <li>
+                                <a href="#">Shop</a>
+                            </li>
                             <li><a href="#">IV Therapy</a></li>
                             <li><a href="#">Why Toka?</a></li>
-                        </ul>
+                        </ul> -->
                         <ul class="woo-acc">
-                            <li><a href="#" class="acc"></a></li>
+                            <li><a href="#account-settings" class="acc sidebar-menu-toggle"></a></li>
                             <li>
-                                <a href="#" class="mini-cart">
+                                <a href="#mini-cart-settings" class="mini-cart sidebar-menu-toggle">
                                     <span class="item-c">
-                                    <span>5</span>
+                                    <span><?php get_template_part('template-parts/shopping-cart-count') ?></span>
                                     </span>
                                 </a>
                             </li>

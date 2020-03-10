@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="813.993" height="165.278" viewBox="0 0 813.993 165.278">
+    <defs>
+        <linearGradient id="prefix__linear-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#464646"/>
+            <stop offset="1" stop-color="#333"/>
+        </linearGradient>
+        <style>
+            .prefix__cls-1{fill-rule:evenodd;fill:url(#prefix__linear-gradient)}
+        </style>
+    </defs>
+    <g id="prefix__toka-logo-mega-menu" transform="translate(-222.871 -315.901)">
+        <g id="prefix__Group_1" data-name="Group 1" transform="translate(222.871 315.901)">
+            <path id="prefix__Path_58" d="M235.809 355.305l-16.072 37.655H187.4l70.336-161.03h27.974l70.336 161.03h-33.255l-15.843-37.655-11.71-28.2-23.956-55.488-23.763 55.483-11.71 28.2z" class="prefix__cls-1" data-name="Path 58" transform="translate(457.947 -230.361)"/>
+            <path id="prefix__Path_59" d="M166.9 307.722l71.407-75.5h39.11l-66.854 69.188 69.112 90.733h-38.15l-52.465-69.15-22.16 22.768v46.38h-31.3V232.22h31.3v75.5z" class="prefix__cls-1" data-name="Path 59" transform="translate(311.52 -229.541)"/>
+            <path id="prefix__Path_60" d="M71 314.6v-.421c0-47.031 36.814-82.658 83.73-82.658s83.117 35.168 83.117 82.2v.459c0 47.031-36.814 82.62-83.73 82.62S71 361.63 71 314.6zm134.358 0v-.421c0-29.2-21.162-53.575-51.049-53.575s-50.82 23.917-50.82 53.116v.459c0 29.2 21.162 53.575 51.049 53.575s50.628-23.879 50.628-53.077z" class="prefix__cls-1" data-name="Path 60" transform="translate(128.911 -231.52)"/>
+            <path id="prefix__Path_61" d="M68.24 261.571H18.76V232.22h130.531v29.351h-49.48v130.57H68.24v-130.57z" class="prefix__cls-1" data-name="Path 61" transform="translate(-18.76 -229.541)"/>
+        </g>
+    </g>
+</svg>

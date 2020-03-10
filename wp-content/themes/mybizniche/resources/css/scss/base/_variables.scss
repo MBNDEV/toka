@@ -36,5 +36,23 @@ $button-font-family: 'Ubuntu', sans-serif;
 /* FOUNDATION VARIABLES */
 $grid-container: 1440px;
 
+$foundation-palette: (
+  primary: $color-primary,
+  secondary: $color-secondary,
+  success: $color-success,
+  warning: $color-warning,
+  alert: $color-alert,
+) !default;
+
 $button-background: $color-primary;
 $button-radius: 3px;
+$button-sizes: (
+    tiny: 0.6rem,
+    small: 0.75rem,
+    defaut: 14px, // default: 0.9rem,
+    large: 1.25rem
+) !default;
+$button-padding: 1.5em;
+$button-font-weight: 500 !default;
+
+$input-shadow: none;

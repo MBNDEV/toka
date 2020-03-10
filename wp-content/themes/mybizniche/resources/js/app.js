@@ -3,7 +3,7 @@
     var app = {
         onReady: function(){
 
-        },
+        },	
         onLoad: function(){
 			$(document).foundation();
 
@@ -12,6 +12,9 @@
 			app.mobileMenu();
 			app.smoothscroll();
 			app.sliders();
+			app.customScrollBar();
+			app.sideBarMenu();
+			app.accountTabs();
 		},
 		utils: function(){
 			$('.wrap-words').each(function(i, e){
@@ -121,7 +124,46 @@
 				]
 			});
 
+		},
+		customScrollBar: function(){
+			$('.with-scrollbar').each(function(i, e){
+				$(e).niceScroll({
+					cursorborder: '',
+					cursorcolor: 'rgba(20, 200, 240, 0.4)',
+				});
+			});
 
+			$(window).on('scroll', function(){
+				$('.with-scrollbar').getNiceScroll().resize();
+			});
+		},
+		sideBarMenu: function(){
+			$('a.sidebar-menu-toggle').on('click', function(e){
+				var hash = this.hash;
+				
+				if(!hash)
+					return;
+
+				e.preventDefault();
+				
+				$(hash+'.sidebar-menu-wrap').addClass('in');
+			});
+
+			$('.sidebar-menu-wrap').on('click', function(e){
+				if (e.target !== this)
+				return;
+
+				$(this).removeClass('in');
+			});
+
+			$('.sidebar-menu .close').on('click', function(){
+				$(this).closest('.sidebar-menu-wrap').removeClass('in');
+			});
+		},
+		accountTabs: function(){
+			$('#account-tabs').on('change.zf.tabs', function(){
+				$('.sidebar-menu-wrap .sidebar-menu .inner').getNiceScroll().resize();
+			});
 		}
     }
 

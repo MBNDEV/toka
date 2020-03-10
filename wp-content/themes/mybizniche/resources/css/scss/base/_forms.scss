@@ -1,0 +1,51 @@
+input[type=text], input[type=password],
+input[type=email], input[type=tel],
+input[type=number], select, textarea{
+    height: 58px;
+    border: solid 1px #d1d1d1;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+textarea{
+    height: auto;
+}
+
+[type=submit]{
+    letter-spacing: 4.2px;
+}
+
+.button{
+    font-weight: 500;
+
+    &.secondary,
+    &.secondary:hover,
+    &.secondary:focus{
+        color: #fff;
+    }
+}
+
+.action-buttons{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+fieldset{
+    margin-bottom: 20px;
+    
+    legend{
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-dark;
+        margin-bottom: 22px;
+    }
+
+    .grid-padding-x{
+        margin-left: -8px;
+        margin-right: -8px;
+        
+        .cell{
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+    }
+}
