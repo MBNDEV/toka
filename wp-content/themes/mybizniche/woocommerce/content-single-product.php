@@ -32,35 +32,75 @@ if ( post_password_required() ) {
 }
 ?>
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+	<div id="woocommerce-single-product">
+		
+		<div class="woocommerce-image-summary">
+			<div class="grid-x grid-margin-x">
+				<div class="large-6 cell">
+				<?php
 
-	<?php
-	/**
-	 * Hook: woocommerce_before_single_product_summary.
-	 *
-	 * @hooked woocommerce_show_product_sale_flash - 10
-	 * @hooked woocommerce_show_product_images - 20
-	 */
-	do_action( 'woocommerce_before_single_product_summary' );
-	?>
+					echo '<div class="summary entry-summary"> <div class="hide-for-large">';
+					woocommerce_breadcrumb();
+					woocommerce_template_single_title();
+					woocommerce_template_single_meta();
+					woocommerce_template_single_price();
+					echo '</div></div>';
 
-	<div class="summary entry-summary">
-		<?php
-		/**
-		 * Hook: woocommerce_single_product_summary.
-		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked woocommerce_template_single_sharing - 50
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
-		 */
-		do_action( 'woocommerce_single_product_summary' );
-		?>
-	</div>
 
+					echo '<div class="single-image-view">';
+					/**
+					 * Hook: woocommerce_before_single_product_summary.
+					 *
+					 * @hooked woocommerce_show_product_sale_flash - 10
+					 * @hooked woocommerce_show_product_images - 20
+					 */
+					do_action( 'woocommerce_before_single_product_summary' );
+
+					echo "</div>";
+				?>
+				</div>
+				<div class="large-6 cell">
+					<div class="summary entry-summary">
+						<?php
+
+						remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+						remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
+						remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+						remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+						remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+						remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+						//remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50);
+
+						echo '<div class="show-for-large">';
+						woocommerce_breadcrumb();
+						woocommerce_template_single_title();
+						woocommerce_template_single_meta();
+						woocommerce_template_single_price();
+						echo '</div>';
+
+						woocommerce_template_single_excerpt();
+						woocommerce_template_single_add_to_cart();
+						woocommerce_template_single_sharing();
+
+						/**
+						 * Hook: woocommerce_single_product_summary.
+						 *
+						 * @hooked woocommerce_template_single_title - 5
+						 * @hooked woocommerce_template_single_rating - 10
+						 * @hooked woocommerce_template_single_price - 10
+						 * @hooked woocommerce_template_single_excerpt - 20
+						 * @hooked woocommerce_template_single_add_to_cart - 30
+						 * @hooked woocommerce_template_single_meta - 40
+						 * @hooked woocommerce_template_single_sharing - 50
+						 * @hooked WC_Structured_Data::generate_product_data() - 60
+						 */
+						do_action( 'woocommerce_single_product_summary' );
+						?>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
 	<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
@@ -71,6 +111,7 @@ if ( post_password_required() ) {
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
+	</div>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
