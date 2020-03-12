@@ -22,6 +22,6 @@
         "files": {
         }
     },
-    "siteURL": "http://tokacbd.dev.mybizniche.com/",
-    "browserSync": false
+    "siteURL": "http://localhost/projects/tokacbd/",
+    "browserSync": true
 }

@@ -126,7 +126,7 @@
 
 			var faqSlider = function(){
 				var w	= window.innerWidth,
-					$e	= $('.featured-faqs');
+					$e	= $('.featured-faqs, .faq-boxes');
 
 				if(w <= 1023){
 					if(!$e.hasClass('slick-initialized')){
@@ -150,6 +150,20 @@
 
 			faqSlider();
 			$(window).on('resize', faqSlider);
+
+
+			
+            $('.bg-slider').slick({
+                slidesToShow: 1,
+                infinite: true,
+                dots: false,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 10000,
+				speed: 1300,
+                pauseOnHover: false,
+				fade: true
+			});
 		},
 		customScrollBar: function(){
 			$('.with-scrollbar').each(function(i, e){
