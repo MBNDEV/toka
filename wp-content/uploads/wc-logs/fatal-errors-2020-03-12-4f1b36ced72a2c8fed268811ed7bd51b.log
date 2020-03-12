@@ -1,0 +1,10 @@
+2020-03-12T10:41:08+00:00 CRITICAL Uncaught Error: Call to undefined function money_format() in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\templates\template-services.php:103
+Stack trace:
+#0 C:\xampp\htdocs\projects\tokacbd\wp-includes\template-loader.php(98): include()
+#1 C:\xampp\htdocs\projects\tokacbd\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\projects\tokacbd\index.php(17): require('C:\\xampp\\htdocs...')
+#3 {main}
+  thrown in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\templates\template-services.php on line 103
+
+2020-03-12T10:58:24+00:00 CRITICAL syntax error, unexpected ')' in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\templates\template-services.php on line 110
+

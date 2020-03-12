@@ -32,8 +32,8 @@ get_header(); ?>
                     <div class="items">
                         <div class="item">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-sleep.png" srcset="images/img-product-tincture-sleep@2x.png 2x,
-                                images/img-product-tincture-sleep@3x.png 3x" class="images-product-tincture-sleep">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-sleep.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-sleep@2x.png 2x,
+                                <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-sleep@3x.png 3x" class="images-product-tincture-sleep">
                             </div>
 
                             <div class="content">
@@ -54,8 +54,8 @@ get_header(); ?>
                         </div>
                         <div class="item">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-natural.png" srcset="images/img-product-tincture-natural@2x.png 2x,
-                                images/img-product-tincture-natural@3x.png 3x" class="images-product-tincture-natural">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-natural.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-natural@2x.png 2x,
+                                <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-natural@3x.png 3x" class="images-product-tincture-natural">
                             </div>
 
                             <div class="content">
@@ -76,8 +76,8 @@ get_header(); ?>
                         </div>
                         <div class="item">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-libido.png" srcset="images/img-product-tincture-libido@2x.png 2x,
-                            images/img-product-tincture-libido@3x.png 3x" class="images-product-tincture-libido">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-libido.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-libido@2x.png 2x,
+                            <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-libido@3x.png 3x" class="images-product-tincture-libido">
                             </div>
 
                             <div class="content">
@@ -98,8 +98,8 @@ get_header(); ?>
                         </div>
                         <div class="item">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-lemon.png" srcset="images/img-product-tincture-lemon@2x.png 2x,
-                            images/img-product-tincture-lemon@3x.png 3x" class="images-product-tincture-lemon">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-lemon.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-lemon@2x.png 2x,
+                            <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-lemon@3x.png 3x" class="images-product-tincture-lemon">
                             </div>
 
                             <div class="content">
@@ -120,8 +120,8 @@ get_header(); ?>
                         </div>
                         <div class="item">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-energy.png" srcset="images/img-product-tincture-energy@2x.png 2x,
-                                        images/img-product-tincture-energy@3x.png 3x" class="img-product-tincture-energy">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-energy.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-energy@2x.png 2x,
+                                        <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-energy@3x.png 3x" class="img-product-tincture-energy">
                             </div>
 
                             <div class="content">
@@ -142,8 +142,8 @@ get_header(); ?>
                         </div>
                         <div class="item">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-vanilla.png" srcset="images/img-product-tincture-vanilla@2x.png 2x,
-                                images/img-product-tincture-vanilla@3x.png 3x" class="img-product-tincture-vanilla">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-vanilla.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-vanilla@2x.png 2x,
+                                <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-vanilla@3x.png 3x" class="img-product-tincture-vanilla">
                             </div>
 
                             <div class="content">
@@ -591,47 +591,7 @@ get_header(); ?>
     </div>
 </section>
 
-
-<section id="sec-faq" class="sec-faq section">
-    <div class="grid-container fluid">
-        <div class="grid-x">
-            <div class="cell large-12">
-                <h2 class="section-title text-center">Frequently Asked Questions</h2>
-            </div>
-            <div class="cell large-12">
-                <div class="faq-box faq-box-1">
-                    <div class="text">
-                        <h3>What is CBD?</h3>
-                        <p>Cannabidiol (CBD) is a naturally-occurring constituent of industrial hemp (cannabis sativa) plants. It is the most abundant non-psychoactive cannabinoid found in cannabis and is being scientifically investigated for numerous reasons. Most people have heard of a cannabinoid called THC, which is the ingredient in cannabis that gets users high. Unlike THC, CBD (cannabidiol) is a non-intoxicating cannabinoid and does not cause a high.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="cell large-7">
-                <div class="faq-box faq-box-2" data-mh="faq-box">
-                    <div class="text">
-                        <h3>Is CBD oil legal?</h3>
-                        <p>Industrial hemp was legalized with the passage of the United States Farm Bill of 2018. CBD containing less than 0.3% of THC is legal in all 50 states. Many states are also passing their own legislation to legalize hemp and CBD products further. You do not need a prescription to buy CBD oil. CBD laws vary internationally. We recommend you research the legality of CBD in your country before making a purchase.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="cell large-5">
-                <div class="faq-box faq-box-3" data-mh="faq-box">
-                    <div class="text">
-                        <h3>What can CBD be used for?</h3>
-                        <p>CBD has a wide range of uses, including the potential to treat anxiety, depression, aches and pains, and other everyday ailments. While we can’t make medical claims to what CBD can or can’t treat, it has been shown to have a positive impact on people’s and pet’s lives.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="cell large-12">
-                <div class="faq-cta">
-                    <a href="#">
-                        <span class="arrow-button">Visit FAQ Page</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<?php get_template_part('template-parts/section-faqs') ?>
 
 
 <?php get_footer() ?>
