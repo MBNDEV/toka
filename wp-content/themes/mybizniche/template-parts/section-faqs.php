@@ -1,11 +1,12 @@
 <section id="sec-faq" class="sec-faq section">
     <div class="grid-container fluid">
         <div class="grid-x">
-            <div class="cell large-12">
-                <h2 class="section-title text-center">Frequently Asked Questions</h2>
+            <div class="cell large-12 text-center">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <a href="#faq-boxes" class="button-circ-down smoothscrolling">Down</a>
             </div>
             <div class="cell large-12">
-                <div class="faq-boxes">
+                <div id="faq-boxes" class="faq-boxes">
                     <?php 
                     $faqs = get_posts('post_type=faq&posts_per_page=3');
 

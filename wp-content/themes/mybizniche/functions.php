@@ -172,7 +172,7 @@ function mbn_register_sidebars(){
     ]);
 
     // footer menus
-    for($i=1;$i<=3;$i++){
+    for($i=1;$i<=4;$i++){
         register_sidebar(array(
             'name'          => __('Footer Area '.$i),
             'id'            => 'footer-area-'.$i,

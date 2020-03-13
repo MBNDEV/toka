@@ -16,11 +16,38 @@ add_filter('body_class', 'mbn_body_class');
 ** Submenu Classes
 */
 function mbn_submenu_classes($classes, $args){
-    // code here ...
+    // footer menus
+    for($i=1;$i<4;$i++){
+        if(('footer-menu-'.$i) == $args->menu->slug){
+            $classes[] = 'menu vertical';
+        }
+    }
+
+
     
     return $classes;
 }
-add_filter('wp_nav_menu_items', 'mbn_submenu_classes', 10, 2);
+add_filter('nav_menu_submenu_css_class', 'mbn_submenu_classes', 10, 2);
+
+
+
+/*
+** Submenu Classes
+*/
+function mbn_nav_menu_args($args){
+    // footer menus
+    for($i=1;$i<4;$i++){
+        if(('footer-menu-'.$i) == $args['menu']->slug){
+            $args['container']  = false;
+            $args['menu_class'] = 'menu vertical';
+        }
+    }
+
+
+
+    return $args;
+}
+add_filter('wp_nav_menu_args', 'mbn_nav_menu_args', 10, 1);
 
 
 
@@ -38,6 +65,14 @@ function mbn_cf7_redirect_script(){
 }
 add_action('wp_footer', 'mbn_cf7_redirect_script', 20);
 
+
+/**
+ * Wrap widget title
+**/
+function mbn_wrap_widget_title($title, $instance, $wid){
+    return sprintf('<h4>%s</h4>', $title);
+}
+add_filter('widget_title', 'mbn_wrap_widget_title', 10, 3);
 
 
 /**

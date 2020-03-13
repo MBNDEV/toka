@@ -18,18 +18,74 @@ get_header(); ?>
                     <h2>Positively <span class="blue">Pure Wellness.</span></h2>
                     <p>Developed with pharmaceutical science. Rooted in functional medicine.</p>
                 </div>
+
+                <?php
+                $types      = ['tinctures', 'gummies', 'pre-rolls'];
+                $categories = [];
+
+                foreach($types as $type){
+                    if($term = get_term_by('slug', $type, 'product_cat')){
+                        $categories[] = $term;
+                    }
+                }
+                ?>
                 
                 <div class="p-tabs">
                     <ul>
-                        <li class="active">Tinctures</li>
+                        <?php foreach($categories as $key => $category): ?>
+                        <li class="<?php echo $key==0 ?'active' :'' ?>">
+                            <a href="#p-tabs-<?php echo $category->slug ?>"><?php echo $category->name ?></a>
+                        </li>
+                        <?php endforeach ?>
+                        <!-- <li class="active">Tinctures</li>
                         <li>Gummies</li>
-                        <li>Pre-Rolls</li>
+                        <li>Pre-Rolls</li> -->
                     </ul>
                     <a href="#" class="more">More</a>
                 </div>
 
                 <div class="p-tab-cont">
-                    <div class="items">
+                    <?php foreach($categories as $key => $category): ?>
+                    <div class="tab-item <?php echo $key==0 ?'in' :'' ?>" id="p-tabs-<?php echo $category->slug ?>">
+                        <?php
+                        $items = wc_get_products([
+                            'limit'     => 6,
+                            'category'  => [$category->slug]
+                        ]);
+
+                        if(!empty($items)):
+                        ?>
+                        <div class="items">
+                            <?php foreach($items as $item): ?>
+                            <div class="item">
+                                <div class="thumb">
+                                    <?php echo get_the_post_thumbnail($item->id) ?>
+                                </div>
+
+                                <div class="content">
+                                    <h3><span style="color:<?php echo get_field('color', $item->id) ?>"><?php echo $item->name ?></span></h3>
+                                    <h6>TINCTURE</h6>
+                                    <ul class="menu sizes">
+                                        <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
+                                        <li><a href="#"><strong>2000</strong>mg</a></li>
+                                    </ul>
+                                    <span class="price">
+                                        <sup><?php echo get_woocommerce_currency_symbol() ?></sup> <?php echo $item->price ?>
+                                    </span>
+                                    <ul class="menu actions">
+                                        <li><a href="<?php echo esc_url($item->add_to_cart_url()) ?>" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
+                                        <li><a href="" class="button">QUICK VIEW</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <?php endforeach ?>
+                        </div>
+                        <?php else: ?>
+                        <p class="text-center"><em><small>No products available.</small></em></p>
+                        <?php endif ?>
+                    </div>
+                    <?php endforeach ?>
+                    <!-- <div class="items" id="">
                         <div class="item">
                             <div class="thumb">
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-sleep.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-sleep@2x.png 2x,
@@ -162,7 +218,7 @@ get_header(); ?>
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="large-12 cell text-center">
@@ -447,10 +503,10 @@ get_header(); ?>
                             </div>
 
                             <div class="product">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/product-sleep.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-sleep.png" alt="">
                             </div>
                             <div class="product2">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/product-sleep.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-sleep.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -475,10 +531,10 @@ get_header(); ?>
                             </div>
 
                             <div class="product">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/product-sleep.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-energy.png" alt="">
                             </div>
                             <div class="product2">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/product-sleep.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-energy.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -506,10 +562,10 @@ get_header(); ?>
                             <span class="text3">Libido</span> -->
 
                             <div class="product">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/product-sleep.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-libido.png" alt="">
                             </div>
                             <div class="product2">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/product-sleep.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-libido.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -517,7 +573,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-sleep.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-skincare.png" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -537,10 +593,7 @@ get_header(); ?>
                             <span class="text3">Libido</span> -->
 
                             <div class="product">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/product-sleep.png" alt="">
-                            </div>
-                            <div class="product2">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/product-sleep.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-skincare2.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -550,7 +603,7 @@ get_header(); ?>
                     <div class="slide-item" style="color:#1c8ece"><a href="javascript:void(0)">Sleep</a></div>
                     <div class="slide-item" style="color:#f7941d"><a href="javascript:void(0)">Energy</a></div>
                     <div class="slide-item" style="color:#b58dc0"><a href="javascript:void(0)">Libido</a></div>
-                    <div class="slide-item" style="color:#222222"><a href="javascript:void(0)">Skincare</a></div>
+                    <div class="slide-item" style="color:#222222"><a href="javascript:void(0)" class="small-text">Skincare</a></div>
                 </div>
 
                 <h4 class="sub-head">Find Your Relief:</h4>
@@ -568,15 +621,15 @@ get_header(); ?>
 </section>
 
 
-<section id="sec-quote" class="sec-quote section">
+<!-- <section id="sec-quote" class="sec-quote section">
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
-            <div class="cell large-5">
+            <div class="cell large-5 order-1 order-lg-0">
                 <div class="image-wrap">
                     <img src="<?php echo MBN_ASSETS_URI ?>/img/img-doc.png" alt="">
                 </div>
             </div>
-            <div class="cell large-7">
+            <div class="cell large-7 order-0 order-lg-1">
                 <blockquote class="doc-quote">
                     <h3>
                         I have tried other CBD products and have found <span class="highlight">Toka to be the most natural and potent.</span>
@@ -589,7 +642,7 @@ get_header(); ?>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <?php get_template_part('template-parts/section-faqs') ?>
 

@@ -520,9 +520,7 @@
         opacity: 1;
 
         .sidebar-menu{
-            &.is-right{
-                transform: translate(0);
-            }
+            transform: translateX(0) !important;
         }
     }
 
@@ -533,11 +531,12 @@
         max-width: 411px;
         padding: 10px;
         overflow: hidden;
+        transition: 0.5s ease all;
+        transform: translateX(-110%);
 
         &.is-right{
             margin: 0 0 0 auto;
             transform: translateX(110%);
-            transition: 0.5s ease all;
         }
 
         .inner{
@@ -558,6 +557,46 @@
             .close{
                 font-size: 25px;
                 cursor: pointer;
+                text-indent: 999px;
+                width: 21px;
+                height: 21px;
+                line-height: 21px;
+                text-align: center;
+                background: transparent url(../img/icn-close.svg) no-repeat center;
+                background-size: 100%;
+                overflow: hidden;
+            }
+        }
+    }
+
+    &.main-menu{
+        .sidebar-menu{
+            max-width: 705px;
+            padding-left: 70px;
+            
+            .top{
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .header-nav{
+                margin-bottom: 85px;
+                ul{
+                    li{
+                        a{
+                            font-size: 32px;
+                            font-weight: 300;
+                            color: $color-primary;
+                            padding: 12px 0;
+                        }
+                    }
+                }
+            }
+
+            .contact-info{
+                li{
+                    margin-bottom: 20px;
+                }
             }
         }
     }
@@ -712,6 +751,56 @@
 
                     &:last-child{
                         margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include media(max-width, 1023px){
+        &.main-menu{
+            .sidebar-menu{
+                max-width: 640px;
+                padding-left: 20px;
+            
+                .top{
+                    margin-top: 0px;
+                    margin-bottom: 30px;
+                }
+
+                .header-nav{
+                    ul{
+                        li{
+                            a{
+                                font-size: 24px;
+                                padding: 10px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media(max-width, 639px){
+        &.main-menu{
+            .sidebar-menu{
+                padding-left: 0;
+            
+                .top{
+                    margin-top: 0px;
+                    margin-bottom: 20px;
+                }
+
+                .header-nav{
+                    ul{
+                        li{
+                            a{
+                                font-size: 21px;
+                                padding: 10px 0;
+                            }
+                        }
                     }
                 }
             }

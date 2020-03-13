@@ -8,7 +8,7 @@
                         <div class="f-top">
                             <ul class="contact-info">
                                 <li class="pin"><a href="#">3407 Montrose Blvd., Houston, Texas 77006</a></li>
-                                <li class="phone"><a href="#">713 773 2273</a></li>
+                                <li class="phone"><a href="tel:713-773-2273">713 773 2273</a></li>
                                 <li class="calendar">
                                     <a href="#">8am-5pm Monday thru Friday</a>
                                     <span class="badge">Store is open today</span>
@@ -27,7 +27,8 @@
                     </div>
                     <div class="cell large-2">
                         <div class="f-menu">
-                            <h4>About</h4>
+                            <?php dynamic_sidebar('footer-area-1') ?>
+                            <!-- <h4>About</h4>
                             <ul class="menu vertical">
                                 <li class="hide-link">
                                     <a href="#">&nbsp;</a>
@@ -38,12 +39,13 @@
                                         <li><a href="#">Blog</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
-                    <div class="cell large-2">
+                    <div class="cell small-6 large-2">
                         <div class="f-menu">
-                            <h4>Shop</h4>
+                            <?php dynamic_sidebar('footer-area-2') ?>
+                            <!-- <h4>Shop</h4>
                             <ul class="menu vertical">
                                 <li>
                                     <a href="#">Product Type</a>
@@ -54,12 +56,13 @@
                                         <li><a href="#">Oil Tinctures</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
-                    <div class="cell large-2">
+                    <div class="cell small-6 large-2">
                         <div class="f-menu">
-                            <h4>&nbsp;</h4>
+                            <?php dynamic_sidebar('footer-area-3') ?>
+                            <!-- <h4>&nbsp;</h4>
                             <ul class="menu vertical">
                                 <li>
                                     <a href="#">Find Your Relief</a>
@@ -69,15 +72,16 @@
                                         <li><a href="#">Libido</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
-                    <div class="cell large-2">
+                    <div class="cell medium-6 large-2">
                         <div class="f-menu">
-                            <h4>Help</h4>
+                            <?php dynamic_sidebar('footer-area-4') ?>
+                            <!-- <h4>Help</h4>
                             <ul class="menu vertical">
                                 <li class="hide-link">
-                                    <a href="#">&nbsp;</a>
+                                    <a href="#"></a>
                                     <ul class="sub-menu menu vertical">
                                         <li><a href="#">FAQs</a></li>
                                         <li><a href="#">Shipping and Returns</a></li>
@@ -86,10 +90,10 @@
                                         <li><a href="#">Privacy Policy</a></li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
-                    <div class="cell large-4">
+                    <div class="cell medium-6 large-4">
                         <div class="subscribe-form">
                             <h4><span class="blue">Ready to Feel Relief?</span><br>
                             Sign up to receive 10% off your first order!</h4>

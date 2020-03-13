@@ -15,6 +15,7 @@
 			app.customScrollBar();
 			app.sideBarMenu();
 			app.accountTabs();
+			app.pTabs();
 		},
 		utils: function(){
 			$('.wrap-words').each(function(i, e){
@@ -90,7 +91,7 @@
                 dots: true,
                 arrows: false,
                 autoplay: true,
-                autoplaySpeed: 6000,
+                autoplaySpeed: 6777000,
                 pauseOnHover: false,
 				speed: 1300,
 				fade: true,
@@ -151,7 +152,6 @@
 			faqSlider();
 			$(window).on('resize', faqSlider);
 
-
 			
             $('.bg-slider').slick({
                 slidesToShow: 1,
@@ -204,6 +204,17 @@
 		accountTabs: function(){
 			$('#account-tabs').on('change.zf.tabs', function(){
 				$('.sidebar-menu-wrap .sidebar-menu .inner').getNiceScroll().resize();
+			});
+		},
+		pTabs: function(){
+			$('.p-tabs li a').on('click', function(e){
+				e.preventDefault();
+
+				$(this).closest('ul').children('li').removeClass('active');
+				$(this).parent().addClass('active');
+
+				$('.p-tab-cont').children('.tab-item').removeClass('in');
+				$('.p-tab-cont').find(this.hash).addClass('in');
 			});
 		}
     }
