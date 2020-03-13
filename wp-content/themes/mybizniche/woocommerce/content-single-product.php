@@ -58,6 +58,14 @@ if ( post_password_required() ) {
 
 					echo "</div>";
 				?>
+				<script>
+					jQuery(function(){
+						//Product thumbnail lightbox
+						$('.woocommerce-product-gallery__image a').each(function () {
+							$(this).attr('data-fancybox', 'prod-gal-thumb');
+						});
+					});
+				</script>
 				</div>
 				<div class="large-6 cell">
 					<div class="summary entry-summary">

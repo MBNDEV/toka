@@ -42,11 +42,21 @@ if ( ! empty( $product_tabs ) ) : ?>
 		</ul>
 		<?php foreach ( $product_tabs as $key => $product_tab ) : ?>
 			<div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--<?php echo esc_attr( $key ); ?> panel entry-content wc-tab" id="tab-<?php echo esc_attr( $key ); ?>" role="tabpanel" aria-labelledby="tab-title-<?php echo esc_attr( $key ); ?>">
-				<?php
-				if ( isset( $product_tab['callback'] ) ) {
-					call_user_func( $product_tab['callback'], $key, $product_tab );
-				}
-				?>
+				<div class="grid-x grid-margin-x">
+					<div class="cell large-8">
+						<?php
+						if ( isset( $product_tab['callback'] ) ) {
+							call_user_func( $product_tab['callback'], $key, $product_tab );
+						}
+						?>
+					</div>	
+					<div class="cell large-3 large-offset-1">
+						<div class="organic-100">
+							100% 
+							<small>ORGANIC INDUSTRIAL <br> HEMP GROWN <br> IN COLORADO</small>
+						</div>
+					</div>
+				</div>
 			</div>
 		<?php endforeach; ?>
 

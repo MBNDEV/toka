@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' ); ?>
 
 	<?php
+		remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 		/**
 		 * woocommerce_before_main_content hook.
 		 *
