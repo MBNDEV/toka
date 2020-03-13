@@ -16,6 +16,7 @@
 
     <div class="spacer-top"></div>
 
+    <?php get_template_part('template-parts/main-menu') ?>
     <?php get_template_part('template-parts/account-settings') ?>
     <?php get_template_part('template-parts/mini-cart-settings') ?>
 
@@ -27,7 +28,7 @@
             <div class="grid-container fluid">
                 <div class="grid-x grid-margin-x align-middle">
                     <div class="small-4 large-5 cell left-col">
-                        <a class="option-menu"></a>
+                        <a href="#main-menu" class="option-menu sidebar-menu-toggle"></a>
                         <a class="s-icon"></a>
                         <div class="sale">
                             <span class="lbl">Ready to Feel Relief?</span>

@@ -118,6 +118,35 @@
         }
     }
 
+    @include media(max-width, 1023px){
+        padding-top: 65px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .f-menu{
+            margin-bottom: 20px;
+
+            h4{
+                margin-bottom: 15px;
+            }
+        }
+
+        .f-bottom{
+            margin-top: 65px;
+            padding-bottom: 55px;
+        }
+
+        .f-copyright{
+            margin-bottom: 15px;
+        }
+
+        .f-note{
+            p{
+                line-height: 1.5;
+            }
+        }
+    }
+
     @include media(max-width, 639px){
         .f-top{
             .contact-info{

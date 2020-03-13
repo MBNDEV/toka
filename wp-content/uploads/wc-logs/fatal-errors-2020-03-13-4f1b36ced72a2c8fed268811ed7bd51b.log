@@ -1,0 +1,67 @@
+2020-03-13T17:06:58+00:00 CRITICAL Cannot redeclare mbn_submenu_classes() (previously declared in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php:18) in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 37
+
+2020-03-13T17:06:59+00:00 CRITICAL Cannot redeclare mbn_submenu_classes() (previously declared in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php:18) in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 37
+
+2020-03-13T17:07:03+00:00 CRITICAL Cannot redeclare mbn_submenu_classes() (previously declared in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php:18) in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 36
+
+2020-03-13T17:07:04+00:00 CRITICAL Cannot redeclare mbn_submenu_classes() (previously declared in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php:18) in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 36
+
+2020-03-13T17:11:43+00:00 CRITICAL Object of class WP_Term could not be converted to string in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 34
+
+2020-03-13T17:11:54+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 35
+
+2020-03-13T17:11:55+00:00 CRITICAL syntax error, unexpected '}' in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 35
+
+2020-03-13T17:14:28+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php:21
+Stack trace:
+#0 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-hook.php(288): mbn_submenu_classes('<li id="menu-it...', Object(stdClass))
+#1 C:\xampp\htdocs\projects\tokacbd\wp-includes\plugin.php(206): WP_Hook->apply_filters('<li id="menu-it...', Array)
+#2 C:\xampp\htdocs\projects\tokacbd\wp-includes\nav-menu-template.php(247): apply_filters('wp_nav_menu_ite...', '<li id="menu-it...', Object(stdClass))
+#3 C:\xampp\htdocs\projects\tokacbd\wp-includes\widgets\class-wp-nav-menu-widget.php(81): wp_nav_menu(Object(stdClass))
+#4 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-widget.php(379): WP_Nav_Menu_Widget->widget(Array, Array)
+#5 C:\xampp\htdocs\projects\tokacbd\wp-content\plugins\megamenu\classes\widget-manager.class.php(846): WP_Widget->display_callback(Array, Array)
+#6 C:\xampp\htdocs\projects\tokacbd\wp-content\plugins\megamenu\megamenu.php in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 21
+
+2020-03-13T17:14:37+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php:21
+Stack trace:
+#0 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-hook.php(288): mbn_submenu_classes('<li id="menu-it...', Object(stdClass))
+#1 C:\xampp\htdocs\projects\tokacbd\wp-includes\plugin.php(206): WP_Hook->apply_filters('<li id="menu-it...', Array)
+#2 C:\xampp\htdocs\projects\tokacbd\wp-includes\nav-menu-template.php(247): apply_filters('wp_nav_menu_ite...', '<li id="menu-it...', Object(stdClass))
+#3 C:\xampp\htdocs\projects\tokacbd\wp-includes\widgets\class-wp-nav-menu-widget.php(81): wp_nav_menu(Object(stdClass))
+#4 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-widget.php(379): WP_Nav_Menu_Widget->widget(Array, Array)
+#5 C:\xampp\htdocs\projects\tokacbd\wp-content\plugins\megamenu\classes\widget-manager.class.php(846): WP_Widget->display_callback(Array, Array)
+#6 C:\xampp\htdocs\projects\tokacbd\wp-content\plugins\megamenu\megamenu.php in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 21
+
+2020-03-13T17:15:48+00:00 CRITICAL Uncaught Error: [] operator not supported for strings in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php:22
+Stack trace:
+#0 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-hook.php(288): mbn_submenu_classes('<li id="menu-it...', Object(stdClass))
+#1 C:\xampp\htdocs\projects\tokacbd\wp-includes\plugin.php(206): WP_Hook->apply_filters('<li id="menu-it...', Array)
+#2 C:\xampp\htdocs\projects\tokacbd\wp-includes\nav-menu-template.php(247): apply_filters('wp_nav_menu_ite...', '<li id="menu-it...', Object(stdClass))
+#3 C:\xampp\htdocs\projects\tokacbd\wp-includes\widgets\class-wp-nav-menu-widget.php(81): wp_nav_menu(Object(stdClass))
+#4 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-widget.php(379): WP_Nav_Menu_Widget->widget(Array, Array)
+#5 C:\xampp\htdocs\projects\tokacbd\wp-includes\widgets.php(805): WP_Widget->display_callback(Array, Array)
+#6 C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\footer.php(30): dynamic_sidebar('footer-area-1')
+#7 C: in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 22
+
+2020-03-13T17:15:55+00:00 CRITICAL Uncaught Error: [] operator not supported for strings in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php:22
+Stack trace:
+#0 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-hook.php(288): mbn_submenu_classes('<li id="menu-it...', Object(stdClass))
+#1 C:\xampp\htdocs\projects\tokacbd\wp-includes\plugin.php(206): WP_Hook->apply_filters('<li id="menu-it...', Array)
+#2 C:\xampp\htdocs\projects\tokacbd\wp-includes\nav-menu-template.php(247): apply_filters('wp_nav_menu_ite...', '<li id="menu-it...', Object(stdClass))
+#3 C:\xampp\htdocs\projects\tokacbd\wp-includes\widgets\class-wp-nav-menu-widget.php(81): wp_nav_menu(Object(stdClass))
+#4 C:\xampp\htdocs\projects\tokacbd\wp-includes\class-wp-widget.php(379): WP_Nav_Menu_Widget->widget(Array, Array)
+#5 C:\xampp\htdocs\projects\tokacbd\wp-includes\widgets.php(805): WP_Widget->display_callback(Array, Array)
+#6 C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\footer.php(30): dynamic_sidebar('footer-area-1')
+#7 C: in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\includes\public-hooks.php on line 22
+
+2020-03-13T17:26:01+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wc_get_products(), 0 passed in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\templates\template-home.php on line 34 and exactly 1 expected in C:\xampp\htdocs\projects\tokacbd\wp-content\plugins\woocommerce\includes\wc-product-functions.php:26
+Stack trace:
+#0 C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\templates\template-home.php(34): wc_get_products()
+#1 C:\xampp\htdocs\projects\tokacbd\wp-includes\template-loader.php(98): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\projects\tokacbd\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\projects\tokacbd\index.php(17): require('C:\\xampp\\htdocs...')
+#4 {main}
+  thrown in C:\xampp\htdocs\projects\tokacbd\wp-content\plugins\woocommerce\includes\wc-product-functions.php on line 26
+
+2020-03-13T18:01:33+00:00 CRITICAL syntax error, unexpected '$key' (T_VARIABLE) in C:\xampp\htdocs\projects\tokacbd\wp-content\themes\mybizniche\templates\template-home.php on line 48
+
