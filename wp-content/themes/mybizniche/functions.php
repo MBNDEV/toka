@@ -129,6 +129,11 @@ function mbn_enqueue_scripts(){
         wp_enqueue_style('findstore-css', MBN_ASSETS_URI.'/css/find-store.css', [], $wp_version);
         wp_enqueue_script('findstore-js', MBN_ASSETS_URI.'/js/find-store.js', [], $wp_version);
     }
+
+    if(is_page_template("templates/template-faqs.php")){
+        wp_enqueue_style('faqs-css', MBN_ASSETS_URI.'/css/faq.css', [], $wp_version);
+        wp_enqueue_script('faqs-js', MBN_ASSETS_URI.'/js/faq.js', [], $wp_version);
+    }
 }
 add_action('wp_enqueue_scripts', 'mbn_enqueue_scripts', 20);
 

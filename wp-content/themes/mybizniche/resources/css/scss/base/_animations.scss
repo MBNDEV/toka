@@ -35,3 +35,27 @@
         top: 0;
     }
 }
+
+@include keyframes(subHeaderIn){
+    from{
+        -webkit-transform: translate(-100%,0);
+        transform: translate(-100%,0);
+    }
+
+    to{
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+    }
+}
+
+@include keyframes(animHighlights){
+    from{
+       background:$color-secondary;
+       color:$white;
+    }
+
+    to{
+        background:none;
+       
+    }
+}
