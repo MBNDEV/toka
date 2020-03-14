@@ -8454,6 +8454,48 @@ ol.list-upper-roman {
   }
 }
 
+@-webkit-keyframes subHeaderIn {
+  from {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes subHeaderIn {
+  from {
+    -webkit-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@-webkit-keyframes animHighlights {
+  from {
+    background: #14c8f0;
+    color: #fefefe;
+  }
+  to {
+    background: none;
+  }
+}
+
+@keyframes animHighlights {
+  from {
+    background: #14c8f0;
+    color: #fefefe;
+  }
+  to {
+    background: none;
+  }
+}
+
 body {
   font-family: "Ubuntu", sans-serif;
   font-size: 16px;

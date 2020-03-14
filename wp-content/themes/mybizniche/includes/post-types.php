@@ -68,19 +68,6 @@ function mbn_ivtherapy_post_type(){
 
     // register_taxonomy('faqs_cat', array('faqs'), $args);
 
-    register_post_type( 'find_store',
-		array(
-			'labels' => array(
-				'name' => __( 'Stores' ),
-				'singular_name' => __('find-store')
-			),
-			'public' => true,
-			'has_archive' => false,
-			'show_in_rest' => false,
-			'rewrite' => array('slug' => 'find-store'),
-			'supports'	=>	array('title','editor','page-attributes','thumbnail')
-		)
-	);
 }
 
 add_action('init', 'mbn_ivtherapy_post_type');
@@ -110,7 +97,7 @@ function mbn_faqs_post_types(){
 
     $args = array(
         'labels'                => $labels,
-        'description'           => 'lorem ipsum',
+        'description'           => 'Faqs content',
         'public'                => false,
         'publicly_queryable'    => false,
         'show_in_menu'          => true,
@@ -124,7 +111,7 @@ function mbn_faqs_post_types(){
         'can_export'            => true,
         'menu_position'         => 20,
         'menu_icon'             => 'dashicons-editor-paragraph',
-        'supports'              => array('title', 'editor', 'thumbnail'),
+        'supports'              => array('title', 'editor', 'thumbnail','page-attributes'),
         'delete_with_user'      => true
     );
 
@@ -132,5 +119,44 @@ function mbn_faqs_post_types(){
 
 
 }
-
 add_action('init', 'mbn_faqs_post_types');
+
+function faqs_taxonomy() {  
+    register_taxonomy(  
+        'faqs_categories',  
+        'faq',       
+        array(  
+            'hierarchical' => true,  
+            'label' => 'Categories',  
+            'query_var' => true,
+            'rewrite' => array(
+                'slug' => 'faq-categories',
+                'with_front' => true  
+            )
+        )  
+    );  
+}  
+add_action( 'init', 'faqs_taxonomy');
+
+
+
+
+
+
+function mbn_find_store_post_types(){
+    register_post_type( 'find_store',
+        array(
+            'labels' => array(
+                'name' => __( 'Stores' ),
+                'singular_name' => __('find-store')
+            ),
+            'public' => true,
+            'has_archive' => false,
+            'show_in_rest' => false,
+            'rewrite' => array('slug' => 'find-store'),
+            'supports'	=>	array('title','editor','page-attributes','thumbnail')
+        )
+    );
+}
+
+add_action('init', 'mbn_find_store_post_types');
