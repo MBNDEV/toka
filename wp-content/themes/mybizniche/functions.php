@@ -44,7 +44,8 @@ function mbn_theme_setup(){
     add_editor_style( 'style-editor.css' );
 
     register_nav_menus(array(
-        'header-menu'            => 'Header Menu',
+        'header-menu'   => 'Header Menu',
+        'main-menu'     => 'Main Menu',
     ));
 
 }
