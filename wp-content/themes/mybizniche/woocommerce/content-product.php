@@ -33,6 +33,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_before_shop_loop_item' );
 
+	remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 	/**
 	 * Hook: woocommerce_before_shop_loop_item_title.
 	 *
@@ -40,7 +41,10 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10
 	 */
 	do_action( 'woocommerce_before_shop_loop_item_title' );
-
+	
+	echo "<figure>";
+		woocommerce_template_loop_product_thumbnail();
+	echo "</figure>";
 	/**
 	 * Hook: woocommerce_shop_loop_item_title.
 	 *

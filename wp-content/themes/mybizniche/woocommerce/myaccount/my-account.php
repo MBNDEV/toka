@@ -17,20 +17,32 @@
 
 defined( 'ABSPATH' ) || exit;
 
-/**
- * My Account navigation.
- *
- * @since 2.6.0
- */
-do_action( 'woocommerce_account_navigation' ); ?>
+?>
 
-<div class="woocommerce-MyAccount-content">
-	<?php
+<div class="grid-x grid-margin-x">
+	<div class="cell large-3">
+		<div class="myaccount-sidebar" id="myaccnav" data-toggler=".nav-open">
+		<?php 
 		/**
-		 * My Account content.
+		 * My Account navigation.
 		 *
 		 * @since 2.6.0
 		 */
-		do_action( 'woocommerce_account_content' );
-	?>
+		do_action( 'woocommerce_account_navigation' ); ?>
+		</div>
+	</div>
+
+	<div class="cell large-6 large-offset-1">
+		<div class="myaccount-main">
+			<?php
+				/**
+				 * My Account content.
+				 *
+				 * @since 2.6.0
+				 */
+				do_action( 'woocommerce_account_content' );
+			?>
+		</div>
+	</div>
+
 </div>
