@@ -395,7 +395,7 @@ get_header(); ?>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
                                 <h2>Sleep</h2>
-                                <a href="#" class="arrow-button">Explore Products</a>
+                                <a href="<?php echo home_url('/products/') ?>" class="arrow-button">Explore Products</a>
                             </div>
                             <div class="note">
                                 <h4 style="color:#1c8ece">100%</h4>

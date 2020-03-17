@@ -53,12 +53,13 @@
     .p-tabs{
         text-align: center;
         display: block;
-        margin-bottom:79px;
+        margin: 0  auto 79px;
 
         ul{
             @include ulMenu();
             text-align: center;
             font-size:0px;
+            margin: 0;
 
             li{
                 font-size:14px;
