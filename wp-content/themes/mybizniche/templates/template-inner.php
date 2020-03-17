@@ -1,9 +1,12 @@
-<?php get_header() ?>
+<?php 
+
+/* Template Name: Inner Page */
+
+get_header() ?>
 
 
 
 <section class="page-content">
-	<div class="grid-container">
 	<?php
 	while ( have_posts() ) : the_post();
 		
@@ -11,7 +14,6 @@
 
 	endwhile; // End of the loop.
 	?>
-	</div>
 </section>
 
 

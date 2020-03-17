@@ -115,6 +115,16 @@
     
 
     <?php wp_footer() ?>
+    
+ <script>
+    jQuery(function(){
+        jQuery('.woocommerce-notices-wrapper').append('<span class="close-notify" />');
+        jQuery('.close-notify').click(function(){
+            //jQuery(this).parent().addClass('hide');
+            jQuery(this).parent().children().first().remove();
+        })
+    });
+</script>
 
 </body>
 </html>
