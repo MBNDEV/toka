@@ -47,7 +47,7 @@ $faqs = get_posts([
                     </div> -->
                 </div>
                 <div class="faq-cta">
-                    <a href="#">
+                    <a href="<?php echo home_url('/faqs/') ?>">
                         <span class="arrow-button">Visit FAQ Page</span>
                     </a>
                 </div>
