@@ -6,23 +6,7 @@
                 <div class="grid-x grid-margin-x">
                     <div class="cell large-12">
                         <div class="f-top">
-                            <ul class="contact-info">
-                                <li class="pin"><a href="#">3407 Montrose Blvd., Houston, Texas 77006</a></li>
-                                <li class="phone"><a href="tel:713-773-2273">713 773 2273</a></li>
-                                <li class="calendar">
-                                    <a href="#">8am-5pm Monday thru Friday</a>
-                                    <span class="badge">Store is open today</span>
-                                </li>
-                                <li>
-                                    <ul class="social-links">
-                                        <li>Follow Us:</li>
-                                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                                        <li><a href="#"><span class="icon-twitter"></span></a></li>
-                                        <li><a href="#"><span class="icon-instagram"></span></a></li>
-                                        <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <?php get_template_part('template-parts/contact-info') ?>
                         </div>
                     </div>
                     <div class="cell large-2">
@@ -107,11 +91,7 @@
                     </div>
                     <div class="cell large-12">
                         <div class="f-bottom text-center">
-                            <ul class="f-cards">
-                                <li><img src="<?php echo MBN_ASSETS_URI ?>/img/icn-amex.png" alt=""></li>
-                                <li><img src="<?php echo MBN_ASSETS_URI ?>/img/icn-mastercard.png" alt=""></li>
-                                <li><img src="<?php echo MBN_ASSETS_URI ?>/img/icn-visa.png" alt=""></li>
-                            </ul>
+                            <?php get_template_part('template-parts/cards-list') ?>
 
                             <div class="f-copyright">
                                 <p>

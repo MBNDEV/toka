@@ -41,7 +41,7 @@ get_header(); ?>
                         <li>Gummies</li>
                         <li>Pre-Rolls</li> -->
                     </ul>
-                    <a href="#" class="more">More</a>
+                    <a href="<?php echo home_url('/products/') ?>" class="more">More</a>
                 </div>
 
                 <div class="p-tab-cont">
@@ -62,7 +62,7 @@ get_header(); ?>
                                     <?php echo get_the_post_thumbnail($item->id) ?>
                                 </div>
 
-                                <div class="content">
+                                <div class="product-info content">
                                     <h3><span style="color:<?php echo get_field('color', $item->id) ?>"><?php echo $item->name ?></span></h3>
                                     <h6>TINCTURE</h6>
                                     <ul class="menu sizes">
@@ -83,146 +83,50 @@ get_header(); ?>
                         <?php else: ?>
                         <p class="text-center"><em><small>No products available.</small></em></p>
                         <?php endif ?>
+
+                        <div class="f-cards-wrap">
+                            <?php get_template_part('template-parts/cards-list') ?>
+                        </div>
+                        
+                        <?php if(!empty($items)): ?>
+                        <div class="p-items">
+                            <?php foreach($items as $item): ?>
+                            <div class="item">
+                                <div class="thumb">
+                                    <?php echo get_the_post_thumbnail($item->id) ?>
+                                </div>
+
+                                <div class="product-info content">
+                                    <h3><span style="color:<?php echo get_field('color', $item->id) ?>"><?php echo $item->name ?></span></h3>
+                                    <h6>TINCTURE</h6>
+                                    <ul class="menu sizes">
+                                        <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
+                                        <li><a href="#"><strong>2000</strong>mg</a></li>
+                                    </ul>
+                                    <span class="price">
+                                        <sup><?php echo get_woocommerce_currency_symbol() ?></sup> <?php echo $item->price ?>
+                                    </span>
+                                    <ul class="menu actions">
+                                        <li><a href="<?php echo esc_url($item->add_to_cart_url()) ?>" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
+                                        <li><a href="" class="button"><img src="<?php echo MBN_ASSETS_URI ?>/img/eye.svg" width="20" alt=""></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <?php endforeach ?>
+                        </div>
+                        <?php endif ?>
+
                     </div>
                     <?php endforeach ?>
-                    <!-- <div class="items" id="">
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-sleep.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-sleep@2x.png 2x,
-                                <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-sleep@3x.png 3x" class="images-product-tincture-sleep">
-                            </div>
-
-                            <div class="content">
-                                <h3><span style="color:#1c8ece">SLEEP</span></h3>
-                                <h6>TINCTURE</h6>
-                                <ul class="menu sizes">
-                                    <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
-                                    <li><a href="#"><strong>2000</strong>mg</a></li>
-                                </ul>
-                                <span class="price">
-                                    <sup>$</sup> 192.95
-                                </span>
-                                <ul class="menu actions">
-                                    <li><a href="#" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                    <li><a href="#" class="button">QUICK VIEW</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-natural.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-natural@2x.png 2x,
-                                <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-natural@3x.png 3x" class="images-product-tincture-natural">
-                            </div>
-
-                            <div class="content">
-                                <h3><span style="color:#8dc63f">NATURAL</span></h3>
-                                <h6>TINCTURE</h6>
-                                <ul class="menu sizes">
-                                    <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
-                                    <li><a href="#"><strong>2000</strong>mg</a></li>
-                                </ul>
-                                <span class="price">
-                                    <sup>$</sup> 192.95
-                                </span>
-                                <ul class="menu actions">
-                                    <li><a href="#" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                    <li><a href="#" class="button">QUICK VIEW</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-libido.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-libido@2x.png 2x,
-                            <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-libido@3x.png 3x" class="images-product-tincture-libido">
-                            </div>
-
-                            <div class="content">
-                                <h3><span style="color:#b58dc0">LIBIDO</span></h3>
-                                <h6>TINCTURE</h6>
-                                <ul class="menu sizes">
-                                    <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
-                                    <li><a href="#"><strong>2000</strong>mg</a></li>
-                                </ul>
-                                <span class="price">
-                                    <sup>$</sup> 192.95
-                                </span>
-                                <ul class="menu actions">
-                                    <li><a href="#" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                    <li><a href="#" class="button">QUICK VIEW</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-lemon.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-lemon@2x.png 2x,
-                            <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-lemon@3x.png 3x" class="images-product-tincture-lemon">
-                            </div>
-
-                            <div class="content">
-                                <h3><span style="color:#feda00">LEMON</span></h3>
-                                <h6>TINCTURE</h6>
-                                <ul class="menu sizes">
-                                    <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
-                                    <li><a href="#"><strong>2000</strong>mg</a></li>
-                                </ul>
-                                <span class="price">
-                                    <sup>$</sup> 192.95
-                                </span>
-                                <ul class="menu actions">
-                                    <li><a href="#" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                    <li><a href="#" class="button">QUICK VIEW</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-energy.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-energy@2x.png 2x,
-                                        <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-energy@3x.png 3x" class="img-product-tincture-energy">
-                            </div>
-
-                            <div class="content">
-                                <h3><span style="color:#f7941d">ENERGY</span></h3>
-                                <h6>TINCTURE</h6>
-                                <ul class="menu sizes">
-                                    <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
-                                    <li><a href="#"><strong>2000</strong>mg</a></li>
-                                </ul>
-                                <span class="price">
-                                    <sup>$</sup> 192.95
-                                </span>
-                                <ul class="menu actions">
-                                    <li><a href="#" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                    <li><a href="#" class="button">QUICK VIEW</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-vanilla.png" srcset="<?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-vanilla@2x.png 2x,
-                                <?php echo MBN_ASSETS_URI ?>/img/img-product-tincture-vanilla@3x.png 3x" class="img-product-tincture-vanilla">
-                            </div>
-
-                            <div class="content">
-                                <h3><span style="color:#e9dec9">VANILLA</span></h3>
-                                <h6>TINCTURE</h6>
-                                <ul class="menu sizes">
-                                    <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
-                                    <li><a href="#"><strong>2000</strong>mg</a></li>
-                                </ul>
-                                <span class="price">
-                                    <sup>$</sup> 192.95
-                                </span>
-                                <ul class="menu actions">
-                                    <li><a href="#" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                    <li><a href="#" class="button">QUICK VIEW</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="large-12 cell text-center">
-                <a href="#" class="arrow-button">Shop Now</a>
+                <a href="<?php echo home_url('/products/') ?>" class="arrow-button">Shop Now</a>
+
+                <a href="<?php echo home_url('/find-store/') ?>" class="find-store-btn">
+                    <img src="<?php echo MBN_ASSETS_URI ?>/img/icn-find-a-store.svg" alt="">
+                    Find A Store
+                </a>
             </div>
         </div>
     </div>

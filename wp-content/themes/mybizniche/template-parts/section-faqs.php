@@ -1,17 +1,25 @@
+<?php
+$faqs = get_posts([
+    'numberposts'   => -1,
+    'post_type'     => 'faq',
+    'meta_key'      => 'add_to_features',
+    'order'         => 'asc',
+    'meta_value'    => true
+]);
+?>
+
 <section id="sec-faq" class="sec-faq section">
     <div class="grid-container fluid">
         <div class="grid-x">
             <div class="cell large-12 text-center">
                 <h2 class="section-title">Frequently Asked Questions</h2>
+                <?php if($faqs): ?>
                 <a href="#faq-boxes" class="button-circ-down smoothscrolling">Down</a>
+                <?php endif ?>
             </div>
             <div class="cell large-12">
                 <div id="faq-boxes" class="faq-boxes">
-                    <?php 
-                    $faqs = get_posts('post_type=faq&posts_per_page=3');
-
-                    foreach($faqs as $key => $faq):
-                    ?>
+                    <?php  foreach($faqs as $key => $faq): ?>
                     <div class="faq-box faq-box-<?php echo $key + 1 ?>" <?php echo in_array($key+1, [2, 3]) ?'data-mh="faqs"' :'' ?>>
                         <div class="text">
                             <h3><?php echo $faq->post_title ?></h3>

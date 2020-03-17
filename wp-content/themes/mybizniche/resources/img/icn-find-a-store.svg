@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="37.746" height="37.746" viewBox="0 0 37.746 37.746">
+    <g id="prefix__icn-find-a-store" transform="translate(-1790.928 -978.127)">
+        <path id="prefix__Icon_material-location-searching" d="M35.712 18.657A15.432 15.432 0 0022.089 5.034V1.5h-3.432v3.534A15.432 15.432 0 005.034 18.657H1.5v3.431h3.534a15.432 15.432 0 0013.623 13.624v3.534h3.431v-3.534a15.432 15.432 0 0013.624-13.623h3.534v-3.432zM20.373 32.383a12.01 12.01 0 1112.01-12.01 12 12 0 01-12.01 12.01z" data-name="Icon material-location-searching" transform="translate(1789.428 976.627)" style="fill:#222"/>
+        <path id="prefix__Icon_material-location-on" d="M12.521 3A5.018 5.018 0 007.5 8.021c0 3.766 5.021 9.326 5.021 9.326s5.021-5.559 5.021-9.326A5.018 5.018 0 0012.521 3zm0 6.815a1.793 1.793 0 111.793-1.793 1.794 1.794 0 01-1.793 1.793z" data-name="Icon material-location-on" transform="translate(1797.318 987.342)" style="fill:#14c8f0"/>
+    </g>
+</svg>
