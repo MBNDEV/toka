@@ -19,10 +19,12 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 <div class="cart_totals <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
+	
+	<a class="button continue-shop" href="<?php the_permalink(112); ?>">Continue Shopping</a>
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
+	<h2 class="hide"><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
@@ -93,6 +95,10 @@ defined( 'ABSPATH' ) || exit;
 		?>
 
 		<?php do_action( 'woocommerce_cart_totals_before_order_total' ); ?>
+
+		<tr class="tr-hr">
+			<th colspan="2" style="padding:0;"><hr style="opacity:0.4"></th>
+		</tr>
 
 		<tr class="order-total">
 			<th><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>

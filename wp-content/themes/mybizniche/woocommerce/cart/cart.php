@@ -22,7 +22,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
+	<table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents custom-cart" cellspacing="0">
 		<thead>
 			<tr>
 				<th class="product-remove">&nbsp;</th>
@@ -135,7 +135,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
 
-			<tr>
+			<tr class="hide">
 				<td colspan="6" class="actions">
 
 					<?php if ( wc_coupons_enabled() ) { ?>

@@ -62,6 +62,24 @@ function mbn_wc_empty_cart_message(){
 }
 add_action('woocommerce_after_mini_cart', 'mbn_wc_empty_cart_message');
 
+//Automatically Update Cart on Quantity Change
+//--------------------------------------------
+function mbn_cart_refresh_update_qty() { 
+    if (is_cart()) { 
+       ?> 
+       <script type="text/javascript"> 
+          jQuery('div.woocommerce').on('click', 'input.qty', function(){ 
+             jQuery("[name='update_cart']").trigger("click"); 
+          }); 
+       </script> 
+       <style>
+           button[name='update_cart'] {display: none !important;}
+       </style>
+       <?php 
+    } 
+ }
+ add_action( 'wp_footer', 'mbn_cart_refresh_update_qty' ); 
+ 
 
 // To change add to cart text on single product page
 add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
