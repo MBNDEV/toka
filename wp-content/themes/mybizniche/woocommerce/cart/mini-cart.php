@@ -23,6 +23,7 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 
 <?php if ( ! WC()->cart->is_empty() ) : ?>
 
+	
 	<ul class="woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
 		<?php
 		do_action( 'woocommerce_before_mini_cart_contents' );
@@ -59,6 +60,15 @@ do_action( 'woocommerce_before_mini_cart' ); ?>
 							<?php echo $thumbnail . $product_name; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 						</a>
 					<?php endif; ?>
+					<?php
+						$terms = get_the_terms( $product_id, 'product_cat' );
+						echo '<span class="category">';
+						foreach ($terms as $term) {
+						   $product_cat = $term->name;
+						}
+						echo '<span>' .$product_cat. '</span>' ;
+						echo '</span>';
+					?>
 					<?php echo wc_get_formatted_cart_item_data( $cart_item ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 					<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				</li>
