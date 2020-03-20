@@ -20,6 +20,13 @@
     <?php get_template_part('template-parts/account-settings') ?>
     <?php get_template_part('template-parts/mini-cart-settings') ?>
 
+    <div id="search-box" data-toggler=".show">
+        <form action="/search-results/" method="get">
+            <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Search" />
+            <input type="image" alt="Search" src="<?php echo MBN_ASSETS_URI ?>/img/icn-search.svg" />
+        </form>
+    </div>
+
     <!-- WRAPPER -->
     <div id="wrapper" class="wrapper">
 
@@ -29,7 +36,7 @@
                 <div class="grid-x grid-margin-x align-middle">
                     <div class="small-4 large-5 cell left-col">
                         <a href="#main-menu" class="option-menu sidebar-menu-toggle"></a>
-                        <a class="s-icon"></a>
+                        <a class="s-icon" data-toggle="search-box" aria-expanded="false" data-s=""></a>
                         <div class="sale">
                             <span class="lbl">Ready to Feel Relief?</span>
                             <span class="val"><span class="lbl2">Sign up to receive</span> <strong>10% off</strong> your first order!</span>

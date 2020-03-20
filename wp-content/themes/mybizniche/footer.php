@@ -5,6 +5,9 @@
             <div class="grid-container">
                 <div class="grid-x grid-margin-x">
                     <div class="cell large-12">
+                        <div class="f-logo hide-for-medium">
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/toka-logo-footer.png" alt="TOKA">
+                        </div>
                         <div class="f-top">
                             <?php get_template_part('template-parts/contact-info') ?>
                         </div>
