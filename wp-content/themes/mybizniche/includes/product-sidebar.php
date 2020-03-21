@@ -7,10 +7,11 @@
 ?>
 
 <aside class="woocommerce-sidebar"  id="mobtoggle" data-toggler=".show">
-	<h4 class="all-products <?php if(get_the_permalink(112) == $current_link) {echo "selected";} ?>"><a href="<?php the_permalink(112); ?>">
-		All Products</a><span class="mobtoggle" data-toggle="mobtoggle"></span></h4>
+	<h4 class="select-prodcat hide-for-large" class="mobtoggle" data-toggle="mobtoggle">Product Categories</h4>
 
 	<div class="all-categories">
+	<h4 class="all-products <?php if(get_the_permalink(112) == $current_link) {echo "selected";} ?>"><a href="<?php the_permalink(112); ?>">
+		All Products</a></h4>
 	<?php
 		//echo '<ul class="vertical menu accordion-menu" data-accordion-menu data-submenu-toggle="true" data-multi-open="false" >';
 		echo '<ul class="vertical menu">';

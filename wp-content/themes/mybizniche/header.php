@@ -21,7 +21,7 @@
     <?php get_template_part('template-parts/mini-cart-settings') ?>
 
     <div id="search-box" data-toggler=".show">
-        <form action="/search-results/" method="get">
+        <form action="/" method="get">
             <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Search" />
             <input type="image" alt="Search" src="<?php echo MBN_ASSETS_URI ?>/img/icn-search.svg" />
         </form>
