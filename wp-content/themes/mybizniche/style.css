@@ -212,7 +212,7 @@ input[type="password"] {padding: 20px;}
 
 /* Product popup */
 #yith-quick-view-modal.open .yith-wcqv-main {overflow-y: auto;}
-#yith-quick-view-modal .yith-wcqv-wrapper {width: 1410px !important; max-width: 100%; height: 80vh !important;}
+#yith-quick-view-modal .yith-wcqv-wrapper {max-width: 100%; height: 80vh !important;}
 #yith-quick-view-modal .yith-wcqv-main {background: #fff; box-shadow: none; border:1px solid #3c3c3c;}
 #yith-quick-view-modal .onsale {background: #222; margin: 0; min-height: 1px; min-width: 1px; padding: 10px; border-radius: 20px; font:400 14px/1 "Roboto", sans-serif}
 
@@ -373,16 +373,33 @@ input[type="password"] {padding: 20px;}
 .find-store-btn.fixed {position: fixed;	font-size: 16px;	font-weight: 500;	text-align: center;	color: #222222;	text-transform: uppercase;	z-index: 20; right: 30px; bottom: 10px;	transition: color 0.3s ease;}
 .find-store-btn.fixed img {display: block; margin: 0 auto 10px;}
 
-#search-box {padding:10px 30px; background: #eee; position: absolute;left: 0; right: 0;	top: -50px;	transition: all 0.5s ease;}
+#search-box {padding:10px 30px; background: #eee; position: fixed;left: 0; right: 0;	top: -100px; z-index: 100; transition: all 0.5s ease;}
 #search-box.show {top: 110px;	transition: all 0.5s ease;}
 #search-box.show ~ * .s-icon {background-image: url(resources/img/icn-close.svg); background-size: 25px;}
 #search-box form {position: relative;}
 #search-box form input {margin: 0; padding:15px 50px 15px 20px;}
 #search-box form input[type="image"] {position: absolute; right: 15px; top:15px; padding:0; z-index: 10;}
 
+#search-results {padding:60px 0;}
+#search-results h1 {font-size:50px; margin-bottom: 50px;}
+
+.search-item {position: relative; overflow: hidden; margin: 0 0 20px;}
+.search-item figure {float: left; max-width: 170px; text-align: center; min-height: 60px; margin:0 20px 0 0; line-height: 200px; overflow: hidden; background: rgba(0,0,0,0.1);}
+.search-item figure img {width: auto; max-width: 170px; max-height: 170px;}
+.search-item article {}
+.search-item article p {font-size:16px;}
+.search-item .entry-title small {font-size:20px; display: inline-block; margin:0 5px 5px 0; vertical-align: middle;} 
+
+
+/* Footer */
 .f-logo {text-align:center; margin: -10px 0 40px;}
+#footer .f-menu h4 {font-size: 14px;}
+.subscribe-form .input-group .button {border: 1px solid #d1d1d1;}
 
 
+@media (min-width: 1440px) {
+	#yith-quick-view-modal .yith-wcqv-wrapper {width: 1410px !important; }
+}
 @media (min-width: 1600px) {
 	.wp-block-group__inner-container, .wp-block-cover__inner-container {max-width: 1440px;}
 
@@ -390,6 +407,7 @@ input[type="password"] {padding: 20px;}
 	.featured-faqs .sc-faq-item:nth-child(3n+3) {width: 40%; padding-left: 90px;}
 
 }
+
 @media (max-width: 1599px) {
 	.sec-tagline figure {margin: 0 calc((-100vw - -1170px) / 2);}
 
@@ -438,6 +456,8 @@ input[type="password"] {padding: 20px;}
 	.woocommerce-checkout h3 {font-size: 30px;}
 	.woocommerce-checkout #order_review_heading + .button {display:none}
 
+	.woocommerce-products-header {padding:80px 0 50px}
+
 }
 
 @media (max-width: 1023px) {
@@ -456,12 +476,15 @@ input[type="password"] {padding: 20px;}
 	.sec-mission-vision h3 {text-align: center;}
 	
 	.woocommerce-sidebar {margin: 0 0 30px; border:0}
-	.woocommerce-sidebar .all-products {margin-bottom: 0;}
-	.woocommerce-sidebar .all-products a {padding: 18px 25px 18px 15px;}
-	.woocommerce-sidebar .all-products a:before {display: none;}
-	.woocommerce-sidebar.show .all-products a:after {transform: rotate(135deg);}
-	.woocommerce-sidebar .all-products span {cursor: pointer; position: absolute; width: 50px; height: 50px; right: 0px;top: 0px;}
+	.woocommerce-sidebar .select-prodcat {background: #222; color: #fff; display: block; position: relative; padding: 18px; font:500 14px "Roboto", sans-serif; text-transform: uppercase; line-height: 1;}
+	.woocommerce-sidebar .select-prodcat:after {content: ""; z-index: 2; transition: all 0.5s ease; position: absolute; width: 10px; height: 10px; right: 20px; top: 20px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); opacity: .3;}
+	.woocommerce-sidebar.show .select-prodcat:after {transform: rotate(135deg);}
 
+	.woocommerce-sidebar .all-products {margin-bottom: 0;}
+	.woocommerce-sidebar .all-products a {padding: 15px 0; font-size:16px; background: none; color:#000;}
+	.woocommerce-sidebar .all-products a:before {display: none;}
+	.woocommerce-sidebar .all-products a:after {display:none;}
+	
 	.myaccount-sidebar .myaccount-navigation > span {cursor: pointer; display: block; position: relative; font-size: 18px; font-weight: bold; color:#fff; background: #333; padding: 12px 15px;}
 	.myaccount-sidebar .myaccount-navigation > span:before {content: ""; position: absolute; width: 12px; height: 12px; right: 20px;top: 20px; border-top: 2px solid #bebebe; border-right: 2px solid #bebebe; transform: rotate(45deg);}
 	.myaccount-sidebar .myaccount-navigation ul {display: none;}
@@ -478,6 +501,11 @@ input[type="password"] {padding: 20px;}
 	.checkout-header {padding:80px 0 50px}
 
 	#search-box.show {top: 140px;}
+
+	#yith-quick-view-content div.images {width:auto; float: none;}
+	#yith-quick-view-content div.summary {width:auto; float: none; padding:0 20px; text-align: center;}
+	#yith-quick-view-content .variable-items-wrapper {justify-content: center;}
+	#yith-quick-view-content .single_variation_wrap {display:inline-block;}
 }
 
 @media (max-width: 639px) {
@@ -498,12 +526,17 @@ input[type="password"] {padding: 20px;}
 	.featured-faqs .sc-faq-item h3 {font-size: 28px;}
 	.featured-faqs .sc-faq-item p {font-size: 18px;}
 
-	.woocommerce-count-filter {float:none; display: flex;}
+	.woocommerce-count-filter {float:none; display: flex; width:100%;}
 	.woocommerce-count-filter .woocommerce-result-count {white-space: nowrap;}
 	.woocommerce-count-filter .woocommerce-ordering {flex-basis: 100%;}
 	
 	.myaccount-header {padding: 80px 0 30px 0;}
 	.myaccount-header h1 {font-size: 40px;}
+
+	.woocommerce-products-header {padding:60px 0 30px}
+
+	#search-results h1 {font-size:38px;}
+	#search-results .entry-title {font-size: 30px;}
 }
 
 @media (max-width: 480px) {
