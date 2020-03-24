@@ -26,7 +26,7 @@
             </div><!-- .entry-content -->
         </article><!-- #post-<?php the_ID(); ?> -->
 
-        <?php endwhile;
+        <?php endwhile; wp_reset_query();
 
         the_posts_navigation();
 
