@@ -248,7 +248,7 @@ function mbn_find_store_ajax(){
       
     endforeach;   
    
-    
+    wp_reset_query();
     header("Content-Type: application/json");
     echo json_encode($array);
     wp_die();

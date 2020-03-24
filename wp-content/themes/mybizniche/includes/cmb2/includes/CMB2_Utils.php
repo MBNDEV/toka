@@ -73,7 +73,7 @@ class CMB2_Utils {
 				}
 			}
 		}
-
+		wp_reset_query();
 		return 0 === $attachment_id ? false : $attachment_id;
 	}
 

@@ -56,7 +56,7 @@ function display_faqs_post($attr) {
     else : 
         $postvar  .= 'no item/s found';             
     endif;    
-
+    wp_reset_query();
     return $postvar;
 }
 add_shortcode( 'display-faqs', 'display_faqs_post' );
