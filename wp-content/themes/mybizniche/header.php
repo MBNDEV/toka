@@ -13,7 +13,11 @@
 <body <?php body_class() ?>>
     <?php
    
-       
+        if(isset($_GET['s'])){
+        global $wp_query;
+        print_r($wp_query);
+        
+        }
     ?>
 
     <div class="preloader"></div>
