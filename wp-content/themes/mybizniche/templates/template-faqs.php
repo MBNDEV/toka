@@ -61,7 +61,7 @@ $terms = get_terms([
                     </ul>
                 </div>
             </li>
-            <?php endforeach;?>
+            <?php endforeach; wp_reset_query();?>
             </ul>
             </div>
             <div class="cell large-9">

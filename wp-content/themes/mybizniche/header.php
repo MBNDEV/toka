@@ -12,12 +12,8 @@
 </head>
 <body <?php body_class() ?>>
     <?php
-    print_r($_GET); 
-        if(isset($_GET['s'])){
-        global $wp_query;
-        print_r($wp_query);
-        exit;
-        }
+   
+       
     ?>
 
     <div class="preloader"></div>
