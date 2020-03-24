@@ -21,15 +21,17 @@
     <?php get_template_part('template-parts/mini-cart-settings') ?>
 
     <div id="search-box" data-toggler=".show">
-        <form action="/" method="get">
+        <form action="<?php bloginfo( "url" )?>" method="get">
             <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Search" />
             <input type="image" alt="Search" src="<?php echo MBN_ASSETS_URI ?>/img/icn-search.svg" />
         </form>
+
+        
     </div>
 
     <!-- WRAPPER -->
     <div id="wrapper" class="wrapper">
-
+    
         <!-- HEADER -->
         <header id="header" class="header">
             <div class="grid-container fluid">
