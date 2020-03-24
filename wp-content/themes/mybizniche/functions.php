@@ -214,3 +214,22 @@ require MBN_DIR_PATH.'/includes/widget-ivtherapy-nav-item.php';
 //require MBN_DIR_PATH.'/includes/options/theme-options.php';
 // require MBN_DIR_PATH.'/includes/options/template-options.php';
 
+function loadmore_ajax(){
+ 
+	$args = json_decode( stripslashes( $_POST['query'] ), true );
+	$args['paged'] = $_POST['page'] + 1;
+	$args['post_status'] = 'publish';
+ 
+	query_posts( $args );
+ 
+	if( have_posts() ) :
+        while( have_posts() ): the_post();
+        
+        get_template_part( 'template-parts/post-list', get_post_format() );
+ 
+		endwhile;
+	endif;
+	die;
+}
+add_action('wp_ajax_loadmore', 'loadmore_ajax'); 
+add_action('wp_ajax_nopriv_loadmore', 'loadmore_ajax'); 
