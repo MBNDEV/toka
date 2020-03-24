@@ -1,5 +1,8 @@
 <?php
 get_header();
+
+echo "test search";
+exit;
 ?>
 	<main id="search-results" >
 		<div  class="grid-container">
