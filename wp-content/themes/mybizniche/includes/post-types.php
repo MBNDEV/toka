@@ -153,6 +153,7 @@ function mbn_find_store_post_types(){
             'public' => true,
             'has_archive' => false,
             'show_in_rest' => false,
+            'menu_position' => 20,
             'rewrite' => array('slug' => 'find-store'),
             'supports'	=>	array('title','editor','page-attributes','thumbnail')
         )
@@ -160,3 +161,40 @@ function mbn_find_store_post_types(){
 }
 
 add_action('init', 'mbn_find_store_post_types');
+
+
+
+// Register Batch Records Post Type
+function batch_records_post() {
+	register_post_type( 'batch-record',
+		array(
+			'labels' 	=> array(
+				'name' => __( 'Batch Records' ),
+				'singular_name' => __('Batch Record')
+			),
+			'public' 		=> true,
+			'has_archive' 	=> false,
+			'show_in_rest' 	=> true,
+            'menu_position' => 20,
+			'supports'		=>	array('title', 'editor', 'page-attributes', 'thumbnail'),
+        	'menu_icon' 	=> 'dashicons-editor-paragraph',
+		)
+	);
+	register_taxonomy(  
+		'batch-records',
+		'batch-record',
+		array(
+			'hierarchical' => true,			
+			'has_archive' => true,
+			'label' => 'Categories',  			
+			'query_var' => true,
+			'show_admin_column' => true,
+			'show_in_rest' => true,
+            /*'rewrite' => array(
+                'slug' => 'batch-records',
+                'with_front' => true  
+            )*/
+		)
+	);
+}
+add_action( 'init', 'batch_records_post' );
