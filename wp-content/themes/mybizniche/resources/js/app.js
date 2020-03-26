@@ -179,6 +179,8 @@
 		},
 		sideBarMenu: function(){
 			$('a.sidebar-menu-toggle').on('click', function(e){
+			//$('a.sidebar-menu-toggle').mouseover(function(e){
+				
 				var hash = this.hash;
 				
 				if(!hash)

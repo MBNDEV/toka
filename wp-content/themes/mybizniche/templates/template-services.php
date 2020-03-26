@@ -15,7 +15,7 @@ get_header(); ?>
                     <h1><?php the_title() ?></h1>
                     <p><strong><span class="blue">Intravenous (IV) therapy</span></strong> for many different reasons has been popularized over the past few years.<br>
                     Results have been impressive in assisting people to receive specific micro nutrients and vitamins in a safe and efficacious manner. Thus, TOKA is pleased to have IV therapy as a service that can partner with our other medical therapies using TOKA CBD.</p>
-                    <a href="#" class="arrow-button margin-top-2">IV THERAPY MENU</a>
+                    <a href="#ivmenu-options" class="arrow-button margin-top-2" data-smooth-scroll>IV THERAPY MENU</a>
                 </div>
             </div>
         </div>
@@ -35,7 +35,7 @@ get_header(); ?>
                     <h2><span class="blue">100+</span> Years</h2>
                     <h4>Combined Medical Experience</h4>
                     <p>TOKA is supported with several different physicians and nurses who have a combined medical experience of over 100 years. Thus, the TOKA staff has the ability to help most people with any type of malady.</p>
-                    <a href="#" class="arrow-button margin-top-2">IV THERAPY MENU</a>
+                    <a href="#ivmenu-options" class="arrow-button margin-top-2" data-smooth-scroll>IV THERAPY MENU</a>
                 </div>
             </div>
             <div class="cell large-12">
@@ -45,7 +45,7 @@ get_header(); ?>
                     <p><span class="blue">IV therapy</span> can be used for hydration only or it can be utilized for the administration of micronutrients to assist in boosting immunity. IV therapy should never be used for the replacement of prescription medications.</p>
                 </div>
 
-                <div class="ivmenu-options">
+                <div class="ivmenu-options" id="ivmenu-options">
                     <h3 class="title">IV Menu Options:</h3>
 
                     <?php

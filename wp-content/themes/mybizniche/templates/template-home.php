@@ -68,13 +68,14 @@ get_header(); ?>
                                     <ul class="menu sizes">
                                         <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
                                         <li><a href="#"><strong>2000</strong>mg</a></li>
+                                        <li><a href="#"><?php echo $item->attributes ?></a></li>
                                     </ul>
                                     <span class="price">
                                         <sup><?php echo get_woocommerce_currency_symbol() ?></sup> <?php echo $item->price ?>
                                     </span>
                                     <ul class="menu actions">
                                         <li><a href="<?php echo esc_url($item->add_to_cart_url()) ?>" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                        <li><a href="" class="button">QUICK VIEW</a></li>
+                                        <li><a href="#" class="button yith-wcqv-button" data-product_id="<?php echo $item->id ?>">QUICK VIEW</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -108,7 +109,7 @@ get_header(); ?>
                                     </span>
                                     <ul class="menu actions">
                                         <li><a href="<?php echo esc_url($item->add_to_cart_url()) ?>" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                        <li><a href="" class="button"><img src="<?php echo MBN_ASSETS_URI ?>/img/eye.svg" width="20" alt=""></a></li>
+                                        <li><a href="#" class="button yith-wcqv-button" data-product_id="<?php echo $item->id ?>"><img src="<?php echo MBN_ASSETS_URI ?>/img/eye.svg" width="20" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -418,7 +419,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-Energy.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-energy.png" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -513,7 +514,7 @@ get_header(); ?>
                 <h4 class="sub-head">Find Your Relief:</h4>
                 
                 <div class="button-wrap">
-                    <a href="#" class="arrow-button">Explore Products</a>
+                    <a href="<?php echo home_url('/products/') ?>" class="arrow-button">Explore Products</a>
                 </div>
             </div>
         </div>
