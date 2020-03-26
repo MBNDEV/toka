@@ -225,7 +225,7 @@ function save_name_fields( $customer_id ) {
 // Redirect users to custom URL based on their role after login
 function wc_custom_user_redirect( $redirect, $user ) {
     $role = $user->roles[0];
-    $myaccount = get_permalink( wc_get_page_id( 'myaccount' ) );
+    $myaccount = get_permalink( wc_get_page_id( 'my-account' ) );
     
     if ( $role == 'customer' || $role == 'subscriber' ) {
         $redirect = $myaccount;

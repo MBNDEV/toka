@@ -1,9 +1,6 @@
 <?php 
 	$current_link = home_url($_SERVER['REQUEST_URI']); 
 	$taxonomy_name = 'product_cat';
-	$applications_terms = array(20,21,22,23,24);
-	$batteries_terms = array(18,19,109);
-	$accessories_terms = array(70,71);
 ?>
 
 <aside class="woocommerce-sidebar"  id="mobtoggle" data-toggler=".show">

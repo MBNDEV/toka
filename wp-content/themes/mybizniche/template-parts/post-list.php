@@ -40,7 +40,7 @@
     <div class="entry-content">
         <?php if (!is_singular('post')) {
                 the_title('<h2 class="post-title">','</h2>');
-                the_excerpt(); 
+                the_excerpt(10); 
             } else {
                 the_content();
             }         

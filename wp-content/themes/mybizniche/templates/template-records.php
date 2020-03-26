@@ -190,7 +190,7 @@ get_header() ?>
 		<script>
 			jQuery(function($){
 				$(".batch-menu ul ul a").click(function(e){
-					e.preventDefault();
+					//e.preventDefault();
 					var href = $(this).attr("href");
 					$('.item-active').removeClass('item-active');
 					setTimeout(function(){
@@ -199,7 +199,6 @@ get_header() ?>
 							$(href).removeClass("animHighlights");
 						},800);*/
 					},500)
-					$("html,body").animate({scrollTop:$(href).offset().top - (app.data.bannner_height * 0.5)},500);
 				});
 			});
 		</script>

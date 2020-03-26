@@ -24,7 +24,7 @@ $terms = get_terms([
 ]);
 ?>
 
-<section class="banner">
+<section class="banner" id="faq-banner">
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-center">
             <h1><?php the_title();?></h1>
