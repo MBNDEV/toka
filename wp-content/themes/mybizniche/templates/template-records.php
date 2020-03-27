@@ -165,8 +165,9 @@ get_header() ?>
 								$pCount = $pque->found_posts; 
 
 								//if($tCount < 1 and $pCount > 0) {
-									echo '<li class="prodbytax-item '. $batch_category->slug .'" data-c="'.$batchCount.'" aria-expanded="false">';
-									echo '<a href="#'. $batch_category->slug .'" class="prodtax-head"  data-smooth-scroll>' . $batch_category->name . '</a>';
+									echo '<li class="batchbytax-item '. $batch_category->slug .'" data-c="'.$batchCount.'" aria-expanded="false">';
+									//echo '<a href="#'. $batch_category->slug .'" class="batchtax-head"  data-smooth-scroll>' . $batch_category->name . '</a>';
+									echo '<a class="batchtax-head">' . $batch_category->name . '</a>';
 									if($pque->found_posts > 0) {
 										echo "<ul class='".$batchCount."'>";
 										while ( $pque->have_posts() ) { $pque->the_post(); ?>

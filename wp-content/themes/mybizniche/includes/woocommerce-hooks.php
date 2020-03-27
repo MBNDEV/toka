@@ -222,10 +222,18 @@ function save_name_fields( $customer_id ) {
  
 }
 
+// Logout go to homepage
+function auto_redirect_after_logout(){
+    wp_redirect( home_url() );
+    exit();
+}
+add_action('wp_logout','auto_redirect_after_logout');
+
+
 // Redirect users to custom URL based on their role after login
 function wc_custom_user_redirect( $redirect, $user ) {
     $role = $user->roles[0];
-    $myaccount = get_permalink( wc_get_page_id( 'my-account' ) );
+    $myaccount = get_permalink( wc_get_page_id( 'myaccount' ) );
     
     if ( $role == 'customer' || $role == 'subscriber' ) {
         $redirect = $myaccount;
@@ -234,4 +242,11 @@ function wc_custom_user_redirect( $redirect, $user ) {
     }
     return $redirect;
 }
+add_filter( 'woocommerce_login_redirect', 'wc_custom_user_redirect', 10, 2 );
 
+
+//Redirect to myaccount after registration.
+function mbn_register_redirect( $redirect ) {
+    return wc_get_page_permalink( 'myaccount' );
+}
+add_filter( 'woocommerce_registration_redirect', 'mbn_register_redirect', 10, 2 );

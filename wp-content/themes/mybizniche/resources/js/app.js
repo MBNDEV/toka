@@ -16,6 +16,8 @@
 			app.sideBarMenu();
 			app.accountTabs();
 			app.pTabs();
+
+
 		},
 		utils: function(){
 			$('.wrap-words').each(function(i, e){
@@ -199,8 +201,22 @@
 			});
 
 
+
 			$('.sidebar-menu .close').on('click', function(){
 				$(this).closest('.sidebar-menu-wrap').removeClass('in');
+			});
+		},
+		sideBarMenuHover: function(){
+			$('a.option-menu.sidebar-menu-toggle').mouseover(function(e){
+					
+				var hash = this.hash;
+				
+				if(!hash)
+					return;
+
+				e.preventDefault();
+				
+				$(hash+'.sidebar-menu-wrap').addClass('in');
 			});
 		},
 		accountTabs: function(){
@@ -221,8 +237,19 @@
 		}
     }
 
+    jQuery(document).ready(function(){
+        if (jQuery(window).width() > 1024) {
+            app.sideBarMenuHover();
+        }  
+    });
+    jQuery(window).resize(function () {
+            if (jQuery(window).width() > 1024) {
+                app.sideBarMenuHover();
+            }
+    });
 
     document.addEventListener('DOMContentLoaded', app.onReady);
-    window.addEventListener('load', app.onLoad);
+	window.addEventListener('load', app.onLoad);
+	
 
 })(jQuery);

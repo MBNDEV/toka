@@ -68,7 +68,6 @@ get_header(); ?>
                                     <ul class="menu sizes">
                                         <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
                                         <li><a href="#"><strong>2000</strong>mg</a></li>
-                                        <li><a href="#"><?php echo $item->attributes ?></a></li>
                                     </ul>
                                     <span class="price">
                                         <sup><?php echo get_woocommerce_currency_symbol() ?></sup> <?php echo $item->price ?>
