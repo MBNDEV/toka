@@ -31,7 +31,7 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
 
         if($item){
         ?>
-        <span class="ivtherapy-nav-item">
+        <a class="ivtherapy-nav-item" href="<?php the_permalink(187); ?>#ivmenu-item-<?php echo $item->ID ?>">
             <!-- <img src="<?php echo get_field('icon', $item->ID) ?>" alt="" class="icon"> -->
             <span class="icon">
                 <?php
@@ -58,7 +58,7 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
                 <img src="<?php echo MBN_ASSETS_URI ?>/img/icn-toka-label.svg" alt="">
                 <?php echo $item->post_title ?>
             </span>
-        </span>
+        </a>
         <?php
         }
 

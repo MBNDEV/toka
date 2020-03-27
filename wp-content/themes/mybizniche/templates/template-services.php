@@ -113,8 +113,8 @@ get_header(); ?>
                                     </li>
                                 </ul>
                                 <div class="content">
-                                    <p>Packed with high dose zinc, high dose B complex, high dose vitamin C blended with natural elemental nutrients, TOKA Immune will infuse your body with the tools it needs to maintain the heathy immune system that active professionals demand.</p>
-                                    <p><a href="#" class="arrow-button">Select and Book Now</a></p>
+                                    <p class="min-hcontent"><?php echo $i->post_content; ?></p>
+                                    <p class="medium-text-center-down"><a href="/contact/" class="arrow-button">Select and Book Now</a></p>
                                 </div>
                             </div>
                             <!-- /ITEM -->
