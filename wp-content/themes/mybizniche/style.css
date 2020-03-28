@@ -35,6 +35,7 @@ input[type="password"] {padding: 20px;}
 .btn-arrow .wp-block-button__link:hover:after {right: 10px;}
 
 .wrapper {overflow: hidden;}
+.header a.logo {width:110px;padding: 2px 10px 5px; background: #222;}
 
 /* page content */
 .page-content {}
@@ -241,6 +242,8 @@ input[type="password"] {padding: 20px;}
 #yith-quick-view-modal .custom-variations .pa_size {font-size: 15px; color:#b2b2ae;}
 #yith-quick-view-modal .woocommerce-variation {margin-bottom: 30px;}
 
+#yith-quick-view-modal .wcppec-checkout-buttons {display:none;}
+
 #yith-quick-view-close {border:0; font-size: 0;right: 15px; top: 15px;}
 #yith-quick-view-close:before {content: "\2715"; font-size: 20px;}
 
@@ -360,6 +363,8 @@ input[type="password"] {padding: 20px;}
 #customer_details {padding-top: 15px; width:auto;}
 
 .woocommerce table.custom-checkout {border:0;border-collapse: collapse;}
+.woocommerce table.custom-checkout tr {background: none !important;}
+.woocommerce table.custom-checkout thead, .woocommerce table.custom-checkout tbody, .woocommerce table.custom-checkout tfoot {background: #fff;}
 .woocommerce table.custom-checkout > thead > tr > th {border:1px solid #d1d1d1; width:60%; color:#888;}
 .woocommerce table.custom-checkout > tbody > tr > td {border:1px solid #d1d1d1; width:60%; font-size:18px;}
 
@@ -384,6 +389,7 @@ input[type="password"] {padding: 20px;}
 .woocommerce .checkout tfoot .edit-cart:hover:before {border-color: #fff;}
 
 .woocommerce .checkout .button.btn-payment {width: 320px; max-width:100%; float:right; padding:27px 40px;}
+
 
 #order_review #payment {background: none; border:1px solid #b2b2ae; border-radius: 5px;}
 #order_review #payment .payment_box {background: #fff; border:1px solid #b2b2ae; padding: 20px 50px;}
@@ -470,10 +476,12 @@ input[type="password"] {padding: 20px;}
 
 
 /* Footer */
+#footer {padding-top:75px;}
 .f-logo {text-align:center; margin: -10px 0 40px;}
 .footer .f-menu ul li a {font-size:14px;}
 .subscribe-form .input-group .button {border: 1px solid #d1d1d1;}
 
+#footer .f-bottom {margin-top: 75px;} 
 
 @media (min-width: 1440px) {
 	#yith-quick-view-modal .yith-wcqv-wrapper {width: 1410px !important; }
@@ -673,14 +681,15 @@ input[type="password"] {padding: 20px;}
 	.home .sec-banner .p-tabs {margin-bottom: 40px;}
 }
 
-.sec-masthead {background: url(resources/img/bg-iv-therapy.jpg) no-repeat center center / 100%;}
 
 #faq-banner.sticky {top:145px;}
+.faq-offset {margin-top:-70px; padding-top:70px;}
 @media (min-width: 640px) {
 	#faq-banner.sticky {top:120px;}
-	#faq-banner h1 {padding:100px 0 60px}
+	#faq-banner h1 {padding:80px 0 60px}
 	#faq-banner.sticky h1 {padding:12px 0}
 }
+
 
 #mega-menu-header-menu.mega-menu > li > .mega-sub-menu {padding-top: 30px !important;}
 #mega-menu-header-menu.mega-menu ul ul ul li {padding-top: 10px !important; padding-bottom: 10px !important;}
@@ -690,8 +699,11 @@ input[type="password"] {padding: 20px;}
 #sec-years .bg-slider:after {background-size: 80%; top:45%;}
 
 #sec-years .text-wrap.text-wrap-2 p {font-size:24px;}
-#sec-years .ivmenu-options .ivmenu-item  .min-hcontent {min-height: 180px;}
+#sec-years .ivmenu-options .ivmenu-item {margin-top:-115px; padding-top:115px;}
+#sec-years .ivmenu-options .ivmenu-item .min-hcontent {min-height: 180px;}
 
+
+.sec-masthead {background: url(resources/img/bg-iv-therapy.jpg) no-repeat center center / 100%;}
 @media (min-width: 1200px) {
 	#sec-masthead {padding-top: 80px;}
 }
@@ -716,4 +728,8 @@ input[type="password"] {padding: 20px;}
 	#sec-years {padding:50% 0 0;}
 	#sec-years .bg-slider::after {top:80%; opacity:0.5;}
 	#sec-years .text-wrap.text-wrap-1 {max-width: none;}
+}
+
+@media (max-width: 767px) {
+	.header a.logo {width: 100px;}
 }
