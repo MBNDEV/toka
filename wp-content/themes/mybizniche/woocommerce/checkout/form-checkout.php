@@ -37,7 +37,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		
 		<div class="col2-set grid-x grid-margin-x" id="customer_details">
 			<div class="cell large-4 xcol-1">
-				<h3><?php esc_html_e( 'Shipping & Billing', 'woocommerce' ); ?></h3>
+				<h3><?php esc_html_e( 'Billing & Shipping', 'woocommerce' ); ?></h3>
 				<?php do_action( 'woocommerce_checkout_billing' ); ?><br>
 				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
 			</div>
