@@ -19,9 +19,9 @@
                 e.preventDefault();
                 var href = $(this).attr("href");
                 setTimeout(function(){
-                    $(href).addClass("animHighlights");
+                    $(href).next().addClass("animHighlights");
                     setTimeout(function(){
-                        $(href).removeClass("animHighlights");
+                        $(href).next().removeClass("animHighlights");
                     },800);
                 },500)
                 $("html,body").animate({scrollTop:$(href).offset().top - (app.data.bannner_height * 0.5)},500);

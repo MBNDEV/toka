@@ -74,7 +74,9 @@ $terms = get_terms([
                                         $layout_key = strtolower(str_replace(" ","_",get_field("layout",$post->ID)));
                                         ?>
                                     <div data-equalizer data-equalize-on="large" class="cell box <?php echo array_key_exists($layout_key,$layout)?$layout[$layout_key]:"large-4"?>">
-                                        <div id="post<?php echo $post->ID;?>" class="item it<?php echo $key;?>">
+                                        
+                                        <div id="post<?php echo $post->ID;?>" class="faq-offset"></div>    
+                                        <div class="item it<?php echo $key;?>">
                                         <h3><?php echo $post->post_title ?></h3>
                                         <?php echo apply_filters('the_content', $post->post_content)?>
 
