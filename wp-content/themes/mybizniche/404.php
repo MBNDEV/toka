@@ -7,9 +7,8 @@
                 <div class="text-block">
                     <h1>404 ERROR PAGE</h1>
 
-                    <p>
-                        Sorry, the page you are looking for doesn’t exist or an other error occured.<br>
-                        <a href="javascript:window.history.back()">Go back</a> or head over to <a href="<?php echo home_url() ?>"><?php echo home_url() ?></a> to choose a new direction.
+                    <p>Sorry, the page you are looking for doesn’t exist or an other error occured.</p>
+                    <p><a href="javascript:window.history.back()">Go back</a> or head over to <a href="<?php echo home_url() ?>"><?php echo home_url() ?></a> to choose a new direction.
                     </p>
                 </div>
             </div>
