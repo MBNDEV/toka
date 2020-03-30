@@ -475,6 +475,11 @@ input[type="password"] {padding: 20px;}
 .no-results {font-size:18px}
 
 
+/* 404 page */
+#sec-404 {text-align:center;}
+#sec-404 h1 {font-size:60px; margin:50px 0;}
+
+
 /* Footer */
 #footer {padding-top:75px;}
 .f-logo {text-align:center; margin: -10px 0 40px;}
@@ -615,6 +620,7 @@ input[type="password"] {padding: 20px;}
 	.batch-sidebar {position: static !important;margin: 0 !important; max-width:none !important;}
 
 	.medium-text-center-down {text-align:center;}
+
 }
 
 @media (max-width: 639px) {
@@ -663,6 +669,8 @@ input[type="password"] {padding: 20px;}
 	.subscribe-form .input-group .button {font-size:14px; padding:12px;}
 
 	.small-text-center {text-align:center;}
+
+	#sec-404 h1 {font-size:40px;}
 }
 
 @media (max-width: 480px) {
