@@ -15,16 +15,10 @@
                     'menu_class'        => 'menu vertical',
                 ]);
                 ?>
-                <!-- <ul class="menu vertical">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">IV Therapy</a></li>
-                    <li><a href="#">Why Toka?</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Find a Store</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul> -->
+            </div>
+
+            <div class="hide-for-large mob-payment"> 
+                <?php get_template_part('template-parts/cards-list') ?>
             </div>
 
             <?php get_template_part('template-parts/contact-info') ?>
