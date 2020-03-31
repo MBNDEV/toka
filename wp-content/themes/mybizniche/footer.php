@@ -84,12 +84,7 @@
                         <div class="subscribe-form">
                             <h4><span class="blue">Ready to Feel Relief?</span><br>
                             Sign up to receive 10% off your first order!</h4>
-                            <div class="input-group">
-                                <input type="text" class="input-group-field" placeholder="Enter your email address here..">
-                                <div class="input-group-button">
-                                    <button class="button">SIGN UP <span class="icon-arrow-right"></span></button>
-                                </div>
-                            </div>
+                            <?= do_shortcode('[contact-form-7 id="518" title="Newsletter Form"]'); ?>
                         </div>
                     </div>
                     <div class="cell large-12">

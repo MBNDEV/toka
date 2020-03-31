@@ -238,6 +238,11 @@
     }
 
     jQuery(document).ready(function(){
+		jQuery('.mega-menu-item ul a').click(function(){
+			console.log('test');
+			jQuery('.mega-toggle-on').removeClass('mega-toggle-on');
+		});
+
         if (jQuery(window).width() > 1024) {
             app.sideBarMenuHover();
         }  
