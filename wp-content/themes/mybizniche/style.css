@@ -205,11 +205,20 @@ input[type="password"] {padding: 20px;}
 #woocommerce-single-product .woocommerce-tabs h5 {font-size: 20px; font-weight: bold; color: #1c8ece;}
 #woocommerce-single-product .woocommerce-tabs p {margin-bottom: 40px;}
 #woocommerce-single-product .woocommerce-tabs table {width: auto; max-width: 100%;}
-#woocommerce-single-product .woocommerce-tabs table td {color: #f8f8f8; padding: 8px;}
+#woocommerce-single-product .woocommerce-tabs table > * {background: none;}
+#woocommerce-single-product .woocommerce-tabs table tr {background: none;}
+#woocommerce-single-product .woocommerce-tabs table th,
+#woocommerce-single-product .woocommerce-tabs table td {color: #f8f8f8; padding:5px 10px; text-align: left; background: none; border: 1px solid rgba(255,255,255,0.2);}
 #woocommerce-single-product .woocommerce-tabs table td:first-child {color: #bebebe;}
-#woocommerce-single-product .woocommerce-tabs table td p {margin: 0;;}
-#woocommerce-single-product .woocommerce-tabs .wc-tabs {display: none; border: 0; background: none; padding:0 0 0 8px; margin: -87px 0 40px;}
+#woocommerce-single-product .woocommerce-tabs table td p {margin: 0;}
+#woocommerce-single-product .woocommerce-tabs .wc-tabs {/* display: none; */ border: 0; background: none; padding:0 0 0 8px; margin: -87px 0 40px;}
 #woocommerce-single-product .woocommerce-tabs .wc-tabs.show {display: block;}
+#woocommerce-single-product .woocommerce-tabs .wc-tabs li.active {background: #222; border-bottom-color: #222;}
+#woocommerce-single-product .woocommerce-tabs .wc-tabs li.active:before {box-shadow: 2px 2px 0 #222; border:0;}
+#woocommerce-single-product .woocommerce-tabs .wc-tabs li.active:after {box-shadow: -2px 2px 0 #222; border:0;}
+#woocommerce-single-product .woocommerce-tabs .wc-tabs li.active a {color: #fff;}
+
+
 
 #woocommerce-single-product .woocommerce-tabs .organic-100 {font-size: 68px; font-weight: bold; color: #1c8ece; margin-top: 80px;}
 #woocommerce-single-product .woocommerce-tabs .organic-100 small {font-size:21px;  font-weight: bold; color: #fff; display:block; line-height: 1.2;}
