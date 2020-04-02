@@ -12,7 +12,8 @@
                 wp_nav_menu([
                     'theme_location'    => 'main-menu',
                     'container'         => false,
-                    'menu_class'        => 'menu vertical',
+                    //'menu_class'        => 'menu vertical',
+                    'items_wrap' => '<ul class="vertical menu drilldown" data-drilldown data-auto-height="true" data-animate-height="true" data-parent-link="true">%3$s</ul>' 
                 ]);
                 ?>
             </div>
