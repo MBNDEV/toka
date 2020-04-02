@@ -2,7 +2,7 @@
 
 define('MBN_DIR_URI', get_template_directory_uri());
 define('MBN_DIR_PATH', get_template_directory());
-define('MBN_ASSETS_URI', MBN_DIR_URI.'/resources');
+define('MBN_ASSETS_URI', MBN_DIR_URI.'/assets');
 define('MBN_MAP_API_KEY',"AIzaSyDac2mOtJr_IktjUhiLZYRL_xHzxRbodRE");
 
 //MBN Login
