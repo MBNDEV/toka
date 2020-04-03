@@ -694,7 +694,6 @@ input[type="password"] {padding: 20px;}
 
 
 /* Homepage */
-.home .sec-mission {background-image: url(assets/img/bg-mission.jpg);}
 @media (min-width: 1200px) {
 	.home .sec-banner {padding:60px 0;}
 	.home .sec-banner .text-wrap h1 {font-size:60px; margin-bottom: 20px;}
