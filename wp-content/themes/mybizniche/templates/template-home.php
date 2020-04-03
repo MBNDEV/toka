@@ -20,7 +20,7 @@ get_header(); ?>
                 </div>
 
                 <?php
-                $types      = ['tinctures', 'gummies', 'pre-rolls'];
+                $types      = ['cbd-oil-tinctures', 'cbd-gummies', 'cbd-pre-rolls'];
                 $categories = [];
 
                 foreach($types as $type){
@@ -390,7 +390,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-sleep.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-sleep.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -418,7 +418,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-energy.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-energy.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -446,7 +446,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-libido.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-libido.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -461,9 +461,6 @@ get_header(); ?>
                                     IN COLORADO
                                 </h5>
                             </div>
-                            <!-- <span class="text1">Skincare</span>
-                            <span class="text2">Energy</span>
-                            <span class="text3">Libido</span> -->
 
                             <div class="product">
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-libido.png" alt="">
@@ -477,7 +474,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-skincare.png" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-skincare.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -492,9 +489,6 @@ get_header(); ?>
                                     IN COLORADO
                                 </h5>
                             </div>
-                            <!-- <span class="text1">Skincare</span>
-                            <span class="text2">Energy</span>
-                            <span class="text3">Libido</span> -->
 
                             <div class="product">
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-skincare2.png" alt="">
@@ -523,30 +517,6 @@ get_header(); ?>
         <img src="<?php echo MBN_ASSETS_URI ?>/img/bg-sleep-toka.svg" alt="" class="obj1">
     </div>
 </section>
-
-
-<!-- <section id="sec-quote" class="sec-quote section">
-    <div class="grid-container">
-        <div class="grid-x grid-margin-x">
-            <div class="cell large-5 order-1 order-lg-0">
-                <div class="image-wrap">
-                    <img src="<?php echo MBN_ASSETS_URI ?>/img/img-doc.png" alt="">
-                </div>
-            </div>
-            <div class="cell large-7 order-0 order-lg-1">
-                <blockquote class="doc-quote">
-                    <h3>
-                        I have tried other CBD products and have found <span class="highlight">Toka to be the most natural and potent.</span>
-                    </h3>
-                    <p>Being a leader in new, innovative medicine for over 30 years, I knew I had to try CBD and find the most effective and purest brand, that’s when I came across Toka. Toka CBD is my go-to and what I recommend to my patients. I have tried other CBD products and have found Toka to be the most natural and potent. I sleep great with Toka CBD. It has enhanced my sleeping capabilities and I wake up with no side effects and I sleep much more soundly. I believe so much in Toka CBD that I took it as my pain reliever when I had back surgery!</p>
-                    
-                    <h4 class="signature">Dr. Stanley Jones</h4>
-                    <h5 class="name">Dr. Stanley C. Jones, MD</h5>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <?php get_template_part('template-parts/section-faqs') ?>
 

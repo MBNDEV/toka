@@ -152,13 +152,13 @@ input[type="password"] {padding: 20px;}
 #woocommerce ul.products li .price ins {text-decoration: none; font-weight: 400;}
 
 #woocommerce ul.products li .button {height: 46px; padding: 5px 16px; font:500 14px/34px "Roboto", sans-serif; margin: 5px; text-transform: uppercase;}
-#woocommerce ul.products li .add_to_cart_button {border:1px solid #333; background: #222 url(resources/img/icn-shop-bag.svg) no-repeat 15px center; color: #fff; padding: 5px 20px 5px 50px; font-weight: bold;}
+#woocommerce ul.products li .add_to_cart_button {border:1px solid #333; background: #222 url(assets/img/icn-shop-bag.svg) no-repeat 15px center; color: #fff; padding: 5px 20px 5px 50px; font-weight: bold;}
 #woocommerce ul.products li .add_to_cart_button.added {padding:5px 25px; background-image: none; pointer-events: none; opacity: 0.8;}
 #woocommerce ul.products li .add_to_cart_button.loading:after {top: 5px;}
 #woocommerce ul.products li .yith-wcqv-button {border:1px solid #333;}
 #woocommerce ul.products li .wc-forward {display: none;}
 
-#woocommerce .single_add_to_cart_button {letter-spacing:normal; text-transform: uppercase; border:1px solid #333; background: #222 url(resources/img/icn-shop-bag.svg) no-repeat 18px center; color: #fff; padding: 20px 25px 20px 55px; font-weight: bold;}
+#woocommerce .single_add_to_cart_button {letter-spacing:normal; text-transform: uppercase; border:1px solid #333; background: #222 url(assets/img/icn-shop-bag.svg) no-repeat 18px center; color: #fff; padding: 20px 25px 20px 55px; font-weight: bold;}
 
 /*  Product detail */
 #woocommerce-single-product {position: relative;}
@@ -236,7 +236,7 @@ input[type="password"] {padding: 20px;}
 #yith-quick-view-content div.images img {width:auto; margin:0 auto 15px;}
 #yith-quick-view-content div.summary {padding:100px 15px 50px;}
 #yith-quick-view-modal .product_title {font-size: 40px; color: #1c8ece; letter-spacing: normal; text-transform: uppercase;}
-#yith-quick-view-modal .single_add_to_cart_button {letter-spacing:normal; text-transform: uppercase; border:1px solid #333; background: #222 url(resources/img/icn-shop-bag.svg) no-repeat 18px center; color: #fff; padding: 20px 25px 20px 55px; font-weight: bold;}
+#yith-quick-view-modal .single_add_to_cart_button {letter-spacing:normal; text-transform: uppercase; border:1px solid #333; background: #222 url(assets/img/icn-shop-bag.svg) no-repeat 18px center; color: #fff; padding: 20px 25px 20px 55px; font-weight: bold;}
 #yith-quick-view-modal div.summary p.price {letter-spacing:1px; color: #222; font:45px 'Oswald', sans-serif; line-height: 1;}
 #yith-quick-view-modal div.summary .price .woocommerce-Price-currencySymbol {color:#b2b2ae; font-size: 26px; vertical-align: top; line-height: 1; padding-top: 4px; display: inline-block;}
 #yith-quick-view-modal div.summary .price {letter-spacing:1px; color: #222; font:45px 'Oswald', sans-serif; line-height: 1;}
@@ -293,7 +293,7 @@ input[type="password"] {padding: 20px;}
 .sidebar-menu .myaccount-navigation ul li[class*="downloads"] {display:none;}
 .sidebar-menu .myaccount-navigation ul li[class*="customer-logout"] {position: absolute; left: 0; right: 0; bottom: 20px;}
 .sidebar-menu .myaccount-navigation ul li[class*="customer-logout"] a {text-align: center; font-size: 14px; text-transform: uppercase; font-weight:bold;}
-.sidebar-menu .myaccount-navigation ul li[class*="customer-logout"] a:before {content: url(resources/img/icn-logout.png);	display: inline-block;	vertical-align: middle;	height: 20px;	margin: 0 5px 0 0;}
+.sidebar-menu .myaccount-navigation ul li[class*="customer-logout"] a:before {content: url(assets/img/icn-logout.png);	display: inline-block;	vertical-align: middle;	height: 20px;	margin: 0 5px 0 0;}
 
 .sidebar-menu form.login, .sidebar-menu form.register {border: 0;   padding: 0;}
 
@@ -305,7 +305,7 @@ input[type="password"] {padding: 20px;}
 .woocommerce-notices-wrapper .woocommerce-message ~ .close-notify,
 .woocommerce-notices-wrapper .woocommerce-info ~ .close-notify,
 .woocommerce-notices-wrapper .woocommerce-NoticeGroup ~ .close-notify {display: block;}
-.woocommerce-notices-wrapper .close-notify {background:#b81c23 url(resources/img/icn-close-w.svg) no-repeat center / 20px; cursor: pointer; position: absolute; width: 30px; height: 30px; left: -30px; top: 0; display: none;}
+.woocommerce-notices-wrapper .close-notify {background:#b81c23 url(assets/img/icn-close-w.svg) no-repeat center / 20px; cursor: pointer; position: absolute; width: 30px; height: 30px; left: -30px; top: 0; display: none;}
 .woocommerce-notices-wrapper .woocommerce-message ~ .close-notify {background-color: #8fae1b;}
 .woocommerce-notices-wrapper .woocommerce-info ~ .close-notify {background-color: #1e85be;}
 
@@ -413,7 +413,7 @@ input[type="password"] {padding: 20px;}
 
 #search-box {padding:10px 30px; background: #eee; position: fixed;left: 0; right: 0;	top: -100px; z-index: 100; transition: all 0.5s ease;}
 #search-box.show {top: 110px;	transition: all 0.5s ease;}
-#search-box.show ~ * .s-icon {background-image: url(resources/img/icn-close.svg); background-size: 25px;}
+#search-box.show ~ * .s-icon {background-image: url(assets/img/icn-close.svg); background-size: 25px;}
 #search-box form {position: relative;}
 #search-box form input {margin: 0; padding:15px 50px 15px 20px;}
 #search-box form input[type="image"] {position: absolute; right: 15px; top:15px; padding:0; z-index: 10;}
@@ -694,6 +694,7 @@ input[type="password"] {padding: 20px;}
 
 
 /* Homepage */
+.home .sec-mission {background-image: url(assets/img/bg-mission.jpg);}
 @media (min-width: 1200px) {
 	.home .sec-banner {padding:60px 0;}
 	.home .sec-banner .text-wrap h1 {font-size:60px; margin-bottom: 20px;}
@@ -723,7 +724,9 @@ input[type="password"] {padding: 20px;}
 #sec-years .ivmenu-options .ivmenu-item .min-hcontent {min-height: 180px;}
 
 
-.sec-masthead {background: url(resources/img/bg-iv-therapy.jpg) no-repeat center center / 100%;}
+.sec-masthead {background: url(assets/img/bg-iv-therapy.jpg) no-repeat center center / 100%;}
+
+
 @media (min-width: 1200px) {
 	#sec-masthead {padding-top: 80px;}
 }
