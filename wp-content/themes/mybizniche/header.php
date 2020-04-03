@@ -46,13 +46,6 @@
                             // 'walker'            => new MBN_Walker_Header_Menu
                         ]);
                         ?>
-                        <!-- <ul class="m-menu">
-                            <li>
-                                <a href="#">Shop</a>
-                            </li>
-                            <li><a href="#">IV Therapy</a></li>
-                            <li><a href="#">Why Toka?</a></li>
-                        </ul> -->
                         <ul class="woo-acc">
                             <li><a href="#account-settings" class="acc sidebar-menu-toggle"></a></li>
                             <li>
