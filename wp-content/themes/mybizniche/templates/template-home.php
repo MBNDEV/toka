@@ -20,8 +20,8 @@ get_header(); ?>
                 </div>
 
                 <?php
-                //$types      = ['cbd-oil-tinctures', 'cbd-gummies', 'cbd-pre-rolls'];
-                $types      = ['tinctures', 'gummies', 'pre-rolls'];
+                $types      = ['cbd-oil-tinctures', 'cbd-gummies', 'cbd-pre-rolls'];
+                //$types      = ['tinctures', 'gummies', 'pre-rolls'];
                 $categories = [];
 
                 foreach($types as $type){
