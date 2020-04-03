@@ -135,11 +135,26 @@
     
  <script>
     jQuery(function(){
+    
         jQuery('.woocommerce-notices-wrapper').append('<span class="close-notify" />');
         jQuery('.close-notify').click(function(){
             //jQuery(this).parent().addClass('hide');
             jQuery(this).parent().children().first().remove();
         })
+
+        jQuery(document).ready(function($){
+            var itemAddedCart = "<?php echo $_GET['add-to-cart']; ?>";
+
+            $('body').on( 'added_to_cart', function(){
+                $('.mini-cart-settings').addClass('in');
+            });
+
+            if(itemAddedCart != "") {
+                jQuery('.woocommerce-message').remove();
+                $('.mini-cart-settings').addClass('in');
+            }
+            
+        });
     });
 </script>
 
