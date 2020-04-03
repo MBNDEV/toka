@@ -49,6 +49,7 @@ function mbn_theme_setup(){
     register_nav_menus(array(
         'header-menu'   => 'Header Menu',
         'main-menu'     => 'Main Menu',
+        'sticky-menu'     => 'Sticky Menu',
     ));
 
 }

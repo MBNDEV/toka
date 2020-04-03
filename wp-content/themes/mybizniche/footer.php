@@ -122,6 +122,15 @@
         </form>
     </div>
 
+    <div class="foot-sticky hide-for-large">
+        <?php
+            wp_nav_menu([
+                'theme_location'    => 'sticky-menu',
+                'container'         => false,
+            ]);
+        ?>
+    </div>
+
     <?php wp_footer() ?>
     
  <script>

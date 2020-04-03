@@ -787,7 +787,13 @@ input[type="password"] {padding: 20px;}
 	
 	.small-text-center {text-align:center;}
    
+	#mega-menu-wrap-header-menu {display:none !important;}
 	#mega-menu-wrap-header-menu .mega-no-js {display: none !important;}
+
+	.foot-sticky {background: #222; position: fixed; left:0; right: 0; bottom: 0; z-index: 1000;}
+	.foot-sticky ul {margin:0; padding:0; display:flex;}
+	.foot-sticky ul li {list-style: none; flex-basis: 33.33%;}
+	.foot-sticky ul a {padding: 25px 15px; text-align: center; font-size: 13px; font-weight:500; text-transform: uppercase; color: #fff;}
 }
 
 @media (max-width:639px) {
