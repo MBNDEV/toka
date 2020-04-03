@@ -4,7 +4,7 @@
     <meta charset="<?php echo bloginfo('charset') ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" type="image/png" href="<?php echo MBN_ASSETS_URI ?>/img/favicon.ico">
+    <!-- <link rel="icon" type="image/png" href="<?php echo MBN_ASSETS_URI ?>/img/favicon.ico"> -->
     <!-- <title><?php bloginfo('title') ?></title> -->
 
     <?php wp_head() ?>
@@ -12,20 +12,9 @@
 </head>
 <body <?php body_class() ?>>
 
-    <div class="preloader"></div>
+    <!-- <div class="preloader"></div> -->
 
     <div class="spacer-top"></div>
-
-    <?php get_template_part('template-parts/main-menu') ?>
-    <?php get_template_part('template-parts/account-settings') ?>
-    <?php get_template_part('template-parts/mini-cart-settings') ?>
-
-    <div id="search-box" data-toggler=".show">
-        <form action="/" method="get">
-            <input type="text" name="s" id="search" value="<?php the_search_query(); ?>" placeholder="Search" />
-            <input type="image" alt="Search" src="<?php echo MBN_ASSETS_URI ?>/img/icn-search.svg" />
-        </form>
-    </div>
 
     <!-- WRAPPER -->
     <div id="wrapper" class="wrapper">

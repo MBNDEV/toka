@@ -755,3 +755,55 @@ input[type="password"] {padding: 20px;}
 @media (max-width: 767px) {
 	.header a.logo {width: 100px;}
 }
+
+/* Custom css */
+
+.intro-p strong {font-weight:300;}
+.intro-p s {text-decoration:none;}
+.intro-p em {font-style:normal}
+
+#yith-quick-view-close {opacity:1}
+#search-box.show {position:fixed;z-index:100;}
+
+.underlink a{text-decoration:underline;}
+
+.subscribe-form span.wpcf7-not-valid-tip {position:absolute;}
+
+#mega-menu-header-menu .mega-sub-menu .menu a {margin-bottom: 0;}
+#mega-menu-header-menu .menu-3-cols #menu-product-type {column-count: 3; display: block;}
+
+.header-nav .menu ul {margin: 0;}
+.header-nav .menu .menu-item-has-children > a:after {content: ""; transition: all 0.5s ease; position: absolute; width: 15px; height: 15px; right: 20px; border:0; border-top: 2px solid #222; border-right: 2px solid #222; transform: rotate(45deg); opacity: .5;}
+.header-nav .menu .js-drilldown-back > a {padding-left: 30px !important; border-bottom: 1px solid rgba(0,0,0,0.1)}
+.header-nav .menu .js-drilldown-back > a:before {content: ""; transition: all 0.5s ease; position: absolute;top:20px; width: 15px; height: 15px; left: 5px; border:0; border-top: 2px solid #222; border-left: 2px solid #222; transform: rotate(-45deg); opacity: 0.8;}
+.header-nav .menu .is-submenu-parent-item ~ li {padding-left: 10px}
+
+.grecaptcha-badge {display: none !important}
+
+@media (max-width:1023px) {
+	.find-store-btn.fixed {position:absolute; top: 140px; left: 0; right: 0; padding:5px 0 0; bottom: auto; background:#f1f1f1;}
+	.find-store-btn.fixed img { display: inline-block; margin: 0 0 5px; width: 24px; vertical-align: middle;	}
+	.header.fixed ~ .page-content .find-store-btn {position:fixed; -webkit-animation: 0.6s ease headerIn forwards; animation: 0.6s ease headerIn forwards; padding-top: 147px;}
+	
+	.small-text-center {text-align:center;}
+   
+	#mega-menu-wrap-header-menu .mega-no-js {display: none !important;}
+}
+
+@media (max-width:639px) {
+	.intro-p strong {font-weight:500; color:#222222;}
+	.intro-p s {color:#14c8f0;}
+	.intro-p em {font-style:italic}
+
+	.header-nav .menu .menu-item-has-children > a:after {width: 12px; height: 12px;}
+	.header-nav .menu .js-drilldown-back > a:before {width: 12px; height: 12px; top:16px;}
+
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+	#faq-banner.sticky {top: 145px;}
+}
+
+@media (min-width:640px) and (max-width:767px) {
+	#faq-banner.sticky {top: 134px;}
+}
