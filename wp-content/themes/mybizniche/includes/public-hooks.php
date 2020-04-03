@@ -43,7 +43,7 @@ function mbn_nav_menu_args($args){
 
     return $args;
 }
-add_filter('wp_nav_menu_args', 'mbn_nav_menu_args', 10, 1);
+// add_filter('wp_nav_menu_args', 'mbn_nav_menu_args', 10, 1);
 
 
 

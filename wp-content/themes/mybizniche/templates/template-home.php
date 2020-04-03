@@ -20,7 +20,8 @@ get_header(); ?>
                 </div>
 
                 <?php
-                $types      = ['cbd-oil-tinctures', 'cbd-gummies', 'cbd-pre-rolls'];
+                //$types      = ['cbd-oil-tinctures', 'cbd-gummies', 'cbd-pre-rolls'];
+                $types      = ['tinctures', 'gummies', 'pre-rolls'];
                 $categories = [];
 
                 foreach($types as $type){
@@ -59,22 +60,22 @@ get_header(); ?>
                             <?php foreach($items as $item): ?>
                             <div class="item">
                                 <div class="thumb">
-                                    <?php echo get_the_post_thumbnail($item->id) ?>
+                                    <?php echo get_the_post_thumbnail($item->get_id()) ?>
                                 </div>
 
                                 <div class="product-info content">
-                                    <h3><span style="color:<?php echo get_field('color', $item->id) ?>"><?php echo $item->name ?></span></h3>
+                                    <h3><span style="color:<?php echo get_field('color', $item->get_id()) ?>"><?php echo $item->get_name() ?></span></h3>
                                     <h6>TINCTURE</h6>
-                                    <ul class="menu sizes">
+                                    <ul class="menu sizes hide">
                                         <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
                                         <li><a href="#"><strong>2000</strong>mg</a></li>
                                     </ul>
                                     <span class="price">
-                                        <sup><?php echo get_woocommerce_currency_symbol() ?></sup> <?php echo $item->price ?>
+                                        <sup><?php echo get_woocommerce_currency_symbol() ?></sup> <?php echo $item->get_price() ?>
                                     </span>
                                     <ul class="menu actions">
                                         <li><a href="<?php echo esc_url($item->add_to_cart_url()) ?>" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                        <li><a href="#" class="button yith-wcqv-button" data-product_id="<?php echo $item->id ?>">QUICK VIEW</a></li>
+                                        <li><a href="#" class="button yith-wcqv-button" data-product_id="<?php echo $item->get_id() ?>">QUICK VIEW</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -93,22 +94,22 @@ get_header(); ?>
                             <?php foreach($items as $item): ?>
                             <div class="item">
                                 <div class="thumb">
-                                    <?php echo get_the_post_thumbnail($item->id) ?>
+                                    <?php echo get_the_post_thumbnail($item->get_id()) ?>
                                 </div>
 
                                 <div class="product-info content">
-                                    <h3><span style="color:<?php echo get_field('color', $item->id) ?>"><?php echo $item->name ?></span></h3>
+                                    <h3><span style="color:<?php echo get_field('color', $item->get_id()) ?>"><?php echo $item->get_name() ?></span></h3>
                                     <h6>TINCTURE</h6>
                                     <ul class="menu sizes">
                                         <li class="active"><a href="#"><strong>3000</strong>mg</a></li>
                                         <li><a href="#"><strong>2000</strong>mg</a></li>
                                     </ul>
                                     <span class="price">
-                                        <sup><?php echo get_woocommerce_currency_symbol() ?></sup> <?php echo $item->price ?>
+                                        <sup><?php echo get_woocommerce_currency_symbol() ?></sup> <?php echo $item->get_price() ?>
                                     </span>
                                     <ul class="menu actions">
                                         <li><a href="<?php echo esc_url($item->add_to_cart_url()) ?>" class="button add-to-cart"><span class="icon-shopping-bag"></span> ADD TO BAG</a></li>
-                                        <li><a href="#" class="button yith-wcqv-button" data-product_id="<?php echo $item->id ?>"><img src="<?php echo MBN_ASSETS_URI ?>/img/eye.svg" width="20" alt=""></a></li>
+                                        <li><a href="#" class="button yith-wcqv-button" data-product_id="<?php echo $item->get_id() ?>"><img src="<?php echo MBN_ASSETS_URI ?>/img/eye.svg" width="20" alt=""></a></li>
                                     </ul>
                                 </div>
                             </div>

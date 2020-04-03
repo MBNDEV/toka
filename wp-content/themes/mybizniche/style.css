@@ -492,10 +492,12 @@ input[type="password"] {padding: 20px;}
 /* Footer */
 #footer {padding-top:75px;}
 .f-logo {text-align:center; margin: -10px 0 40px;}
+.footer .f-menu ul {display:block;}
 .footer .f-menu ul li a {font-size:14px;}
 .subscribe-form .input-group .button {border: 1px solid #d1d1d1;}
 
 #footer .f-bottom {margin-top: 75px;} 
+
 
 @media (min-width: 1440px) {
 	#yith-quick-view-modal .yith-wcqv-wrapper {width: 1410px !important; }
