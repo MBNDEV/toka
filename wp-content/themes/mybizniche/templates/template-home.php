@@ -364,7 +364,7 @@ get_header(); ?>
 </section>
 
 
-<section id="sec-reviews" class="sec-reviews section">
+<section id="sec-reviews" class="sec-reviews section hide">
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-center">
             <div class="cell large-12">

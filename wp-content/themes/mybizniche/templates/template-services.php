@@ -24,8 +24,8 @@ get_header(); ?>
 
 <section id="sec-years" class="sec-years section">
     <div class="bg-slider">
-        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-service1.png" alt=""></div>
-        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-service2.png" alt=""></div>
+        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-service1.jpg" alt=""></div>
+        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-service2.jpg" alt=""></div>
     </div>
     
     <div class="grid-container">
