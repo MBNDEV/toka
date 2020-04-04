@@ -206,14 +206,14 @@ function mbn_myme_types($mime_types){
 }
 add_filter('upload_mimes', 'mbn_myme_types');
 
-/*
+
 require MBN_DIR_PATH.'/includes/tgmpa/init.php';
 require MBN_DIR_PATH.'/includes/post-types.php';
 require MBN_DIR_PATH.'/includes/shortcodes.php';
 require MBN_DIR_PATH.'/includes/utils.php';
 require MBN_DIR_PATH.'/includes/public-hooks.php';
 require MBN_DIR_PATH.'/includes/admin-hooks.php';
-require MBN_DIR_PATH.'/includes/woocommerce-hooks.php';*/
+require MBN_DIR_PATH.'/includes/woocommerce-hooks.php';
 require MBN_DIR_PATH.'/includes/header-menu-walker.php';
 //require MBN_DIR_PATH.'/includes/widget-ivtherapy-nav-item.php';
 
