@@ -29,7 +29,7 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
 
         $item = get_post($instance['item']);
 
-        if($item){
+       /* if($item){
         ?>
         <a class="ivtherapy-nav-item" href="<?php the_permalink(187); ?>#ivmenu-item-<?php echo $item->ID ?>">
             <!-- <img src="<?php echo get_field('icon', $item->ID) ?>" alt="" class="icon"> -->
@@ -60,7 +60,7 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
             </span>
         </a>
         <?php
-        }
+        }*/
 
         echo $args['after_widget'];
     }
