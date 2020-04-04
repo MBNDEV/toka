@@ -9,8 +9,11 @@
             </ul>
             
             <div class="mini-cart" id="mini-cart">
-                <?php // woocommerce_mini_cart(); ?>
+               <?php if(is_checkout() || is_cart() ) { ?>
+                <?php  woocommerce_mini_cart(); ?>
+               <?php } else { ?>
                 <?php dynamic_sidebar('mini-cart') ?>
+               <?php } ?>
             </div>
             <div class="mini-cart-summary">
                 <div class="total-price">
