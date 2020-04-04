@@ -28,8 +28,8 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
         echo $args['before_widget'];
 
         $item = get_post($instance['item']);
-
-       /* if($item){
+        try{
+        if($item){
         ?>
         <a class="ivtherapy-nav-item" href="<?php the_permalink(187); ?>#ivmenu-item-<?php echo $item->ID ?>">
             <!-- <img src="<?php echo get_field('icon', $item->ID) ?>" alt="" class="icon"> -->
@@ -60,7 +60,10 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
             </span>
         </a>
         <?php
-        }*/
+        }
+    }catch(Throwable $e){
+        print_r($e->getMessage());
+    }
 
         echo $args['after_widget'];
     }
