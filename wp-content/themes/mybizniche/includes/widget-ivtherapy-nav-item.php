@@ -63,6 +63,7 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
         }
     }catch(Throwable $e){
         print_r($e->getMessage());
+        exit;
     }
 
         echo $args['after_widget'];
