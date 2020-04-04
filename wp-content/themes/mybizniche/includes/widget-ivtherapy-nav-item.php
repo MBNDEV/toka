@@ -41,8 +41,9 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
                 $color2         = $color['color_2'];;
                 $is_gradient    = $color['use_gradient'];
 
-                include(locate_template('template-parts/ivtherapy-icon.php', false, false));
+                //include(locate_template('template-parts/ivtherapy-icon.php', false, false));
                 ?>
+                <img src="<?php echo get_field('menu_icon', $item->ID) ?>" alt="">
             </span>
             <style>
             <?php echo '#text-'.$item->ID ?>{
