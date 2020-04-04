@@ -28,7 +28,7 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
         echo $args['before_widget'];
 
         $item = get_post($instance['item']);
-        try{
+  
         if($item){
         ?>
         <a class="ivtherapy-nav-item" href="<?php the_permalink(187); ?>#ivmenu-item-<?php echo $item->ID ?>">
@@ -41,7 +41,7 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
                 $color2         = $color['color_2'];;
                 $is_gradient    = $color['use_gradient'];
 
-                include(locate_template('template-parts/ivtherapy-icon.php', false, false));
+                //include(locate_template('template-parts/ivtherapy-icon.php', false, false));
                 ?>
             </span>
             <style>
@@ -61,10 +61,7 @@ class MBN_Widget_IVtherapy_Nav_Item extends WP_Widget{
         </a>
         <?php
         }
-    }catch(Throwable $e){
-        print_r($e->getMessage());
-        exit;
-    }
+   
 
         echo $args['after_widget'];
     }
