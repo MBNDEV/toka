@@ -92,29 +92,3 @@ $query = new WP_Query($post_args);
 
 
 </div>
-
-
-
-<?php
-
-/*$theme_id = 1783;
-wpmm_fields_group_generator(
-    array(
-        'fields_group_id'   => 'wpmm_theme_settings',
-        'form_action'       => '',
-        'sections'      => array(
-            'id'            => 'general_settings',
-            'section_name'  => __('General Setttings', 'wp-megamenu'),
-
-            'fields'        => array(
-                'type'      => 'checkbox',
-                'name'      => 'enable_sticky_menu',
-                'label'     => __(' Enable Sticky menu', 'wp-megamenu'),
-                'default'   => null,
-                'value'     => get_wpmm_theme_option('enable_sticky_menu', $theme_id),
-            )
-        )
-    )
-);
-*/
-?>

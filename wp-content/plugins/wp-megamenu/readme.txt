@@ -1,10 +1,10 @@
 === WP Mega Menu ===
-Contributors: themeum, kawshar, mhshohel, jakirhasan, anik4e, fahimmurshed
+Contributors: themeum, kawshar, mhshohel, jakirhasan, anik4e, joomcoder
 Tags: wp-megamenu, megamenu, mega menu, navigation, responsive menu, menu, builder, menu builder, drag and drop, wordpress mega menu, dropdown menu, free mega menu
 Donate Link: https://www.themeum.com/
 Requires at least: 4.0
 Tested up to: 5.3
-Stable tag:  1.3.5
+Stable tag:  1.3.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,11 +77,27 @@ A. There are two versions of WP Mega Menu. One is free and another is Pro. The P
 
 == Changelog ==
 
+= 1.3.7 [April 17, 2020]
+
+Update: Security Update
+
+
+= 1.3.6 [March 20, 2020]
+
+Added: Compatibility with 10 more themes ( Astra, Divi, OceanWP, Storefront, GeneratePress, OnePress, StudioPress, Hestia, Heuman, Hello Elementor)
+Update: Optimized the plugin’s code
+Fixed: Localhost to live server mega menu static URL issue
+Fixed: WPMM Theme hide issue
+Fixed: Megamenu custom width input field issue
+Fixed: "Unexpected output" or "headers already sent" warning during plugin activation
+
+
+
 = 1.3.5 [March 3, 2020]
 
-Update: Added prefix before classes.
-Fixed: WPMM version issue.
-Fixed: Login console issue.
+Update: Added prefix before classes
+Fixed: WPMM version issue
+Fixed: Login console issue
 
 
 = 1.3.4 [February 27, 2020]

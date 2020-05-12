@@ -228,6 +228,9 @@ if ( ! class_exists('wp_megamenu_base')) {
 		 * Show settings menu
 		 */
 		public function wpmm_item_settings_load(){
+			if(! current_user_can('administrator')) {
+                return;
+            }
 			check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 
 			$menu_item_id = (int) sanitize_text_field($_POST['menu_item_id']);
@@ -571,6 +574,9 @@ if ( ! class_exists('wp_megamenu_base')) {
 		 * Item option save
 		 */
 		public function wpmm_menu_item_option_save(){
+			if(! current_user_can('administrator')) {
+                return;
+            }
 
 			check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 
@@ -653,6 +659,9 @@ if ( ! class_exists('wp_megamenu_base')) {
 		 * icon save for the item
 		 */
 		public function wpmm_icon_update(){
+			if(! current_user_can('administrator')) {
+                return;
+            }
 			check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 
 			$menu_item_id = (int) sanitize_text_field($_POST['menu_item_id']);
@@ -683,6 +692,9 @@ if ( ! class_exists('wp_megamenu_base')) {
 		 * Change menu type
 		 */
 		public function wpmm_change_menu_type(){
+			if(! current_user_can('administrator')) {
+                return;
+            }
 			check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 
 			$menu_item_id = (int) sanitize_text_field($_POST['menu_item_id']);
@@ -695,6 +707,9 @@ if ( ! class_exists('wp_megamenu_base')) {
 		}
 
 		public function wpmm_change_strees_row(){
+			if(! current_user_can('administrator')) {
+                return;
+            }
 			check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 
 			$menu_item_id = (int) sanitize_text_field($_POST['menu_item_id']);
@@ -707,6 +722,9 @@ if ( ! class_exists('wp_megamenu_base')) {
 		}
 
 		public function wpmm_set_menu_width(){
+			if(! current_user_can('administrator')) {
+                return;
+            }
 			check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 			$menu_item_id = (int) sanitize_text_field($_POST['menu_item_id']);
 			$width = sanitize_text_field($_POST['width']);
@@ -717,6 +735,9 @@ if ( ! class_exists('wp_megamenu_base')) {
 		}
 
 		public function wpmm_set_strees_row_width(){
+			if(! current_user_can('administrator')) {
+                return;
+            }
 			check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 			$menu_item_id = (int) sanitize_text_field($_POST['menu_item_id']);
 			$width = sanitize_text_field($_POST['width']);
@@ -727,6 +748,9 @@ if ( ! class_exists('wp_megamenu_base')) {
 		}
 
 		public function wpmm_save_layout(){
+			if(! current_user_can('administrator')) {
+                return;
+            }
 			check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 
 			$layout_format = sanitize_text_field($_POST['layout_format']);
@@ -833,7 +857,7 @@ if ( ! class_exists('wp_megamenu_base')) {
 						$style .= ".wp-megamenu > li.wp-megamenu-item-{$value->post_id}.wpmm-item-fixed-width  > ul.wp-megamenu-sub-menu { ";
 						$style .= "width: {$options['options']['strees_row_width']}px !important;";
 						// $style .= "margin-left: -".($options['options']['strees_row_width'])."px !important;";
-						$style .= "left: calc(100% - ".($options['options']['strees_row_width'] / 2)."px - 20px) !important";
+						$style .= "left: calc(100% - ".(intval($options['options']['strees_row_width']) / 2)."px - 20px) !important";
 						$style .= '}';
 					} else {
 						$style .= '.wp-megamenu-wrap > ul.wp-megamenu > li.wpmm_mega_menu > .wpmm-strees-row-container 

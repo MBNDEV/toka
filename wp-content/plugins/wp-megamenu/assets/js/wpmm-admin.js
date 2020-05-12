@@ -59,6 +59,16 @@
 
     });
 
+
+    // Get all menu item with class
+    var MenuChild  = $('#menu-to-edit').children('li.menu-item');
+        menu_id = $('input#menu').val();
+    MenuChild.each(function(){
+        var id = parseInt($(this).attr('id').match(/[0-9]+/)[0], 10);
+        var depth = $(this).attr('class').match(/\menu-item-depth-(\d+)\b/)[1];
+        ajax_request_load_menu_item_settings(id, depth, menu_id);
+    });
+
     function ajax_request_load_menu_item_settings(menu_item_id, depth, menu_id) {
         $.ajax({
             type: 'POST',

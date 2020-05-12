@@ -3841,6 +3841,7 @@ if ( ! empty($_GET['theme_id'])){
                 echo '<input type="hidden" name="wpmm_theme_type" value="new_theme" />';
             }
             ?>
+            <?php wp_nonce_field( 'wpmmm_save_new_theme_action', 'wpmmm_save_new_theme_nonce_field' ) ?>
             <?php submit_button(); ?>
         </div>
 

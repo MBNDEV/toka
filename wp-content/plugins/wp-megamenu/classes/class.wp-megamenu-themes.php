@@ -32,49 +32,55 @@ if ( ! class_exists('wp_megamenu_themes')) {
         }
 
         public function save_new_themes(){
-            if ( ! empty($_POST['wpmm_theme_type'])){
-                $user_id = get_current_user_id();
+            if ( current_user_can('administrator') && isset( $_POST['wpmmm_save_new_theme_nonce_field'] ) && wp_verify_nonce( $_POST['wpmmm_save_new_theme_nonce_field'], 'wpmmm_save_new_theme_action' ) ){
+                if(! empty($_POST['wpmm_theme_type'])) {
+                    $user_id = get_current_user_id();
 
-                $wpmm_theme_type = sanitize_text_field($_POST['wpmm_theme_type']);
-                if ($wpmm_theme_type === 'new_theme'){
+                    $wpmm_theme_type = sanitize_text_field($_POST['wpmm_theme_type']);
+                    if ($wpmm_theme_type === 'new_theme'){
 
-                    $options = serialize($_POST['wpmm_theme_option']);
-                    // Create post object
-                    $my_post = array(
-                        'post_title'    => wp_strip_all_tags(sanitize_title( $_POST['wpmm_theme_title'] )),
-                        'post_type'     => 'wpmm_theme',
-                        'post_content'  => $options,
-                        'post_status'   => 'publish',
-                        'post_author'   => $user_id,
-                    );
+                        $options = serialize($_POST['wpmm_theme_option']);
+                        // Create post object
+                        $my_post = array(
+                            'post_title'    => wp_strip_all_tags(sanitize_title( $_POST['wpmm_theme_title'] )),
+                            'post_type'     => 'wpmm_theme',
+                            'post_content'  => $options,
+                            'post_status'   => 'publish',
+                            'post_author'   => $user_id,
+                        );
 
-                    // Insert the post into the database
-                    $post_id = wp_insert_post( $my_post );
+                        // Insert the post into the database
+                        $post_id = wp_insert_post( $my_post );
 
-                    if ($post_id){
+                        if ($post_id){
+                            do_action('wpmm_after_save_theme');
+                            wp_redirect(admin_url('admin.php?page=wp_megamenu_themes&section=add_theme&theme_id='.$post_id));
+                        }
+                    }elseif($wpmm_theme_type === 'edit_theme'){
+                        $theme_id = (int) sanitize_text_field($_POST['wpmm_theme_id']);
+
+                        $options = serialize($_POST['wpmm_theme_option']);
+                        // Create post object
+                        $my_post = array(
+                            'ID'            => $theme_id,
+                            'post_title'    => wp_strip_all_tags( sanitize_title($_POST['wpmm_theme_title']) ),
+                            'post_content'  => $options,
+                        );
+                        wp_update_post($my_post);
+
                         do_action('wpmm_after_save_theme');
-                        wp_redirect(admin_url('admin.php?page=wp_megamenu_themes&section=add_theme&theme_id='.$post_id));
+
+                        add_action('admin_notices', array($this, 'wpmm_theme_updated_notice__success'));
                     }
-                }elseif($wpmm_theme_type === 'edit_theme'){
-                    $theme_id = (int) sanitize_text_field($_POST['wpmm_theme_id']);
-
-                    $options = serialize($_POST['wpmm_theme_option']);
-                    // Create post object
-                    $my_post = array(
-                        'ID'            => $theme_id,
-                        'post_title'    => wp_strip_all_tags( sanitize_title($_POST['wpmm_theme_title']) ),
-                        'post_content'  => $options,
-                    );
-                    wp_update_post($my_post);
-
-                    do_action('wpmm_after_save_theme');
-
-                    add_action('admin_notices', array($this, 'wpmm_theme_updated_notice__success'));
                 }
             }
         }
 
         public function export_theme(){
+
+            if(! current_user_can('administrator') && ! isset( $_POST['wpmmm_save_new_theme_nonce_field'] ) && ! wp_verify_nonce( $_POST['wpmmm_save_new_theme_nonce_field'], 'wpmmm_save_new_theme_action' ) ){
+				return;
+			}
             if ( ! empty($_GET['action']) && $_GET['action'] === 'export_wpmm_theme' && ! empty($_GET['theme_id'])){
                 $theme_id =  (int) $_GET['theme_id'];
                 $theme = get_post($theme_id);
@@ -170,6 +176,9 @@ if ( ! class_exists('wp_megamenu_themes')) {
          * Delete wpmm theme
          */
         public function wpmm_theme_delete(){
+            if(! current_user_can('administrator')) {
+                return;
+            }
             check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
             $theme_id = (int) sanitize_text_field($_POST['theme_id']);
             wp_delete_post($theme_id, true);
@@ -177,6 +186,9 @@ if ( ! class_exists('wp_megamenu_themes')) {
         }
 
         public function wpmm_nav_menu_save(){
+            if(! current_user_can('administrator')) {
+                return;
+            }
             check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
             $menu_id = (int) sanitize_text_field($_POST['menu_id']);
             $selected_theme = (int) sanitize_text_field($_POST['selected_theme']);

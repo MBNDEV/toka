@@ -11,7 +11,8 @@ body {
     position: relative;
     display: block;
 }
-.wp-megamenu-wrap .wpmm-nav-wrap > ul > li > a {
+.wp-megamenu-wrap .wpmm-nav-wrap > ul > li > a, 
+.wp-megamenu-wrap .wpmm-nav-wrap > ul > li .wpmm-search-wrap > a.search-open-icon {
     padding: 15px 14px;
     color: #444;
     transition: color 400ms;
@@ -66,6 +67,11 @@ body .wp-megamenu-wrap .wpmm-nav-wrap > ul {
 .wp-megamenu-wrap .wpmm-nav-wrap > ul > li.wpmm-social-link {
     float: right !important;
 }
+@media(max-width:767px){
+    .wp-megamenu-wrap .wpmm-nav-wrap > ul > li.wpmm-social-link{
+        float: none !important; 
+    }
+}
 .wp-megamenu-wrap .wpmm-nav-wrap > ul > li.wpmm-social-link.wpmm-social-index-0 {
     margin-left: auto;
 }
@@ -84,7 +90,6 @@ body .wp-megamenu-wrap .wpmm-nav-wrap > ul {
     z-index: 2;
 }
 .wpmm_brand_logo_wrap img {
-    margin-top: 11px;
     margin-right: 15px;
 }
 .wpmm_brand_logo_wrap a {
@@ -1134,7 +1139,7 @@ address {
     /*transform: translate(0, 50%);*/
 }
 .wp-megamenu-wrap .wpmm-nav-wrap > ul.wp-megamenu> li#wp-megamenu-item-wpmm-search-icon {
-    display: inherit !important;
+    display: inline-block !important;
 }
 span.wpmm-selected-icon.wpmm-image-icon {
     margin: 0 10px 0 0;
@@ -1273,10 +1278,11 @@ span.wpmm-selected-icon {
     text-align: center;
 }
 a.wpmm-search.search-close-icon {
-    color: #fff;
+    color: #fff !important;
     display: none;
-    position: relative;
-    z-index: 9999;
+    position: fixed !important;
+    z-index: 9999 !important;
+    background: none !important;
 }
 .wpmm-search-input-wrap {
     position: fixed;
@@ -2150,4 +2156,162 @@ a.wpmm-search.search-close-icon {
         display: inline-block;
     }
 
+}
+
+
+
+/*------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------- Theme compatibility --------------------------
+--------------------------------------------------------
+--------------------------------------------------------
+--------------------------------------------------------*/
+
+
+
+/*------------------------------
+--------- Common Css  ----------
+-------------------------------*/
+
+.fa{
+    font: normal normal normal 14px/1 FontAwesome !important;
+}
+.ast-flex.main-header-container .site-branding, 
+.ast-header-break-point .site-header .main-header-bar-wrap .site-branding, 
+.navbar.hestia_left .navbar-header, 
+.navbar.hestia_center .navbar-header, 
+.navbar.hestia_right .navbar-header, 
+#et-top-navigation #top-menu.nav, 
+#page-container #main-header .logo_container, 
+#et-top-navigation #et_top_search, 
+#et-top-navigation #et_mobile_nav_menu, 
+.storefront-primary-navigation #site-navigation div.menu, 
+#page #masthead.site-header .col-full .site-branding, 
+#outer-wrap #site-header #site-header-inner #site-logo, 
+#outer-wrap #site-header .oceanwp-mobile-menu-icon, 
+.followWrap .site-header .container .site-branding, 
+.header-right-wrapper a#nav-toggle{
+    display: none;
+}
+
+.ast-flex.main-header-container .ast-main-header-bar-alignment, 
+.navbar.hestia_left #wp-megamenu-primary, 
+.navbar.hestia_right #wp-megamenu-primary, 
+.navbar.hestia_center #wp-megamenu-primary{
+    width: 100%;
+}
+
+@media(max-width: 767px){
+    .ast-main-header-bar-alignment .wpmm_brand_logo_wrap img{
+        margin-top: 12px;
+    }
+    .container.clearfix.et_menu_container{
+        width: 100%;
+    }
+}
+
+/*------------------------------
+--------- Astra Theme ----------
+-------------------------------*/
+
+.ast-main-header-bar-alignment .wpmm-mobile-menu a.wpmm_mobile_menu_btn{
+    padding: 0 12px;
+}
+.ast-main-header-bar-alignment .wpmm_brand_logo_wrap img{
+    margin-top: 0;
+}
+
+
+/*------------------------------
+--------- Hestia Theme ----------
+-------------------------------*/
+
+nav.hestia_left, nav.navbar.hestia_center, 
+nav.navbar.hestia_right{
+    z-index: 999999;
+}
+nav.hestia_left .wpmm-search-input-wrap form, 
+nav.navbar.hestia_center  .wpmm-search-input-wrap form, 
+nav.navbar.hestia_right  .wpmm-search-input-wrap form{
+    top: 46%;
+}
+
+
+/*------------------------------
+--------- Divi Theme ----------
+-------------------------------*/
+
+#et-top-navigation #top-menu-nav, 
+#main-header #et-top-navigation{
+    float: none;
+}
+
+
+/*------------------------------
+-------- OceanWP Theme ---------
+-------------------------------*/
+
+#site-header-inner #site-navigation-wrap{
+    width: 100%;
+    float: none;
+}
+#site-header #site-navigation-wrap{
+    display: block !important;
+}
+
+/*------------------------------
+-------- Hueman Theme -------
+-------------------------------*/
+#header .mobile-title-logo-in-header, 
+#header button.ham__navbar-toggler-two {
+    display: none !important;
+}
+#header #nav-mobile .wpmm-nav-wrap ul.wp-megamenu{
+    position: relative;
+}
+
+
+/*------------------------------
+------ GeneratePress Theme -----
+-------------------------------*/
+nav#site-navigation.main-navigation #wp-megamenu-primary ul ul{
+    height: auto !important;
+}
+
+
+/*------------------------------
+------ OnePress Theme -----
+-------------------------------*/
+.site-header .onepress-menu{
+    float: none;
+}
+.onepress-menu #wp-megamenu-primary .wpmm_mobile_menu_btn{
+    line-height: 2;
+}
+.onepress-menu #wp-megamenu-primary ul li{
+    white-space: normal;
+}
+.onepress-menu #wp-megamenu-primary ul, 
+.onepress-menu #wp-megamenu-primary ul li a{
+    border: 0 !important;
+}
+.onepress-menu a.wpmm-search.search-close-icon{
+    color: #000 !important;
+}
+@media(max-width: 1140px){
+    .main-navigation .onepress-menu{
+        overflow: visible !important;
+    }
+}
+
+
+/*------------------------------
+------ Hello Elementor Theme -----
+-------------------------------*/
+body.wp-megamenu  .site-header .site-branding{
+    display: none;
+}
+body.wp-megamenu  .site-header .site-navigation{
+    display: block;
 }
