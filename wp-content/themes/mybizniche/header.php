@@ -34,7 +34,7 @@
                     <div class="small-4 large-2 cell">
                         <a href="<?php echo home_url() ?>" class="logo">
                             <!-- <img src="<?php echo MBN_ASSETS_URI ?>/img/logo-toka-box-black.svg" alt="Toka CBD Wellness" /> -->
-                            <img src="<?php echo MBN_ASSETS_URI ?>/img/logo-white.svg" alt="Toka CBD Wellness" />                            
+                            <img src="<?php echo MBN_ASSETS_URI ?>/img/logo-alt-white.svg" alt="Toka CBD Wellness" />                            
                         </a>
                     </div>
                     <div class="small-4 large-5 cell right-col">
