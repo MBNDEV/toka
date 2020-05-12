@@ -336,6 +336,9 @@ if ( ! class_exists('wp_megamenu_widgets')) {
          * Save or update a widget
          */
         public function wpmm_save_widget(){
+            if(! current_user_can('administrator')) {
+                return;
+            }
             check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 
             $id_base = sanitize_text_field( $_POST['id_base'] );
@@ -356,6 +359,9 @@ if ( ! class_exists('wp_megamenu_widgets')) {
          */
 
         public function wpmm_delete_widget(){
+            if(! current_user_can('administrator')) {
+                return;
+            }
             check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 
             $id_base = sanitize_text_field( $_POST['id_base'] );
@@ -542,6 +548,9 @@ if ( ! class_exists('wp_megamenu_widgets')) {
          * Delete Row
          */
         public function wpmm_delete_row(){
+            if(! current_user_can('administrator')) {
+                return;
+            }
             check_ajax_referer( 'wpmm_check_security', 'wpmm_nonce' );
 
             $menu_item_id   = (int) sanitize_text_field($_POST['menu_item_id']);

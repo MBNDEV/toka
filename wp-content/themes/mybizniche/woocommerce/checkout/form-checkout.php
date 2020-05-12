@@ -47,7 +47,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 			<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
 			
 			<h3 id="order_review_heading"><?php esc_html_e( 'Order Summary', 'woocommerce' ); ?> </h3>
-			<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt secondary btn-payment" name="woocommerce_checkout_place_order" id="xplace_order" value="' . esc_attr( $order_button_text ) . '" data-value="' . esc_attr( $order_button_text ) . '">Continue to Payment</button>' );  ?>
+			<?php echo apply_filters( 'woocommerce_order_button_html', '<button type="submit" class="button alt secondary btn-payment" name="woocommerce_checkout_place_order" id="xplace_order">Continue to Payment</button>' );  ?>
 			<div style="clear : both"></div><br>
 			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 

@@ -62,7 +62,7 @@ $widgets = $widgets_manager->get_all_registered_widget();
             <label id="wpmm_stress_row_width_label" style="display: <?php echo ($menu_strees_row ===
             'wpmm-strees-row' || $menu_strees_row === 'wpmm-strees-default' ) ? 'inline-block': 'none'; ?>;">
                 <?php _e('Width', 'wp-megamenu'); ?>
-                <input id="wpmm_stress_row_width" type="text" name="wpmm_stress_row_width" size="10" value="<?php echo $item_strees_row_width; ?>" placeholder="<?php _e('ex: 1170', 'wp-megamenu'); ?>" />
+                <input id="wpmm_stress_row_width" type="number" name="wpmm_stress_row_width" size="10" value="<?php echo $item_strees_row_width; ?>" placeholder="<?php _e('ex: 1170', 'wp-megamenu'); ?>" />
             </label>
 
             <!--<label>
@@ -142,7 +142,7 @@ $widgets = $widgets_manager->get_all_registered_widget();
                                 foreach ($layout_value['row'] as $col_key => $layout_col){
                                     echo '<div class="wpmm-col wpmm-col-'.$layout_col['col'].'" data-col-id="'.$col_key.'">';
 
-                                    echo '<div class="wpmm-item-wrap AA">';
+                                    echo '<div class="wpmm-item-wrap">';
                                         echo '<div class="wpmm-column-actions">';
                                         echo '<span class="wpmmColSortingIcon"><i class="fa fa-arrows"></i> '.__('Column', 'wp-megamenu').' 
                                     </span>';

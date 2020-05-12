@@ -1,0 +1,13 @@
+2020-05-12T09:30:02+00:00 CRITICAL Uncaught Error: Class 'WC_Countries' not found in D:\XAMPP\htdocs\toka\wp-content\plugins\woocommerce\includes\class-woocommerce.php:555
+Stack trace:
+#0 D:\XAMPP\htdocs\toka\wp-includes\class-wp-hook.php(288): WooCommerce->init('')
+#1 D:\XAMPP\htdocs\toka\wp-includes\class-wp-hook.php(312): WP_Hook->apply_filters(NULL, Array)
+#2 D:\XAMPP\htdocs\toka\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#3 D:\XAMPP\htdocs\toka\wp-settings.php(523): do_action('init')
+#4 D:\XAMPP\htdocs\toka\wp-config.php(93): require_once('D:\\XAMPP\\htdocs...')
+#5 D:\XAMPP\htdocs\toka\wp-load.php(37): require_once('D:\\XAMPP\\htdocs...')
+#6 D:\XAMPP\htdocs\toka\wp-blog-header.php(13): require_once('D:\\XAMPP\\htdocs...')
+#7 D:\XAMPP\htdocs\toka\index.php(17): require('D:\\XAMPP\\htdocs...')
+#8 {main}
+  thrown in D:\XAMPP\htdocs\toka\wp-content\plugins\woocommerce\includes\class-woocommerce.php on line 555
+
