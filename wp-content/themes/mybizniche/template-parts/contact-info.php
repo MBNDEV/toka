@@ -8,10 +8,10 @@
     <li>
         <ul class="social-links">
             <li>Follow Us:</li>
-            <li><a href="#"><span class="icon-facebook"></span></a></li>
-            <li><a href="#"><span class="icon-twitter"></span></a></li>
-            <li><a href="#"><span class="icon-instagram"></span></a></li>
-            <li><a href="#"><span class="icon-pinterest"></span></a></li>
+            <li><a href="https://www.facebook.com/tokacbd/" target="_blank"><span class="icon-facebook"></span></a></li>
+            <li><a href="#" target="_blank"><span class="icon-twitter"></span></a></li>
+            <li><a href="https://www.instagram.com/tokacbd/?hl=en" target="_blank"><span class="icon-instagram"></span></a></li>
+            <li><a href="#" target="_blank"><span class="icon-pinterest"></span></a></li>
         </ul>
     </li>
 </ul>

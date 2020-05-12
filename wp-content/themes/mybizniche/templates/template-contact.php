@@ -16,7 +16,7 @@ get_header(); ?>
             <div class="grid-x grid-margin-x align-center">
                 <div class="cell large-5 large-offset-7">
                     <div class="box-cont">
-                        <p><strong>How can we help?</strong> Have a personal story about how CBD has helped you? A flavor suggestion? Get in touch with us.</p>
+                        <p><strong>How can we help?</strong> Contact us for product questions, to book an appointment, or to share a story about how our CBD has helped you!</p>
                         <?php echo do_shortcode('[contact-form-7 id="68" title="Contact Form"]');?>
                     </div>
                 </div>
