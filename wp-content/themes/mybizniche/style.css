@@ -36,7 +36,6 @@ input[type="password"] {padding: 20px;}
 .btn-arrow .wp-block-button__link:hover:after {right: 10px;}
 
 .wrapper {overflow: hidden;}
-.header a.logo {width:110px;padding: 2px 10px 5px; background: #222;}
 
 /* page content */
 .page-content {}
