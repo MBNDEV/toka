@@ -492,9 +492,9 @@ get_header(); ?>
                                 </h5>
                             </div>
 
-                            <div class="product">
+                            <!-- <div class="product">
                                 <img src="<?php echo MBN_ASSETS_URI ?>/img/img-product-skincare2.png" alt="">
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

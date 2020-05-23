@@ -61,13 +61,14 @@
 		}
 
 		.val{
+            display: block;
 			&:before{
 				content: " ";
 				display: inline-block;
 				width: 27px;
 				height: 0px;
 				border: solid 0.5px #222222;
-				margin: 0 12px;
+				margin: 0 12px 0 0;
 				vertical-align: middle;
 			}
 
@@ -86,9 +87,9 @@
 	a.logo{
 		margin: 0 auto;
 		display: block;
-        max-width: 130px;
-        padding:0 10px 5px;
-        background: $color-primary;
+        max-width: 230px;
+        padding:0 0 5px;
+        //background: $color-primary;
     }
 
     .m-menu{
@@ -371,8 +372,8 @@
 
             .val{
                 &:before{
-                    width: 20px;
-                    margin: 0 8px;
+                    width: 10px;
+                    margin: 0 5px 0 0;
                 }
             }
         }
@@ -421,7 +422,7 @@
     }
 
     @include media(max-width, 1023px){
-        padding-top: 31px;
+        padding-top: 35px;
 
         .sale{
             position: absolute;
@@ -439,6 +440,7 @@
             }
 
             .val{
+                display: inline-block;
                 .lbl2{
                     color: #fff;
                 }
@@ -485,6 +487,8 @@
 
     
     @include media(max-width, 639px){
+        padding-top: 50px;
+
         .sale{
             font-size: 10px;
             padding: 8px;
