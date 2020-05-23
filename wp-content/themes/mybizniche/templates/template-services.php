@@ -115,12 +115,16 @@ get_header(); ?>
                                                 </span>
                                                 <span class="org-price">
                                                     <strong>With Pre-paid Appointment:</strong>
-                                                    <?php echo '<sup>'.get_woocommerce_currency_symbol().'</sup>'. $price2; ?>
+                                                    <?php echo '<sup>'.get_woocommerce_currency_symbol().'</sup>'. $off; ?>
                                                 </span>
                                             <?php 
-                                            }else{
-                                                printf('<sup>%s</sup>%0.2f', $price);
-                                            }
+                                            }else{ ?>
+                                                <?php //printf('<sup>%s</sup>%0.2f', $price); ?>
+                                                <span class="off-price">
+                                                    <strong>Walk-ins:</strong>
+                                                    <?php echo '<sup>'.get_woocommerce_currency_symbol().'</sup>'. $price; ?>
+                                                </span>
+                                            <?php }
                                             ?>
                                         </span>
                                     </li>
@@ -160,60 +164,5 @@ get_header(); ?>
 
 <?php // get_template_part('template-parts/section-faqs') ?>
 
-<style>
-    /* #g20, #g24 {
-        position:relative;
-    } */
-    #g20 {
-        position: absolute;
-        top: 0;
-        width: 35px;
-        height: 16px;
-        animation: wave1 .7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-        /* transform: translate3d(0, 0, 0); */
-        transform: translate3d(56px, 106px, 0px);
-        }
-    #g24 {
-        position: absolute;
-        top: 0;
-        width: 35px;
-        height: 16px;
-        animation: wave2 .7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
-        /* transform: translate3d(0, 0, 0); */
-        transform: translate3d(21px, 105px, 0px);
-        }
-
-        /* .wave:nth-of-type(2) {
-        top: -175px;
-        animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
-        opacity: 1;
-        } */
-
-        @keyframes wave1 {
-            0% {
-                transform: translate3d(56px, 106px, 0px);
-            }
-            100% {
-                transform: translate3d(36px, 106px, 0px);
-            }
-        }
-        @keyframes wave2 {
-            0% {
-                transform: translate3d(21px, 105px, 0px);
-            }
-            100% {
-                transform: translate3d(1px, 105px, 0px);
-            }
-        }
-
-        @keyframes swell {
-        0%, 100% {
-            transform: translate3d(0,-25px,0);
-        }
-        50% {
-            transform: translate3d(0,5px,0);
-        }
-        }
-</style>
 
 <?php get_footer() ?>
