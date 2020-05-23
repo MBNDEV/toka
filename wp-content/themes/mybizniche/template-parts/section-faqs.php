@@ -20,7 +20,7 @@ $faqs = get_posts([
             <div class="cell large-12">
                 <div id="faq-boxes" class="faq-boxes">
                     <?php  foreach($faqs as $key => $faq): ?>
-                    <div class="faq-box faq-box-<?php echo $key + 1 ?>" <?php echo in_array($key+1, [2, 3]) ?'data-mh="faqs"' :'' ?>  data-aos="fade-up" data-aos-offset="200">
+                    <div class="faq-box faq-box-<?php echo $key + 1 ?>" <?php echo in_array($key+1, [2, 3]) ?'data-mh="faqs"' :'' ?>  data-aos="fade-up" data-aos-offset="100">
                         <div class="text">
                             <h3><?php echo $faq->post_title ?></h3>
                             <?php echo wpautop($faq->post_content) ?>

@@ -49,3 +49,13 @@
 @include media(max-width, 1023px){
     .text-large{ font-size: 21px }
 }
+
+
+@keyframes wave1 {
+    0% {transform: translate3d(56px, 106px, 0px);}
+    100% {transform: translate3d(36px, 106px, 0px);}
+}
+@keyframes wave2 {
+    0% {transform: translate3d(21px, 105px, 0px);}
+    100% {transform: translate3d(1px, 105px, 0px);}
+}

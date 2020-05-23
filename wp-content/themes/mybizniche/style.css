@@ -720,46 +720,7 @@ input[type="password"] {padding: 20px;}
 #mega-menu-header-menu.mega-menu ul ul ul li {padding-top: 10px !important; padding-bottom: 10px !important;}
 
 
-#sec-years {padding-top: 150px;}
-#sec-years .bg-slider:after {background-size: 80%; top:45%;}
 
-#sec-years .text-wrap.text-wrap-2 p {font-size:24px;}
-#sec-years .ivmenu-options .ivmenu-item {margin-top:-115px; padding-top:115px;}
-#sec-years .ivmenu-options .ivmenu-item .min-hcontent {min-height: 180px;}
-
-
-.sec-masthead {background: url(assets/img/bg-iv-therapy.jpg) no-repeat center center / 100%;}
-
-
-@media (min-width: 1200px) {
-	#sec-masthead {padding-top: 80px;}
-}
-@media (max-width: 1199px) {
-	#sec-masthead {padding-top:80px;}
-
-	#sec-years {padding-top:60px}
-	#sec-years .bg-slider::after {top:30%}
-	#sec-years .text-wrap.text-wrap-1 {max-width: 400px;}
-	#sec-years .text-wrap.text-wrap-1 {padding-bottom: 30%;}
-	#sec-years .text-wrap.text-wrap-1 p {font-size: 18px;}
-	#sec-years .text-wrap.text-wrap-2 p {font-size:20px;}
-}
-@media (max-width: 1023px) {
-	#sec-years .text-wrap.text-wrap-1 {padding-bottom: 10%;}
-}
-@media (min-width:768px) and (max-width: 1023px) {
-	#sec-years .text-wrap.text-wrap-1 h2, #sec-years .text-wrap.text-wrap-1 h4,	#sec-years .text-wrap.text-wrap-1 p {color: #222;}
-	#sec-years .text-wrap.text-wrap-1 .arrow-button {color:#222;}
-}
-@media (max-width: 767px) {
-	#sec-years {padding:50% 0 0;}
-	#sec-years .bg-slider::after {top:80%; opacity:0.5;}
-	#sec-years .text-wrap.text-wrap-1 {max-width: none;}
-}
-
-@media (max-width: 767px) {
-	.header a.logo {width: 100px;}
-}
 
 /* Custom css */
 

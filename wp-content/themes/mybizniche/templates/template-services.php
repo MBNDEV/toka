@@ -22,12 +22,12 @@ get_header(); ?>
     </div>
 </section>
 
+
 <section id="sec-years" class="sec-years section" data-aos="fade-up" data-aos-delay="600">
     <div class="bg-slider">
-        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-service1.jpg" alt=""></div>
-        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-service2a.jpg" alt=""></div>
+        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-100yrs-feat-img-slide1.jpg" alt=""></div>
+        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-100yrs-feat-img-slide2.jpg" alt=""></div>
     </div>
-    
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell large-5">
@@ -38,15 +38,18 @@ get_header(); ?>
                     <a href="#ivmenu-options" class="arrow-button margin-top-2" data-smooth-scroll>IV THERAPY MENU</a>
                 </div>
             </div>
-            <div class="cell large-12">
-                <div class="text-wrap text-wrap-2"  data-aos="fade" data-aos-offset="300">
-                    <p>TOKA was created to help people in need of supporting a quality life using various IV drips with appropriate CBD when desired or needed. <span class="white">CBD has been shown to be very effective and supportive of many different problems including help with pain relief, relaxation, boosting of immunity, sleep and several other issues.</span></p>
+        </div>
+    </div>
+</section>    
 
-                    <p><span class="blue">IV therapy</span> can be used for hydration only or it can be utilized for the administration of micronutrients to assist in boosting immunity. IV therapy should never be used for the replacement of prescription medications.</p>
-                </div>
+
+<section class="sec-ivmenu" data-aos="fade-up">
+    <div class="grid-container">
+        <div class="grid-x grid-margin-x">
+            <div class="cell large-12">
 
                 <div class="ivmenu-options" id="ivmenu-options">
-                    <h3 class="title" data-aos="fade-right" data-aos-offset="300">IV Menu Options:</h3>
+                    <h3 class="title hide" data-aos="fade-right" data-aos-offset="300">IV Menu Options:</h3>
 
                     <?php
                     $items = array_chunk(get_posts('post_type=ivtherapy&posts_per_page=-1&order=asc'), 2);
@@ -78,33 +81,43 @@ get_header(); ?>
                             </style>
 
                             <!-- ITEM -->
-                            <div id="ivmenu-item-<?php echo $i->ID ?>" class="ivmenu-item <?php echo ($k==0) ?'left-side' :'right-side' ?>" data-aos="fade" data-aos-offset="300">
+                            <div id="ivmenu-item-<?php echo $i->ID ?>" class="ivmenu-item <?php echo ($k==0) ?'left-side' :'right-side' ?>" data-aos="fade" data-aos-offset="200">
                                 <div class="heading">
-                                    <span class="icon" data-aos="fade-up" data-aos-offset="300" data-aos-delay="">
+                                    <span class="icon" data-aos="fade-up"  data-aos-delay="">
                                         <?php include(locate_template('template-parts/ivtherapy-icon.php', false, false)) ?>
                                     </span>
-                                    <span class="text" data-aos="fade-left" data-aos-offset="300" data-aos-delay="300">
-                                        <img src="<?php echo MBN_ASSETS_URI ?>/img/icn-toka-label.svg" alt=""><br>
+                                    <span class="text" data-aos="fade-left"  data-aos-delay="200">
+                                        <img src="<?php echo MBN_ASSETS_URI ?>/img/icn-toka-label2.svg" alt=""><br>
                                         <strong><?php echo $i->post_title ?></strong>
                                     </span>
                                 </div>
                                 <ul class="metas">
-                                    <li data-aos="fade-down" data-aos-offset="200" data-aos-delay="300">IV Therapy</li>
-                                    <li data-aos="fade-down" data-aos-offset="200" data-aos-delay="300">
+                                    <li data-aos="fade-down" data-aos-delay="200">IV Therapy</li>
+                                    <li data-aos="fade-down" data-aos-delay="200">
                                         <span class="price-tag">
                                             <?php
                                             $price  = get_field('price', $i->ID);
                                             $off    = get_field('off-price', $i->ID);
                                             $price2 = $price - (($off/100) * $price);
 
-                                            if($off){
-                                                printf('<u><sup>%s</sup>%0.2f</u><sup>%s</sup>%0.2f <span class="badge">%s%% off</span>',
+                                            if($off){ ?>
+                                                <?php /* printf('<u><sup>%s</sup>%0.2f</u><sup>%s</sup>%0.2f <span class="badge">%s%% off</span>',
                                                     get_woocommerce_currency_symbol(),
                                                     $price,
                                                     get_woocommerce_currency_symbol(),
                                                     $price2,
                                                     $off
-                                                );
+                                                ); */ ?>
+                                                
+                                                <span class="off-price">
+                                                    <strong>Walk-ins:</strong>
+                                                    <?php echo '<sup>'.get_woocommerce_currency_symbol().'</sup>'. $price; ?>
+                                                </span>
+                                                <span class="org-price">
+                                                    <strong>With Pre-paid Appointment:</strong>
+                                                    <?php echo '<sup>'.get_woocommerce_currency_symbol().'</sup>'. $price2; ?>
+                                                </span>
+                                            <?php 
                                             }else{
                                                 printf('<sup>%s</sup>%0.2f', $price);
                                             }
@@ -112,7 +125,7 @@ get_header(); ?>
                                         </span>
                                     </li>
                                 </ul>
-                                <div class="content" data-aos="fade" data-aos-offset="200" data-aos-delay="300">
+                                <div class="content" data-aos="fade-up"  data-aos-delay="200">
                                     <p class="min-hcontent"><?php echo $i->post_content; ?></p>
                                     <p class="medium-text-center-down"><a href="/contact/" class="arrow-button">Select and Book Now</a></p>
                                 </div>
@@ -129,6 +142,16 @@ get_header(); ?>
     </div>
 </section>
 
+<section class="sec-ivfoot">
+    <div class="grid-container">
+        <div class="text-wrap text-wrap-2"  data-aos="fade" >
+            <p>TOKA was created to help people in need of supporting a quality life using various IV drips with appropriate CBD when desired or needed. <span class="white">CBD has been shown to be very effective and supportive of many different problems including help with pain relief, relaxation, boosting of immunity, sleep and several other issues.</span></p>
+
+            <p><strong class="blue">IV therapy</strong> can be used for hydration only or it can be utilized for the administration of micronutrients to assist in boosting immunity. IV therapy should never be used for the replacement of prescription medications.</p>
+        </div>
+    </div>
+</section>
+
 
 <style>
 .sec-faq{ background-color: #222 }
@@ -137,5 +160,60 @@ get_header(); ?>
 
 <?php // get_template_part('template-parts/section-faqs') ?>
 
+<style>
+    /* #g20, #g24 {
+        position:relative;
+    } */
+    #g20 {
+        position: absolute;
+        top: 0;
+        width: 35px;
+        height: 16px;
+        animation: wave1 .7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+        /* transform: translate3d(0, 0, 0); */
+        transform: translate3d(56px, 106px, 0px);
+        }
+    #g24 {
+        position: absolute;
+        top: 0;
+        width: 35px;
+        height: 16px;
+        animation: wave2 .7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+        /* transform: translate3d(0, 0, 0); */
+        transform: translate3d(21px, 105px, 0px);
+        }
+
+        /* .wave:nth-of-type(2) {
+        top: -175px;
+        animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+        opacity: 1;
+        } */
+
+        @keyframes wave1 {
+            0% {
+                transform: translate3d(56px, 106px, 0px);
+            }
+            100% {
+                transform: translate3d(36px, 106px, 0px);
+            }
+        }
+        @keyframes wave2 {
+            0% {
+                transform: translate3d(21px, 105px, 0px);
+            }
+            100% {
+                transform: translate3d(1px, 105px, 0px);
+            }
+        }
+
+        @keyframes swell {
+        0%, 100% {
+            transform: translate3d(0,-25px,0);
+        }
+        50% {
+            transform: translate3d(0,5px,0);
+        }
+        }
+</style>
 
 <?php get_footer() ?>
