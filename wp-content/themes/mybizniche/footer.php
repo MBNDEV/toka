@@ -132,6 +132,12 @@
     </div>
 
     <?php wp_footer() ?>
-
+    
+    <script>   
+    //$( window ).on("load", function() {
+        AOS.init();
+    //});     
+        
+    </script>
 </body>
 </html>

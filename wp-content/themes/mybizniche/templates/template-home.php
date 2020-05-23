@@ -11,14 +11,14 @@ get_header(); ?>
         <div class="grid-x grid-margin-x align-center">
             <div class="large-12 cell">
                 <div class="text-wrap text-center">
-                    <h1>Your journey to<br /> wellness starts with</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="">Your journey to<br /> wellness starts with</h1>
                     
-                    <img src="<?php echo MBN_ASSETS_URI ?>/img/word-toka.svg" alt="TOKA" class="toka" />
+                    <img  data-aos="fade-down" data-aos-delay="" src="<?php echo MBN_ASSETS_URI ?>/img/word-toka.svg" alt="TOKA" class="toka" />
 
-                    <h2>Positively <span class="blue">Pure Wellness.</span></h2>
-                    <p>Developed with pharmaceutical science. Rooted in functional medicine.</p>
+                    <h2 data-aos="fade-up" data-aos-delay="300">Positively <span class="blue">Pure Wellness.</span></h2>
+                    <p data-aos="fade-up" data-aos-delay="500">Developed with pharmaceutical science. Rooted in functional medicine.</p>
                 </div>
-
+                <div class="p-tabs-wrap" data-aos="fade-up" data-aos-delay="700">
                 <?php
                 $types      = ['cbd-oil-tinctures', 'cbd-gummies', 'cbd-pre-rolls'];
                 //$types      = ['tinctures', 'gummies', 'pre-rolls'];
@@ -120,6 +120,7 @@ get_header(); ?>
                     </div>
                     <?php endforeach ?>
                 </div>
+                </div>
             </div>
             <div class="large-12 cell text-center">
                 <a href="<?php echo home_url('/products/') ?>" class="arrow-button">Shop Now</a>
@@ -139,14 +140,14 @@ get_header(); ?>
     <div class="grid-container">
         <div class="grid-x grid-marign-x align-center">
             <div class="cell large-12">
-                <div class="text-wrap text-center">
+                <div class="text-wrap text-center"  data-aos="fade-down">
                     <h3><span class="blue">Our values</span> make us different</h3>
                     
                     <p>We hold ourselves to a higher standard because we care about keeping you healthy with products that are safe, pure, and work as promised.</p>
                 </div>
 
                 <div class="boxes">
-                    <div class="box">
+                    <div class="box"  data-aos="flip-right">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="88.451" height="92.807" viewBox="0 0 88.451 92.807">
                                 <defs>
@@ -205,7 +206,7 @@ get_header(); ?>
                             Backed by doctors
                         </span>
                     </div>
-                    <div class="box">
+                    <div class="box"  data-aos="flip-right" data-aos-delay="200">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="98.546" height="99.238" viewBox="0 0 98.546 99.238">
                                 <defs>
@@ -242,7 +243,7 @@ get_header(); ?>
                             Highly effective
                         </span>
                     </div>
-                    <div class="box">
+                    <div class="box"  data-aos="flip-right" data-aos-delay="400">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="92.914" height="93" viewBox="0 0 92.914 93">
                                 <defs>
@@ -282,7 +283,7 @@ get_header(); ?>
                             No synthetic additives
                         </span>
                     </div>
-                    <div class="box">
+                    <div class="box"  data-aos="flip-right" data-aos-delay="600">
                         <div class="icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="106.065" height="106.065" viewBox="0 0 106.065 106.065">
                                 <defs>
@@ -339,14 +340,14 @@ get_header(); ?>
 </div>
 
 
-<section class="sec-mission section">
+<section class="sec-mission section" data-aos="fade-up" data-aos-offset="500">
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-bottom">
             <div class="cell large-12">
                 <!-- <img src="<?php echo MBN_ASSETS_URI ?>/img/spacer.png" alt=""> -->
                 <div class="spacer"></div>
             </div>
-            <div class="large-9 cell">
+            <div class="large-9 cell" data-aos="fade-down">
                 <div class="text-wrap">
                     <h3><span class="blue">We’re on a mission</span><br/>
                     to make people feel good.</h3>
@@ -354,7 +355,7 @@ get_header(); ?>
                     <p>We searched the globe, did our own testing and research, and made sure we created a product that’s safe and more effective than anything on the market. All with one thing in mind, making people feel like the best version of themselves, naturally.</p>
                 </div>
             </div>
-            <div class="cell large-3">
+            <div class="cell large-3" data-aos="fade-right" data-aos-delay="200">
                 <div class="image-wrap">
                     <img src="<?php echo MBN_ASSETS_URI ?>/img/icn-partial-logo.svg" alt="">
                 </div>
@@ -383,7 +384,7 @@ get_header(); ?>
 </section>
 
 
-<section id="sec-find" class="sec-find section">
+<section id="sec-find" class="sec-find section" data-aos="zoom-in" data-aos-offset="500" style="max-height:1190px;">
     <div class="grid-container fluid">
         <div class="grid-x grid-margin-x">
             <div class="cell large-12">
