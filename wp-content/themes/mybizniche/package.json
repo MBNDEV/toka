@@ -28,6 +28,7 @@
     "imagemin-mozjpeg": "^8.0.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "foundation-sites": "^6.5.3"
   }
 }
