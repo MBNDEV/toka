@@ -2027,7 +2027,7 @@
     color: darken($color-white, 0.5);
 
     p {
-        font-size: 40px;
+        font-size: 24px;
         color: inherit;
 
         span {
@@ -2041,10 +2041,6 @@
     
     @include media(max-width, 1199px){
         padding: 70px 0;
-
-        p {
-            font-size: 30px;
-        }
     }
     
     @include media(max-width, 639px){

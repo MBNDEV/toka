@@ -1,6 +1,7 @@
 <ul class="contact-info">
-    <li class="pin"><a href="#">3407 Montrose Blvd., Houston, Texas 77006</a></li>
-    <li class="phone"><a href="tel:713-773-2273">713 773 2273</a></li>
+    <li class="pin"><a href="https://goo.gl/maps/SAHTSqGA3Wx9RTgF6" target="_blank">3407 Montrose Blvd Suite A5, Houston, TX 77006</a></li>
+    <!-- <li class="phone"><a href="tel:713-773-2273">713 773 2273</a></li> -->
+    <li class="phone"><a href="tel:346-240-3992">346-240-3992</a></li>
     <li class="calendar">
         <a href="#">8am-5pm Monday thru Friday</a>
         <span class="badge">Store is open today</span>
