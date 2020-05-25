@@ -81,19 +81,19 @@ get_header(); ?>
                             </style>
 
                             <!-- ITEM -->
-                            <div id="ivmenu-item-<?php echo $i->ID ?>" class="ivmenu-item <?php echo ($k==0) ?'left-side' :'right-side' ?>" data-aos="fade" data-aos-offset="200">
+                            <div id="ivmenu-item-<?php echo $i->ID ?>" class="ivmenu-item <?php echo ($k==0) ?'left-side' :'right-side' ?>" data-aos="fade">
                                 <div class="heading">
                                     <span class="icon" data-aos="fade-up"  data-aos-delay="">
                                         <?php include(locate_template('template-parts/ivtherapy-icon.php', false, false)) ?>
                                     </span>
-                                    <span class="text" data-aos="fade-left"  data-aos-delay="200">
+                                    <span class="text" data-aos="fade-left" data-aos-delay="100">
                                         <img src="<?php echo MBN_ASSETS_URI ?>/img/icn-toka-label2.svg" alt=""><br>
                                         <strong><?php echo $i->post_title ?></strong>
                                     </span>
                                 </div>
                                 <ul class="metas">
-                                    <li data-aos="fade-down" data-aos-delay="200">IV Therapy</li>
-                                    <li data-aos="fade-down" data-aos-delay="200">
+                                    <li data-aos="fade-down" data-aos-delay="100">IV Therapy</li>
+                                    <li data-aos="fade-down" data-aos-delay="100">
                                         <span class="price-tag">
                                             <?php
                                             $price  = get_field('price', $i->ID);
@@ -129,7 +129,7 @@ get_header(); ?>
                                         </span>
                                     </li>
                                 </ul>
-                                <div class="content" data-aos="fade-up"  data-aos-delay="200">
+                                <div class="content" data-aos="fade-up"  data-aos-delay="100">
                                     <p class="min-hcontent"><?php echo $i->post_content; ?></p>
                                     <p class="medium-text-center-down"><a href="/contact/" class="arrow-button">Select and Book Now</a></p>
                                 </div>
