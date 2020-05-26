@@ -691,7 +691,6 @@ input[type="password"] {padding: 20px;}
 
 /* App css overrides 
 ------------------------ */
-
 .header-nav + .mob-payment .cards-list {margin-top:-30px; margin-bottom: 50px; justify-content: left;}
 
 
@@ -702,19 +701,6 @@ input[type="password"] {padding: 20px;}
 	.home .sec-banner .text-wrap img.toka {max-width: 450px; margin-bottom: 20px;}
 	.home .sec-banner .p-tabs {margin-bottom: 40px;}
 }
-
-
-#faq-banner.sticky {top: 134px;	border-top: 5px solid #fff;	height: 55px;}
-.faq-offset {margin-top:-70px; padding-top:70px;}
-@media (min-width: 640px) {
-	#faq-banner.sticky {top:114px;}
-	#faq-banner h1 {padding:80px 0 60px}
-	#faq-banner.sticky h1 {padding:12px 0}
-}
-@media (max-width: 1023px) {
-	.faq-offset {margin-top:-110px; padding-top:110px;}
-}
-
 
 #mega-menu-header-menu.mega-menu > li > .mega-sub-menu {padding-top: 30px !important;}
 #mega-menu-header-menu.mega-menu ul ul ul li {padding-top: 10px !important; padding-bottom: 10px !important;}
@@ -772,10 +758,3 @@ input[type="password"] {padding: 20px;}
 
 }
 
-@media (min-width:768px) and (max-width:1023px) {
-	#faq-banner.sticky {top: 145px;}
-}
-
-@media (min-width:640px) and (max-width:767px) {
-	#faq-banner.sticky {top: 134px;}
-}

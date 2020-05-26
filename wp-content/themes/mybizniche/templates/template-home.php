@@ -340,7 +340,7 @@ get_header(); ?>
 </div>
 
 
-<section class="sec-mission section" data-aos="fade-up" data-aos-offset="500">
+<section class="sec-mission section" data-aos="fade-up" data-aos-offset="300">
     <div class="grid-container">
         <div class="grid-x grid-margin-x align-bottom">
             <div class="cell large-12">
@@ -384,7 +384,7 @@ get_header(); ?>
 </section>
 
 
-<section id="sec-find" class="sec-find section" data-aos="zoom-in" data-aos-offset="500" style="max-height:1190px;">
+<section id="sec-find" class="sec-find section" data-aos="zoom-in" data-aos-offset="300" style="max-height:1190px;">
     <div class="grid-container fluid">
         <div class="grid-x grid-margin-x">
             <div class="cell large-12">
