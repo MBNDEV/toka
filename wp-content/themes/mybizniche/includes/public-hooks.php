@@ -310,10 +310,10 @@ function mbn_pace_loader_style(){
         left: 0;
         right: 0;
         bottom: 0;
-        height: 2px;
+        height: 5px;
         width: 200px;
         background: #fff;
-        border: 1px solid #b40016;
+        /* border: 1px solid #b40016; */
 
         overflow: hidden;
     }
@@ -340,7 +340,7 @@ function mbn_pace_loader_style(){
         right: 100%;
         height: 100%;
         width: 100%;
-        background: #b40016;
+        background: #14c8f0;
     }
 
     .pace.pace-inactive {
@@ -353,7 +353,8 @@ function mbn_pace_loader_style(){
         height: 100%;
         top: 0;
         left: 0;
-        background: #222;
+        background: #6a7376;
+        background: rgba(0,0,0,0.5);
         z-index: 1995;
         visibility: visible;
         opacity: 1;
@@ -503,3 +504,47 @@ function mbn_invisible_cf7_recaptcha(){
 
 }
 add_action('wp_footer', 'mbn_invisible_cf7_recaptcha', 45, 0);*/
+
+
+
+// Blog post Load more
+function loadmore_ajax(){
+ 
+	$args = json_decode( stripslashes( $_POST['query'] ), true );
+	$args['paged'] = $_POST['page'] + 1;
+	$args['post_status'] = 'publish';
+ 
+	query_posts( $args );
+ 
+	if( have_posts() ) :
+        while( have_posts() ): the_post();
+        
+        get_template_part( 'template-parts/post-list', get_post_format() );
+ 
+		endwhile;
+	endif;
+	die;
+}
+add_action('wp_ajax_loadmore', 'loadmore_ajax'); 
+add_action('wp_ajax_nopriv_loadmore', 'loadmore_ajax'); 
+
+
+
+// Add Meta Title to lost password page
+function custom_lostpass_title($title) {
+    if (is_wc_endpoint_url( 'lost-password' )) {
+        $title = "My Account - Reset Password - Toka CBD Wellness";
+    }
+    return $title;  
+}
+add_filter( 'pre_get_document_title', 'custom_lostpass_title', 10 );
+add_filter( 'wpseo_title', 'custom_lostpass_title', 15 );
+add_filter( 'wpseo_opengraph_title', 'custom_lostpass_title', 15 );
+
+// Add Meta decription to lost password page
+add_filter('wpseo_opengraph_desc', function($description){
+    if (is_wc_endpoint_url( 'lost-password' )) {
+        $description = "Login to your Toka CBD Wellness account. Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.";
+    }
+    return $description;
+});

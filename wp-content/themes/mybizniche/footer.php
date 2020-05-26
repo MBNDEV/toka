@@ -134,10 +134,13 @@
     <?php wp_footer() ?>
     
     <script>   
-    //$( window ).on("load", function() {
-        AOS.init();
-    //});     
-        
+        AOS.init({
+                startEvent: 'load',
+                disable: 'mobile'
+            });
+        window.addEventListener('load', function() {
+            AOS.refresh();
+        }); 
     </script>
 </body>
 </html>
