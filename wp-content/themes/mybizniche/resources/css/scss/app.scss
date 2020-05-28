@@ -935,7 +935,17 @@
         left: 0;
         width: 100%;
         text-align: center;
+
+        .button {
+            padding:10px 30px;
+
+            &:hover {
+                background: $color-secondary;
+            }
+        }
     }
+
+
 
     
     @include media(max-width, 1536px){
@@ -1714,6 +1724,7 @@
     z-index: 1;
     // background-color: $color-primary;
     overflow: hidden;
+    padding-top: 60px;
 
     .ivmenu-options{
         margin-top: -115px;

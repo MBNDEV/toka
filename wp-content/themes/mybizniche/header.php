@@ -21,7 +21,7 @@
         <header id="header" class="header">
             <div class="grid-container fluid">
                 <div class="grid-x grid-margin-x align-middle">
-                    <div class="small-4 large-5 cell left-col">
+                    <div class="small-3 large-5 cell left-col">
                         <a href="#main-menu" class="option-menu sidebar-menu-toggle"></a>
                         <a class="s-icon" data-toggle="search-box" aria-expanded="false" data-s=""></a>
                         <div class="sale">
@@ -29,13 +29,13 @@
                             <span class="val"><span class="lbl2">Sign up to receive</span> <strong>10% off</strong> your first order!</span>
                         </div>
                     </div>
-                    <div class="small-4 large-2 cell">
+                    <div class="small-6 large-2 cell">
                         <a href="<?php echo home_url() ?>" class="logo">
                             <!-- <img src="<?php echo MBN_ASSETS_URI ?>/img/logo-toka-box-black.svg" alt="Toka CBD Wellness" /> -->
                             <img src="<?php echo MBN_ASSETS_URI ?>/img/logo-toka-2020.svg" alt="Toka CBD Wellness" />                            
                         </a>
                     </div>
-                    <div class="small-4 large-5 cell right-col">
+                    <div class="small-3 large-5 cell right-col">
                         <?php
                         wp_nav_menu([
                             'theme_location'    => 'header-menu',

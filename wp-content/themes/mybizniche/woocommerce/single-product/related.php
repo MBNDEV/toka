@@ -23,7 +23,8 @@ if ( $related_products ) : ?>
 
 	<section class="related products">
 
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+		<h2 class="rel-title"><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+		<p><?php esc_html_e( 'Products other shoppers often purchase', 'woocommerce' ); ?></p>
 
 		<?php woocommerce_product_loop_start(); ?>
 

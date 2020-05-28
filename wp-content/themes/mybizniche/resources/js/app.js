@@ -94,7 +94,7 @@
                 dots: true,
                 arrows: false,
                 autoplay: true,
-                autoplaySpeed: 6777000,
+                autoplaySpeed: 10000,
                 pauseOnHover: false,
 				speed: 1300,
 				fade: true,
