@@ -25,8 +25,8 @@ get_header(); ?>
 
 <section id="sec-years" class="sec-years section" data-aos="fade-up" data-aos-delay="600">
     <div class="bg-slider">
-        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-100yrs-feat-img-slide1.jpg" alt=""></div>
-        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-100yrs-feat-img-slide2.jpg" alt=""></div>
+        <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-100yrs-feat-img-slide1a.jpg" alt=""></div>
+        <!-- <div class="slide-item"><img src="<?php echo MBN_ASSETS_URI ?>/img/img-100yrs-feat-img-slide2.jpg" alt=""></div> -->
     </div>
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
@@ -43,7 +43,7 @@ get_header(); ?>
 </section>    
 
 
-<section class="sec-ivmenu" data-aos="fade-up">
+<section class="sec-ivmenu">
     <div class="grid-container">
         <div class="grid-x grid-margin-x">
             <div class="cell large-12">
@@ -148,7 +148,7 @@ get_header(); ?>
 
 <section class="sec-ivfoot">
     <div class="grid-container">
-        <div class="text-wrap text-wrap-2"  data-aos="fade" >
+        <div class="text-wrap text-wrap-2">
             <p>TOKA was created to help people in need of supporting a quality life using various IV drips with appropriate CBD when desired or needed. <span class="white">CBD has been shown to be very effective and supportive of many different problems including help with pain relief, relaxation, boosting of immunity, sleep and several other issues.</span></p>
 
             <p><strong class="blue">IV therapy</strong> can be used for hydration only or it can be utilized for the administration of micronutrients to assist in boosting immunity. IV therapy should never be used for the replacement of prescription medications.</p>

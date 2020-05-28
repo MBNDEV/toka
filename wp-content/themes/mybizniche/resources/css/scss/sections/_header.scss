@@ -85,11 +85,12 @@
 	}
 
 	a.logo{
-		margin: 0 auto;
+		margin: 0 -14px;
 		display: block;
-        max-width: 230px;
+        //max-width: 230px;
         padding:0 0 5px;
         //background: $color-primary;
+        text-align: center;
     }
 
     .m-menu{
@@ -424,6 +425,13 @@
     @include media(max-width, 1023px){
         padding-top: 35px;
 
+        a.logo {
+            margin: 0;
+            img {
+                width: 240px;
+            }
+        }
+
         .sale{
             position: absolute;
             top: 0;
@@ -487,7 +495,13 @@
 
     
     @include media(max-width, 639px){
-        padding-top: 50px;
+        //padding-top: 50px;
+        .grid-x {
+            min-height: 74px;
+        }
+        a.logo {
+            margin: 0 -30px;
+        }
 
         .sale{
             font-size: 10px;
@@ -495,14 +509,31 @@
         }
 
         .left-col{
-            justify-content: space-between;
+            //justify-content: space-between;
+            margin-left: 0;
         }
 
         .woo-acc{
             margin: 0;
-            width: 100%;
+            //width: 100%; 
             display: flex;
-            justify-content: space-between;
+            //justify-content: space-between;
+        }
+    }
+
+    
+    @include media(max-width, 480px){
+
+        .left-col {
+            .s-icon {
+                display: none;
+            }
+        }
+
+        .woo-acc {
+            .acc {
+                display: none;
+            }
         }
     }
 }

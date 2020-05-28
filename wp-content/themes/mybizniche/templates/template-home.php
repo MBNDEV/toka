@@ -153,7 +153,7 @@ get_header(); ?>
                                 <defs>
                                     <style>
                                         .cls-1 {
-                                            fill: #c9c9c9
+                                            fill: #000
                                         }
                                         
                                         .cls-2 {
@@ -203,7 +203,7 @@ get_header(); ?>
                             </svg>
                         </div>
                         <span>
-                            Backed by doctors
+                            Supported by doctors
                         </span>
                     </div>
                     <div class="box"  data-aos="flip-right" data-aos-delay="200">
@@ -225,7 +225,7 @@ get_header(); ?>
                                     </style>
                                 </defs>
                                 <g id="prefix__icn-highly-effective" transform="translate(-735 -1758.762)">
-                                    <g id="prefix__Ellipse_1011" data-name="Ellipse 1011" transform="translate(735 1768)" style="stroke:#c9c9c9;stroke-width:2px;fill:none">
+                                    <g id="prefix__Ellipse_1011" data-name="Ellipse 1011" transform="translate(735 1768)" style="stroke:#000;stroke-width:2px;fill:none">
                                         <circle cx="45" cy="45" r="45" class="prefix__cls-5" />
                                         <circle cx="45" cy="45" r="44" class="prefix__cls-6" />
                                     </g>
@@ -261,7 +261,7 @@ get_header(); ?>
                                         }
                                         
                                         .prefix__cls-2 {
-                                            stroke: #b2b2ae;
+                                            stroke: #000;
                                             stroke-width: 2px
                                         }
                                     </style>
@@ -294,7 +294,7 @@ get_header(); ?>
                                         }
                                         
                                         .prefix__cls-4 {
-                                            stroke: #c9c9c9;
+                                            stroke: #000;
                                             stroke-width: 4px
                                         }
                                         
@@ -392,7 +392,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-sleep.jpg" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-sleep2.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -420,7 +420,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-energy.jpg" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-energy2.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -448,7 +448,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-libido.jpg" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-libido2.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -476,7 +476,7 @@ get_header(); ?>
                     <div class="slide-item">
                         <div class="slide-content">
                             <div class="thumb">
-                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-skincare.jpg" alt="">
+                                <img src="<?php echo MBN_ASSETS_URI ?>/img/img-feature-skincare2.jpg" alt="">
                             </div>
                             <div class="text">
                                 <h4>Find Your Relief:</h4>
@@ -509,7 +509,8 @@ get_header(); ?>
                 <h4 class="sub-head">Find Your Relief:</h4>
                 
                 <div class="button-wrap">
-                    <a href="<?php echo home_url('/products/') ?>" class="arrow-button">Explore Products</a>
+                    <!-- <a href="<?php echo home_url('/products/') ?>" class="arrow-button">Explore Products</a> -->
+                    <a href="<?php echo home_url('/products/') ?>" class="button">Explore Products</a>
                 </div>
             </div>
         </div>
