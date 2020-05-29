@@ -146,7 +146,7 @@ input[type="password"] {padding: 20px;}
 #woocommerce ul.products li h2 {}
 #woocommerce ul.products li.product a figure {overflow: hidden;} 
 #woocommerce ul.products li.product a img {width: auto; margin: 0 auto; height: 280px; max-width:none;}
-#woocommerce ul.products li .onsale {background: #222; margin: 0; min-height: 1px; min-width: 1px; padding: 10px; border-radius: 20px; font:400 14px/1 "Roboto", sans-serif}
+#woocommerce ul.products li .onsale {display:none; background: #222; margin: 0; min-height: 1px; min-width: 1px; padding: 10px; border-radius: 20px; font:400 14px/1 "Roboto", sans-serif}
 #woocommerce ul.products li .price {font:400 18px "Oswald", sans-serif; color: #222222;}
 #woocommerce ul.products li .price del {color: #bebebe; opacity: 1;}
 #woocommerce ul.products li .price ins {text-decoration: none; font-weight: 400;}
@@ -166,7 +166,7 @@ input[type="password"] {padding: 20px;}
 
 #woocommerce div.product div.images img {width: auto; margin: 0 auto 15px;}
 
-#woocommerce-single-product .onsale {background: #222; margin: 0; min-height: 1px; min-width: 1px; padding: 10px; border-radius: 20px; font:400 14px/1 "Roboto", sans-serif}
+#woocommerce-single-product .onsale {display:none; background: #222; margin: 0; min-height: 1px; min-width: 1px; padding: 10px; border-radius: 20px; font:400 14px/1 "Roboto", sans-serif}
 #woocommerce-single-product .woocommerce-image-summary {padding: 40px 0;}
 
 #woocommerce-single-product .cell .single-image-view .images,
@@ -231,7 +231,7 @@ input[type="password"] {padding: 20px;}
 #yith-quick-view-modal.open .yith-wcqv-main {overflow-y: auto; max-height:90vh;}
 #yith-quick-view-modal .yith-wcqv-wrapper {max-width: 100%; height: auto !important;}
 #yith-quick-view-modal .yith-wcqv-main {background: #fff; box-shadow: none; border:1px solid #3c3c3c;}
-#yith-quick-view-modal .onsale {background: #222; margin: 0; min-height: 1px; min-width: 1px; padding: 10px; border-radius: 20px; font:400 14px/1 "Roboto", sans-serif}
+#yith-quick-view-modal .onsale {display:none; background: #222; margin: 0; min-height: 1px; min-width: 1px; padding: 10px; border-radius: 20px; font:400 14px/1 "Roboto", sans-serif}
 
 #yith-quick-view-content div.images {padding: 70px 0;}
 #yith-quick-view-content div.images img {width:auto; margin:0 auto 15px;}

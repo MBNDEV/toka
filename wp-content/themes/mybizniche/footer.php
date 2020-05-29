@@ -135,11 +135,16 @@
     
     <script>   
         AOS.init({
-                startEvent: 'load',
-                disable: 'mobile'
-            });
+            startEvent: 'load',
+            disable: 'mobile'
+        });
+        AOS.refresh();
         window.addEventListener('load', function() {
             AOS.refresh();
+
+            $('.ivmenu-grid').each(function(){
+                $(this).css('height', 'auto');
+            })
         }); 
     </script>
 </body>

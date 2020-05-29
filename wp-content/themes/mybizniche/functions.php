@@ -2,7 +2,7 @@
 
 define('MBN_DIR_URI', get_template_directory_uri());
 define('MBN_DIR_PATH', get_template_directory());
-define('MBN_ASSETS_URI', MBN_DIR_URI.'/resources');
+define('MBN_ASSETS_URI', MBN_DIR_URI.'/assets');
 define('MBN_MAP_API_KEY',"AIzaSyDac2mOtJr_IktjUhiLZYRL_xHzxRbodRE");
 
 //MBN Login
@@ -122,6 +122,7 @@ function mbn_enqueue_scripts(){
     // App
     wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [], $wp_version);
     
+    wp_enqueue_script('app', MBN_ASSETS_URI.'/js/app.js', [], $wp_version);
     
     // localize objects
     wp_localize_script('app', 'main_obj', array(
@@ -145,7 +146,6 @@ function mbn_enqueue_scripts(){
         wp_enqueue_script('faqs-js', MBN_ASSETS_URI.'/js/faq.js', [], $wp_version);
     }
 
-    wp_enqueue_script('app', MBN_ASSETS_URI.'/js/app.js', [], $wp_version);
 }
 add_action('wp_enqueue_scripts', 'mbn_enqueue_scripts', 20);
 
