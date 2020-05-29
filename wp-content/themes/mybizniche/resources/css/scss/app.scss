@@ -1109,9 +1109,15 @@
         }
 
         .button-wrap{
-            bottom: 14%;
+            bottom: 8%;
         }
 
+        .find-slider{
+
+            .slick-dots{
+                bottom: -30px;
+            }
+        }    
         .find-slider-nav{
             .slide-item{
                 &.slick-active{
@@ -1128,6 +1134,7 @@
                     }
                 }
             }
+            
         }
     }
 }

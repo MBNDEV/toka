@@ -56,7 +56,7 @@ get_header(); ?>
 
                     foreach($items as $item):
                     ?>
-                    <div class="grid-x grid-margin-x align-justify">
+                    <div class="grid-x grid-margin-x align-justify ivmenu-grid" style="height: 650px;">
                         <?php foreach($item as $k => $i): ?>
                         <div class="cell large-5">
                             <?php
