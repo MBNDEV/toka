@@ -95,7 +95,7 @@
                                 <p>
                                     &copy; TOKA COPYRIGHT <?php echo date('Y') ?>.&nbsp;&nbsp;
                                     All Prices are USD.&nbsp;&nbsp;
-                                    <a href="#">Website Design</a> by: My Biz Niche</p>
+                                    <a href="https://www.mybizniche.com/phoenix-web-design/" target="_blank">Website Design</a> by: My Biz Niche</p>
                             </div>
 
                             <div class="f-note">

@@ -11,6 +11,7 @@ body.hide-scrollbar {overflow: hidden;}
 
 input[type="password"] {padding: 20px;}
 
+a.no-link, .no-link > a {cursor: text; pointer-events: none;}
 
 .btn-arrow a{display:inline-block; position: relative; 	font-size: 16px; font-weight: 500;	text-transform: uppercase;	line-height: 22px;	padding: 10px 50px 10px 0;	letter-spacing: 4.8px;}
 .btn-arrow a:after {content: ""; transition:all 0.5s ease; display: inline-block; position: absolute; right: 20px; width: 25px; height: 21px; margin: 0 0 0 5px; vertical-align: middle; background: url(assets/img/icn-arrow-right.svg) no-repeat right center / 25px;}
