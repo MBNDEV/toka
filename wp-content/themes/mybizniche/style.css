@@ -49,7 +49,7 @@ input[type="password"] {padding: 20px;}
 .sec-why-toka h1 img {display: block; width: auto !important; margin: 10px auto;}
 
 .sec-tagline {position: relative; z-index: 1;}
-.sec-tagline h2 {position: absolute; z-index: 1; font-size: 40px; font-weight: 500; font-style: italic; color: #222; width: 570px; max-width: 100%; padding-top: 10%;}
+.sec-tagline h2 {position: absolute; right:0; z-index: 1; font-size: 40px; font-weight: 500; font-style: italic; color: #222; width: 570px; max-width: 100%; padding-top: 10%;}
 .sec-tagline h2 strong {color: #14c8f0; font-weight: 500;}
 .sec-tagline figure {margin: 0 calc((-100vw - -1410px) / 2); position: relative; max-height: 90vh; overflow: hidden;}
 .sec-tagline figure:before {content: ""; z-index: 1; position: absolute; left: 0; right: 0; top: 0; height: 170px; background: url(/wp-content/uploads/2020/03/img-frame-top.png) no-repeat center top / 100%;}
@@ -67,7 +67,7 @@ input[type="password"] {padding: 20px;}
 .sec-origin p {font-size: 40px; color: #6a7376; font-weight: 300;}
 .sec-origin p strong {font-weight: 500; color: #222;}
 
-.sec-origin .origin-header {position: relative; padding: 90px 0 0; margin-bottom: -230px; z-index: 10;}
+.sec-origin .origin-header {position: relative; padding: 90px 0 0; /*margin-bottom: -230px;*/ z-index: 10;}
 .sec-origin .origin-header:before {content:""; position: absolute; z-index: -1; top:-65px; left: calc((-100vw - -1410px)/2);  right: calc((-100vw - -1410px)/2); height: 390px; background: url(/wp-content/uploads/2020/03/toka-fade.png) no-repeat center top / 100%;}
 .origin-header > div > * {width: 1170px; max-width: 100%;}
 
